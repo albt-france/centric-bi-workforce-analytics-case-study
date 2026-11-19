@@ -279,7 +279,11 @@ table _Measures
 		lineageTag: d13f1c22-fbbe-5652-9abc-e1f31f8a4096
 
 	/// How much more new hires earn than 2-4 year colleagues of the same grade (pay compression).
-	measure 'New-Hire Pay Premium %' = DIVIDE ( [Median Salary New Hires], [Median Salary 2-4 Years] ) - 1
+	measure 'New-Hire Pay Premium %' =
+			VAR _new = [Median Salary New Hires]
+			VAR _old = [Median Salary 2-4 Years]
+			RETURN
+			    IF ( NOT ISBLANK ( _new ) && NOT ISBLANK ( _old ), DIVIDE ( _new, _old ) - 1 )
 		formatString: 0.0%
 		displayFolder: 4 Pay & market
 		lineageTag: 938afccf-0782-5381-9969-d71b48c8faef
@@ -372,9 +376,9 @@ table _Measures
 		displayFolder: 6 Finance & reconciliation
 		lineageTag: 6efa12fa-45ae-520b-83af-a202b93fe363
 
-	/// People paid in the last month in context (finance export).
+	/// People paid in the last finance-closed month in context (finance export).
 	measure 'Finance Headcount' =
-			VAR _m = MAX ( DimDate[MonthStart] )
+			VAR _m = CALCULATE ( MAX ( DimDate[MonthStart] ), DimDate[IsFinanceClosedMonth] = 1 )
 			RETURN
 			    CALCULATE ( SUM ( FactFinance[PayrollHeadcount] ), REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )
 		formatString: #,0
@@ -382,7 +386,11 @@ table _Measures
 		lineageTag: e41fc232-6175-5ebd-bbab-9791bd51773e
 
 	/// Finance headcount minus raw HRIS headcount. Explained by duplicate ids and leavers paid in their last month.
-	measure 'HR vs Finance Gap' = IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - [Headcount (raw HRIS)] )
+	measure 'HR vs Finance Gap' =
+			VAR _m = CALCULATE ( MAX ( DimDate[MonthStart] ), DimDate[IsFinanceClosedMonth] = 1 )
+			VAR _hr = CALCULATE ( [Headcount (raw HRIS)], REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )
+			RETURN
+			    IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - _hr )
 		formatString: +#,0;-#,0;0
 		displayFolder: 6 Finance & reconciliation
 		lineageTag: 85485f50-2fe0-58fc-8a40-a7230f7d2611
@@ -394,7 +402,7 @@ table _Measures
 		lineageTag: 77ab558a-1efc-53fc-bca8-f5e77649525f
 
 	/// Closed or provisional (timesheet cut-off rule).
-	measure 'Month Status' = IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional: timesheets still arriving" )
+	measure 'Month Status' = IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional" )
 		displayFolder: 7 Data quality
 		lineageTag: 1298d687-0e8c-5b95-b034-af5541af3798
 

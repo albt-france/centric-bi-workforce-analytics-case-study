@@ -3,11 +3,11 @@
   "name": "volByDept",
   "position": {
     "x": 32,
-    "y": 723,
-    "z": 15000,
-    "height": 305,
+    "y": 730,
+    "z": 16000,
+    "height": 298,
     "width": 916,
-    "tabOrder": 15000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "clusteredBarChart",

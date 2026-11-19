@@ -3,11 +3,11 @@
   "name": "premium",
   "position": {
     "x": 1285,
-    "y": 651,
-    "z": 11000,
-    "height": 377,
+    "y": 658,
+    "z": 12000,
+    "height": 370,
     "width": 603,
-    "tabOrder": 11000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredBarChart",

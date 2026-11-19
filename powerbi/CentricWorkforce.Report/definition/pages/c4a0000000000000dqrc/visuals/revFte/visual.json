@@ -3,11 +3,11 @@
   "name": "revFte",
   "position": {
     "x": 972,
-    "y": 394,
-    "z": 14000,
-    "height": 305,
+    "y": 408,
+    "z": 15000,
+    "height": 298,
     "width": 916,
-    "tabOrder": 14000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "clusteredColumnChart",

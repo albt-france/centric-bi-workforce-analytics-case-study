@@ -3,11 +3,11 @@
   "name": "kpi_Overtime",
   "position": {
     "x": 1160,
-    "y": 250,
-    "z": 10000,
+    "y": 264,
+    "z": 11000,
     "height": 120,
     "width": 352,
-    "tabOrder": 10000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "card",

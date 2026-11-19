@@ -200,7 +200,10 @@ Median Salary 2-4 Years =
 
 // [4 Pay & market] How much more new hires earn than 2-4 year colleagues of the same grade (pay compression).  Format: 0.0%
 New-Hire Pay Premium % =
-    DIVIDE ( [Median Salary New Hires], [Median Salary 2-4 Years] ) - 1
+    VAR _new = [Median Salary New Hires]
+    VAR _old = [Median Salary 2-4 Years]
+    RETURN
+        IF ( NOT ISBLANK ( _new ) && NOT ISBLANK ( _old ), DIVIDE ( _new, _old ) - 1 )
 
 // [4 Pay & market] PUBLIC DATA. Statistics Lithuania average monthly gross earnings, ICT (J58-J63), latest quarter published up to the quarter in context.  Format: €#,0
 Market ICT Avg Gross =
@@ -263,15 +266,18 @@ Revenue (as reported by finance) =
 Revenue per FTE (as reported) =
     DIVIDE ( [Revenue (as reported by finance)], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
 
-// [6 Finance & reconciliation] People paid in the last month in context (finance export).  Format: #,0
+// [6 Finance & reconciliation] People paid in the last finance-closed month in context (finance export).  Format: #,0
 Finance Headcount =
-    VAR _m = MAX ( DimDate[MonthStart] )
+    VAR _m = CALCULATE ( MAX ( DimDate[MonthStart] ), DimDate[IsFinanceClosedMonth] = 1 )
     RETURN
         CALCULATE ( SUM ( FactFinance[PayrollHeadcount] ), REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )
 
 // [6 Finance & reconciliation] Finance headcount minus raw HRIS headcount. Explained by duplicate ids and leavers paid in their last month.  Format: +#,0;-#,0;0
 HR vs Finance Gap =
-    IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - [Headcount (raw HRIS)] )
+    VAR _m = CALCULATE ( MAX ( DimDate[MonthStart] ), DimDate[IsFinanceClosedMonth] = 1 )
+    VAR _hr = CALCULATE ( [Headcount (raw HRIS)], REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )
+    RETURN
+        IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - _hr )
 
 // [7 Data quality] Share of timesheet rows entered more than 10 days after month end.  Format: 0.0%
 Late Timesheets % =
@@ -279,4 +285,4 @@ Late Timesheets % =
 
 // [7 Data quality] Closed or provisional (timesheet cut-off rule).
 Month Status =
-    IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional: timesheets still arriving" )
+    IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional" )

@@ -131,7 +131,7 @@ M = [
     ("4 Pay & market", "Median Salary 2-4 Years", "€#,0", "Median salary of people with 2 to 4 years of service (use with a grade in context).",
      f'VAR _m = MAX ( DimDate[MonthStart] )\nRETURN\n    CALCULATE (\n        MEDIAN ( FactHeadcountMonthly[SalaryMonthlyGross] ),\n        FactHeadcountMonthly[TenureBand] = "2-4 y",\n        FactHeadcountMonthly[IsActiveMonthEnd] = 1,\n        FactHeadcountMonthly[IsDuplicateId] = 0,\n        {SNAP}\n    )'),
     ("4 Pay & market", "New-Hire Pay Premium %", "0.0%", "How much more new hires earn than 2-4 year colleagues of the same grade (pay compression).",
-     "DIVIDE ( [Median Salary New Hires], [Median Salary 2-4 Years] ) - 1"),
+     "VAR _new = [Median Salary New Hires]\nVAR _old = [Median Salary 2-4 Years]\nRETURN\n    IF ( NOT ISBLANK ( _new ) && NOT ISBLANK ( _old ), DIVIDE ( _new, _old ) - 1 )"),
     ("4 Pay & market", "Market ICT Avg Gross", "€#,0", "PUBLIC DATA. Statistics Lithuania average monthly gross earnings, ICT (J58-J63), latest quarter published up to the quarter in context.",
      "VAR _q = MAX ( DimDate[Quarter] )\nRETURN\n    CALCULATE (\n        LASTNONBLANKVALUE ( Market[Quarter], MAX ( Market[AvgGrossEarningsICT_LT] ) ),\n        Market[Quarter] <= _q\n    )"),
     ("4 Pay & market", "Salary vs Market %", "+0.0%;-0.0%;0.0%", "Company average gross salary vs the Lithuanian ICT average (negative = below market).",
@@ -154,14 +154,14 @@ M = [
      "VAR _depts = VALUES ( DimOrg[Department] )\nRETURN\n    CALCULATE (\n        SUM ( FactFinance[Revenue] ),\n        REMOVEFILTERS ( DimOrg ),\n        TREATAS ( _depts, FactFinance[DepartmentReported] )\n    )"),
     ("6 Finance & reconciliation", "Revenue per FTE (as reported)", "€#,0", "Revenue per FTE using the finance department mapping: shows the mis-mapped cost centre.",
      "DIVIDE ( [Revenue (as reported by finance)], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )"),
-    ("6 Finance & reconciliation", "Finance Headcount", "#,0", "People paid in the last month in context (finance export).",
-     "VAR _m = MAX ( DimDate[MonthStart] )\nRETURN\n    CALCULATE ( SUM ( FactFinance[PayrollHeadcount] ), REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )"),
+    ("6 Finance & reconciliation", "Finance Headcount", "#,0", "People paid in the last finance-closed month in context (finance export).",
+     "VAR _m = CALCULATE ( MAX ( DimDate[MonthStart] ), DimDate[IsFinanceClosedMonth] = 1 )\nRETURN\n    CALCULATE ( SUM ( FactFinance[PayrollHeadcount] ), REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )"),
     ("6 Finance & reconciliation", "HR vs Finance Gap", "+#,0;-#,0;0", "Finance headcount minus raw HRIS headcount. Explained by duplicate ids and leavers paid in their last month.",
-     "IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - [Headcount (raw HRIS)] )"),
+     "VAR _m = CALCULATE ( MAX ( DimDate[MonthStart] ), DimDate[IsFinanceClosedMonth] = 1 )\nVAR _hr = CALCULATE ( [Headcount (raw HRIS)], REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )\nRETURN\n    IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - _hr )"),
     ("7 Data quality", "Late Timesheets %", "0.0%", "Share of timesheet rows entered more than 10 days after month end.",
      "DIVIDE ( CALCULATE ( COUNTROWS ( FactTimesheet ), FactTimesheet[EntryLagDays] > 10 ), COUNTROWS ( FactTimesheet ) )"),
     ("7 Data quality", "Month Status", "", "Closed or provisional (timesheet cut-off rule).",
-     'IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional: timesheets still arriving" )'),
+     'IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional" )'),
 ]
 
 

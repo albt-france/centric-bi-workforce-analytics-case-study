@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Can we trust the numbers? Duplicate ids, a mis-mapped cost centre, and a bridge that closes to zero",
+                    "value": "Can we trust the numbers? Duplicate ids, a mis-mapped cost centre, a zero-gap bridge",
                     "textStyle": {
                       "fontSize": "24pt",
                       "color": "#0B0B0B",

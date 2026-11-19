@@ -3,11 +3,11 @@
   "name": "kpi_Utilizationclosedmonths",
   "position": {
     "x": 32,
-    "y": 250,
-    "z": 7000,
+    "y": 264,
+    "z": 8000,
     "height": 120,
     "width": 352,
-    "tabOrder": 7000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",

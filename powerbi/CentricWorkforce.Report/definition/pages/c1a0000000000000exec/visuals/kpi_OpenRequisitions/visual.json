@@ -3,11 +3,11 @@
   "name": "kpi_OpenRequisitions",
   "position": {
     "x": 1599,
-    "y": 250,
-    "z": 12000,
+    "y": 264,
+    "z": 13000,
     "height": 120,
     "width": 289,
-    "tabOrder": 12000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "card",

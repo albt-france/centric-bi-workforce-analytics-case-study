@@ -9,14 +9,10 @@
 
 | Deliverable | Link |
 |---|---|
-| 8-page PDF case study | [docs/Centric_BI_Workforce_Case_Study.pdf](docs/Centric_BI_Workforce_Case_Study.pdf) |
-| Interactive dashboard (no Power BI needed, download and open) | [dashboard/workforce_dashboard.html](dashboard/workforce_dashboard.html) |
-| Power BI project (PBIP: TMDL model + PBIR report) | [powerbi/CentricWorkforce.pbip](powerbi/CentricWorkforce.pbip) · [all measures](powerbi/measures.dax) |
-| Analysis notebook | [notebooks/analysis.ipynb](notebooks/analysis.ipynb) |
-| SQL (DuckDB) | [sql/](sql/) |
-| Requirements and design documents | [docs/](docs/) (list below) |
+| 8-page PDF case study | [Open the PDF](https://albt-france.github.io/centric-bi-workforce-analytics-case-study/docs/Centric_BI_Workforce_Case_Study.pdf) |
+| Interactive dashboard (no Power BI needed) | [Open the dashboard](https://albt-france.github.io/centric-bi-workforce-analytics-case-study/dashboard/workforce_dashboard.html) |
 
-![Page 2 of the PDF: from "turnover report" to the right question](docs/img/preview_page2.png)
+![Power BI report, Executive overview page](docs/img/powerbi_1_executive_overview.png)
 
 ## From the request to the solution, in six steps
 
@@ -44,10 +40,13 @@ a disconnected `Market` table (PUBLIC DATA), 18 single-direction relationships (
 `DepartmentManager` RLS role. The four report pages (Executive overview, Attrition deep dive, Utilization & bench,
 Data quality & reconciliation) are written in PBIR by `src/build_report_pages.py`.
 
-**Status:** the PBIP is generated and checked by script (every field used by the pages exists in the model; every KPI matches SQL
-with the same logic on the same tables). **It has not yet been opened in Power BI Desktop**, so the report pages are not verified
-visually; [POWERBI_BUILD_GUIDE.md](docs/POWERBI_BUILD_GUIDE.md) describes each visual to rebuild it by hand if needed, and
-[measures.dax](powerbi/measures.dax) holds every measure. The HTML dashboard shows the same four pages.
+**Status:** opened and refreshed in Power BI Desktop (19 Nov 2026): the model loads, the four pages render, and the KPIs read on
+cards match SQL ([KPI_CHECKS.md](docs/KPI_CHECKS.md)). [POWERBI_BUILD_GUIDE.md](docs/POWERBI_BUILD_GUIDE.md) describes each visual,
+and [measures.dax](powerbi/measures.dax) holds every measure. The HTML dashboard shows the same four pages without Power BI.
+
+| Attrition deep dive | Utilization & bench | Data quality & reconciliation |
+|---|---|---|
+| ![Attrition deep dive](docs/img/powerbi_2_attrition.png) | ![Utilization and bench](docs/img/powerbi_3_utilization.png) | ![Data quality and reconciliation](docs/img/powerbi_4_data_quality.png) |
 
 ## How to rerun everything
 
@@ -112,7 +111,7 @@ notebooks/  analysis.ipynb
 - The interviews are written scenarios; real stakeholders would bring constraints this case cannot show.
 - Sodra open employer data (`atvira.sodra.lt`) refused automated access (HTTP 403): not used, not bypassed.
 - Public series lag (earnings and vacancies end in 2025-Q4): the latest published quarter is used and dated.
-- The Power BI project has not yet been opened in Power BI Desktop (see status above).
+- The Power BI report has been checked in Power BI Desktop only; it has not been published to the Power BI service, so RLS was not tested with real accounts.
 
 ---
 Independent case study based on public data · not affiliated with or endorsed by Centric

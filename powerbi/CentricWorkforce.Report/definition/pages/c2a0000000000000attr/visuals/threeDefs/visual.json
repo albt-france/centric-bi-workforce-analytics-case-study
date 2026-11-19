@@ -3,11 +3,11 @@
   "name": "threeDefs",
   "position": {
     "x": 32,
-    "y": 250,
-    "z": 7000,
-    "height": 377,
+    "y": 264,
+    "z": 8000,
+    "height": 370,
     "width": 1229,
-    "tabOrder": 7000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "lineChart",

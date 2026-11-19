@@ -3,11 +3,11 @@
   "name": "rawVsClean",
   "position": {
     "x": 32,
-    "y": 394,
-    "z": 13000,
-    "height": 305,
+    "y": 408,
+    "z": 14000,
+    "height": 298,
     "width": 916,
-    "tabOrder": 13000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "lineChart",

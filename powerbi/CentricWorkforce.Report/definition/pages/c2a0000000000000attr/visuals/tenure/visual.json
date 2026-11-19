@@ -3,11 +3,11 @@
   "name": "tenure",
   "position": {
     "x": 659,
-    "y": 651,
-    "z": 10000,
-    "height": 377,
+    "y": 658,
+    "z": 11000,
+    "height": 370,
     "width": 603,
-    "tabOrder": 10000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "clusteredColumnChart",

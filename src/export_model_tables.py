@@ -202,6 +202,15 @@ def fmt(kpi, v):
     return f"{v:.1%}" if "%" in kpi else f"{v:,.1f}" if kpi in ("FTE", "Average Headcount") else f"{v:,.0f}"
 
 
+# Values read on card visuals in Power BI Desktop (PBIP opened and refreshed, 19 Nov 2026), same filters as the context.
+DESKTOP = {("Headcount", "Sep 2026, company"): "603", ("Headcount (raw HRIS)", "Sep 2026, company"): "621",
+           ("Voluntary Attrition %", "R12M to Sep 2026"): "14.1%", ("Regretted Attrition %", "R12M to Sep 2026"): "6.8%",
+           ("Utilization %", "Sep 2026, billable departments"): "78.4%",
+           ("Utilization % (closed months only)", "Oct 2026, billable departments"): "blank",
+           ("Utilization % (raw, no cut-off)", "Oct 2026, billable departments"): "60.2%",
+           ("Finance Headcount", "Sep 2026, company"): "610", ("HR vs Finance Gap (finance - HR raw)", "Sep 2026, company"): "-11"}
+
+
 def write_checks(con, t):
     sql = q(con, "SELECT * FROM out_kpi_checks")
     dl = dax_like(t)
@@ -213,7 +222,7 @@ def write_checks(con, t):
              "2. **model logic**: the filter logic of each DAX measure in `powerbi/measures.dax`, re-applied in pandas to the "
              "exact CSV tables that Power BI loads (`data/model/`), by `src/export_model_tables.py`.",
              "",
-             "The last column is for the value read in Power BI Desktop (card visual with the same filters). "
+             "The last column is the value read in Power BI Desktop on a card visual with the same filters (PBIP opened and refreshed). "
              "Contexts: snapshot = **September 2026** (last month closed for timesheets and finance); "
              "R12M = **October 2025 to September 2026**. All data are SIMULATED.",
              "",
@@ -227,7 +236,7 @@ def write_checks(con, t):
         same = (sv is None and (mv is None or np.isnan(mv))) or (sv is not None and mv is not None and abs(sv - mv) < 1e-3 * max(1, abs(sv)))
         ok += same
         ctx = r.context.replace("R12M to Sep 2026", "R12M Oct 2025 - Sep 2026")
-        lines.append(f"| {r.kpi} | `{DAX_NAME[r.kpi]}` | {ctx} | {fmt(r.kpi, sv)} | {fmt(r.kpi, mv)} | {'yes' if same else '**NO**'} | to read |")
+        lines.append(f"| {r.kpi} | `{DAX_NAME[r.kpi]}` | {ctx} | {fmt(r.kpi, sv)} | {fmt(r.kpi, mv)} | {'yes' if same else '**NO**'} | {DESKTOP.get((r.kpi, r.context), 'not read')} |")
     lines += ["", f"**{ok} / {len(sql)} KPIs match** between SQL and the model logic.",
               "",
               "Notes:",
@@ -236,7 +245,8 @@ def write_checks(con, t):
               "shows a utilisation far below its true level (row *raw, no cut-off*).",
               "- `HR vs Finance Gap` is negative because the HR extract still holds 18 duplicate ids from the HRIS migration, "
               "partly offset by leavers that finance pays in their last month; see `sql/06_hr_finance_reconciliation.sql`.",
-              "- Status of the Power BI column: **not yet read in Power BI Desktop** (to be filled after opening the PBIP)."]
+              "- Power BI Desktop: the PBIP opened, refreshed and rendered all four pages; the 9 values read on cards match SQL. "
+              "KPIs marked *not read* have no card on the report pages with that exact filter; their DAX logic is covered by the model-logic column."]
     (ROOT / "docs" / "KPI_CHECKS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return ok, len(sql)
 

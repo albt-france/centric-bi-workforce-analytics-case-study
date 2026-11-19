@@ -227,10 +227,11 @@ pages = []
 
 
 def slicers(p, y=TOP):
-    p.slicer("slicerSite", L, y, 300, 70, SITE, "Site")
-    p.slicer("slicerDept", L + 324, y, 340, 70, DEPT, "Department")
-    p.slicer("slicerMonth", L + 688, y, 340, 70, MONTH, "Month (cards show the last month selected)")
-    return y + 70 + GAP
+    p.slicer("slicerSite", L, y, 300, 84, SITE, "Site")
+    p.slicer("slicerDept", L + 324, y, 340, 84, DEPT, "Department")
+    p.slicer("slicerMonth", L + 688, y, 340, 84, MONTH, "Month")
+    p.text("slicerNote", L + 1052, y + 20, 800, 50, [[("Cards show the last month selected; R12M = 12 months ending with it.", 11, MUTED, False)]])
+    return y + 84 + GAP
 
 
 # ======================= Page 1 - Executive overview =======================
@@ -272,7 +273,7 @@ p.chart("threeDefs", "lineChart", x1, y, w1 + w2 + GAP, h,
 p.chart("reasons", "tableEx", x3, y, w3, h, {"Values": [C("FactMovements", "ExitReason"), meas("Voluntary Exits"), meas("Regretted Exits")]},
         "Exit reasons (resignations)", table_style(), sort=(meas("Voluntary Exits"), "Descending"))
 y2 = y + h + GAP
-p.chart("dcRegretted", "clusteredColumnChart", x1, y2, w1, h, {"Category": [MONTH], "Y": Ms("Regretted Exits", "Overtime %")},
+p.chart("dcRegretted", "lineClusteredColumnComboChart", x1, y2, w1, h, {"Category": [MONTH], "Y": Ms("Regretted Exits"), "Y2": Ms("Overtime %")},
         "Data & Cloud: overtime, then regretted exits", sort=BY_MONTH, only=("DimOrg", "Department", ["Data & Cloud"], False))
 p.chart("tenure", "clusteredColumnChart", x2, y2, w2, h, {"Category": [C("FactMovements", "TenureBand")], "Y": Ms("Voluntary Exits")},
         "Resignations by length of service", sort=(C("FactMovements", "TenureBand"), "Ascending"))
@@ -307,7 +308,7 @@ pages.append(p)
 
 # ======================= Page 4 - Data quality & reconciliation =======================
 p = Page("c4a0000000000000dqrc", "Data quality & reconciliation")
-p.header("Can we trust the numbers? Duplicate ids, a mis-mapped cost centre, and a bridge that closes to zero",
+p.header("Can we trust the numbers? Duplicate ids, a mis-mapped cost centre, a zero-gap bridge",
          "The HRIS migration (Sep 2025) left 18 people with two ids (+3% headcount). Finance mapped cost centre CC-D1-VNO to Data & Cloud "
          "from May to July 2026. Reconciling HR and finance headcount finds both; the remaining gap is leavers paid in their last month.",
          "SIMULATED")

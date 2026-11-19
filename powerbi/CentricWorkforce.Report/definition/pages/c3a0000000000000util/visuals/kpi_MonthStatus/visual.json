@@ -3,11 +3,11 @@
   "name": "kpi_MonthStatus",
   "position": {
     "x": 1536,
-    "y": 250,
-    "z": 11000,
+    "y": 264,
+    "z": 12000,
     "height": 120,
     "width": 352,
-    "tabOrder": 11000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "card",
