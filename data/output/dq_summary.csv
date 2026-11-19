@@ -1,0 +1,7 @@
+check_name,issues,fix
+"Duplicate employee ids (same person, two ids)",18,Flag is_duplicate_id; count the master id only
+Overlapping SCD2 periods,5,Cut the older row the day before the next row starts
+Rows with missing manager_id,9,"Report as ""Unassigned""; ask HR to complete"
+Rows with missing site,4,Take the site from the cost centre
+Timesheets entered > 10 days after month end,252,Cut-off rule: report closed months only
+Months not closed at extract date,1,"Show as provisional, excluded from KPIs"

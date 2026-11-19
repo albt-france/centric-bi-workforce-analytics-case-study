@@ -1,0 +1,10 @@
+duckdb>=1.1
+pandas>=2.0
+numpy>=1.24
+requests>=2.31
+matplotlib>=3.8
+plotly>=5.20
+pypdf>=4.0
+nbformat>=5.9
+nbconvert>=7.0
+ipykernel>=6.0

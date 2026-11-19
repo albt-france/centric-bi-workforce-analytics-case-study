@@ -1,0 +1,24 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DataFolder", "FactHeadcountMonthly", "FactMovements", "FactTimesheet", "FactFinance", "FactRecruiting", "DimDate", "DimEmployee", "DimOrg", "DimGrade", "Market", "SecurityUserDepartment", "_Measures"]
+
+ref table FactHeadcountMonthly
+ref table FactMovements
+ref table FactTimesheet
+ref table FactFinance
+ref table FactRecruiting
+ref table DimDate
+ref table DimEmployee
+ref table DimOrg
+ref table DimGrade
+ref table Market
+ref table SecurityUserDepartment
+ref table _Measures

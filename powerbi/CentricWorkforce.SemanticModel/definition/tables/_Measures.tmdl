@@ -1,0 +1,410 @@
+/// All measures, grouped in display folders. Reference values: docs/KPI_CHECKS.md.
+table _Measures
+	lineageTag: 258ee401-cf42-5e32-a80e-29d2db9a5fa6
+
+	/// People employed on the last day of the last month in context. Duplicate ids excluded.
+	measure Headcount =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS ( FactHeadcountMonthly ),
+			        FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+			        FactHeadcountMonthly[IsDuplicateId] = 0,
+			        REMOVEFILTERS ( DimDate ),
+			        DimDate[MonthStart] = _m
+			    )
+		formatString: #,0
+		displayFolder: 1 Headcount
+		lineageTag: c7744b2d-80dd-5de4-8140-873642c52af3
+
+	/// Same as Headcount but counting every id in the HRIS, duplicates included. Data-quality view only.
+	measure 'Headcount (raw HRIS)' =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE (
+			        COUNTROWS ( FactHeadcountMonthly ),
+			        FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+			        REMOVEFILTERS ( DimDate ),
+			        DimDate[MonthStart] = _m
+			    )
+		formatString: #,0
+		displayFolder: 1 Headcount
+		lineageTag: 066ee61c-2459-5b17-b9ae-71529ba53c74
+
+	/// Ids created twice by the HRIS migration (Sep 2025) still active at month end.
+	measure 'Duplicate IDs' = [Headcount (raw HRIS)] - [Headcount]
+		formatString: #,0
+		displayFolder: 1 Headcount
+		lineageTag: 2f23bc32-bbcd-5334-96d6-62ca9d65f920
+
+	/// Contracted full-time equivalents at the end of the last month in context.
+	measure FTE =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE (
+			        SUM ( FactHeadcountMonthly[FTE] ),
+			        FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+			        FactHeadcountMonthly[IsDuplicateId] = 0,
+			        REMOVEFILTERS ( DimDate ),
+			        DimDate[MonthStart] = _m
+			    )
+		formatString: #,0.0
+		displayFolder: 1 Headcount
+		lineageTag: bb0a59da-bac8-5cd4-85c9-81c881603b26
+
+	/// Average of month-end headcounts over the months in context. Denominator of every attrition rate.
+	measure 'Average Headcount' = AVERAGEX ( VALUES ( DimDate[MonthStart] ), [Headcount] )
+		formatString: #,0.0
+		displayFolder: 1 Headcount
+		lineageTag: cf5e073e-ca18-58ee-8d90-9ca621f07345
+
+	/// Every exit keyed in the HRIS, including internal moves keyed as exit + rehire.
+	measure 'Exits (gross)' = CALCULATE ( COUNTROWS ( FactMovements ), FactMovements[MovementType] = "Exit" )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: c81657d9-a76b-5995-9e81-97885b3682fd
+
+	/// Exits minus internal transfers (an exit followed by a rehire of the same id within 31 days).
+	measure 'Exits (excl. transfers)' = CALCULATE ( [Exits (gross)], FactMovements[IsInternalTransfer] = 0 )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: f8222b9c-2674-5af2-8a98-6bcd3b931857
+
+	/// Resignations (excl. transfers).
+	measure 'Voluntary Exits' = CALCULATE ( [Exits (excl. transfers)], FactMovements[IsVoluntary] = 1 )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: d93b4f4b-27a3-57d2-95df-58284066c90f
+
+	/// Resignations the manager flagged as regretted (high performers or scarce skills).
+	measure 'Regretted Exits' = CALCULATE ( [Voluntary Exits], FactMovements[IsRegretted] = 1 )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: c8b03b3f-35ba-56c3-8558-df6e8863d28d
+
+	/// Exits (excl. transfers) of people with less than 12 months of service.
+	measure 'Exits Under 12 Months Tenure' = CALCULATE ( [Exits (excl. transfers)], FactMovements[TenureMonths] < 12 )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: 2245c94f-fcca-5f95-bcad-9e381e42d3c1
+
+	/// External hires (rehires that close an internal transfer are excluded).
+	measure Hires = CALCULATE ( COUNTROWS ( FactMovements ), FactMovements[MovementType] = "Hire", FactMovements[IsInternalTransfer] = 0 )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: 49f8d6ad-763f-5141-8237-a20b3ea8d69c
+
+	/// Gross exits / average headcount. Shown for comparison only: inflated by transfers.
+	measure 'Attrition % (gross)' = DIVIDE ( [Exits (gross)], [Average Headcount] )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: 85f58a4d-20fb-5461-bc3c-84196e7ec4c0
+
+	/// Exits excl. transfers / average headcount.
+	measure 'Attrition % (excl. transfers)' = DIVIDE ( [Exits (excl. transfers)], [Average Headcount] )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: bb6ed563-888a-500f-b469-07ee797bb6fc
+
+	/// Resignations / average headcount.
+	measure 'Voluntary Attrition %' = DIVIDE ( [Voluntary Exits], [Average Headcount] )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: aead2079-cb19-5388-baf8-6625844d7b4c
+
+	/// Regretted resignations / average headcount. Headline KPI agreed with the HR Director.
+	measure 'Regretted Attrition %' = DIVIDE ( [Regretted Exits], [Average Headcount] )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: 5dd4eb75-8cbf-5d30-807b-6f32834f1cc4
+
+	/// Exits with less than 12 months of service / hires in the same period.
+	measure 'Early Attrition %' = DIVIDE ( [Exits Under 12 Months Tenure], [Hires] )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: d3263d56-c371-5cd7-a6ae-75e52c344ff8
+
+	/// Regretted attrition over the 12 months ending with the last date in context.
+	measure 'Regretted Attrition % R12M' =
+			VAR _end = MAX ( DimDate[Date] )
+			RETURN
+			    CALCULATE ( [Regretted Attrition %], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: c3bc913b-cc81-52d5-8d5b-236bf77c3dcd
+
+	/// Voluntary attrition over the 12 months ending with the last date in context.
+	measure 'Voluntary Attrition % R12M' =
+			VAR _end = MAX ( DimDate[Date] )
+			RETURN
+			    CALCULATE ( [Voluntary Attrition %], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: 038f9e3a-63c4-55c1-8b4e-40faea9db79e
+
+	/// Gross attrition over the 12 months ending with the last date in context.
+	measure 'Attrition % (gross) R12M' =
+			VAR _end = MAX ( DimDate[Date] )
+			RETURN
+			    CALCULATE ( [Attrition % (gross)], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: d850eaed-5e54-54f4-8b2b-9a01f3241764
+
+	/// Attrition excl. transfers over the 12 months ending with the last date in context.
+	measure 'Attrition % (excl. transfers) R12M' =
+			VAR _end = MAX ( DimDate[Date] )
+			RETURN
+			    CALCULATE ( [Attrition % (excl. transfers)], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+		formatString: 0.0%
+		displayFolder: 2 Attrition
+		lineageTag: b617e8d2-43db-5c34-8549-4a7749d59503
+
+	/// Regretted exits in the same period one year earlier.
+	measure 'Regretted Exits LY' = CALCULATE ( [Regretted Exits], SAMEPERIODLASTYEAR ( DimDate[Date] ) )
+		formatString: #,0
+		displayFolder: 2 Attrition
+		lineageTag: 9c6d2d5e-01b9-5b00-912c-c379af193ea8
+
+	/// Lithuanian working days employed x 8 h x FTE, minus absences. Billable departments only.
+	measure 'Capacity Hours' =
+			CALCULATE (
+			    SUM ( FactHeadcountMonthly[CapacityHours] ),
+			    FactHeadcountMonthly[IsDuplicateId] = 0,
+			    DimOrg[IsBillable] = 1
+			)
+		formatString: #,0
+		displayFolder: 3 Utilization
+		lineageTag: 7f21f781-7f3d-5b49-85ec-4f86f774d2b2
+
+	/// Billable hours received in timesheets (billable departments).
+	measure 'Billable Hours' = CALCULATE ( SUM ( FactTimesheet[BillableHours] ), DimOrg[IsBillable] = 1 )
+		formatString: #,0
+		displayFolder: 3 Utilization
+		lineageTag: f3079ed1-5b88-5818-823a-e62caa93c8a3
+
+	/// Hours logged without a client project (billable departments).
+	measure 'Bench Hours' = CALCULATE ( SUM ( FactTimesheet[BenchHours] ), DimOrg[IsBillable] = 1 )
+		formatString: #,0
+		displayFolder: 3 Utilization
+		lineageTag: b41d4e2b-2bcc-5467-a974-736e08c55fef
+
+	/// Hours above contracted capacity (billable departments).
+	measure 'Overtime Hours' = CALCULATE ( SUM ( FactTimesheet[OvertimeHours] ), DimOrg[IsBillable] = 1 )
+		formatString: #,0
+		displayFolder: 3 Utilization
+		lineageTag: 63332f7a-0f59-5893-a122-e2bf0bcbd560
+
+	/// Billable + non-billable + bench hours received (billable departments).
+	measure 'Logged Hours' = CALCULATE ( SUM ( FactTimesheet[LoggedHours] ), DimOrg[IsBillable] = 1 )
+		formatString: #,0
+		displayFolder: 3 Utilization
+		lineageTag: 2ea36ef2-99b7-572c-af73-023974d89dbe
+
+	/// Billable hours / capacity. Not reliable for a month that is not closed: use the closed-months version.
+	measure 'Utilization %' = DIVIDE ( [Billable Hours], [Capacity Hours] )
+		formatString: 0.0%
+		displayFolder: 3 Utilization
+		lineageTag: bd3adc5e-49e8-5937-bf64-8d24f9ac6339
+
+	/// Utilisation on closed months only (month end + 10 days <= extract date). Blank for the open month.
+	measure 'Utilization % (closed months)' = CALCULATE ( [Utilization %], KEEPFILTERS ( DimDate[IsClosedMonth] = 1 ) )
+		formatString: 0.0%
+		displayFolder: 3 Utilization
+		lineageTag: e5f49108-743b-590a-9d15-ade09b579f69
+
+	/// Bench hours / capacity.
+	measure 'Bench %' = DIVIDE ( [Bench Hours], [Capacity Hours] )
+		formatString: 0.0%
+		displayFolder: 3 Utilization
+		lineageTag: 9d6b5592-3dc9-5bb6-9d6a-fa8b2bc2b47f
+
+	/// Overtime hours / capacity. Alert threshold: 15% for two months in a row.
+	measure 'Overtime %' = DIVIDE ( [Overtime Hours], [Capacity Hours] )
+		formatString: 0.0%
+		displayFolder: 3 Utilization
+		lineageTag: a100f85d-c693-5365-8032-7f8345260581
+
+	/// Logged hours / capacity: shows how much of the month has been received.
+	measure 'Timesheet Completeness %' = DIVIDE ( [Logged Hours], [Capacity Hours] )
+		formatString: 0.0%
+		displayFolder: 3 Utilization
+		lineageTag: 260d0782-9379-5bbb-b350-1a15d66f1577
+
+	/// Average contracted monthly gross salary (full-time basis) at the end of the last month in context.
+	measure 'Average Gross Salary' =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE (
+			        AVERAGE ( FactHeadcountMonthly[SalaryMonthlyGross] ),
+			        FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+			        FactHeadcountMonthly[IsDuplicateId] = 0,
+			        REMOVEFILTERS ( DimDate ),
+			        DimDate[MonthStart] = _m
+			    )
+		formatString: €#,0
+		displayFolder: 4 Pay & market
+		lineageTag: 98484316-af49-5f9b-9dae-7f0a965c3cc0
+
+	/// Median salary of people with < 1 year of service (use with a grade in context).
+	measure 'Median Salary New Hires' =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE (
+			        MEDIAN ( FactHeadcountMonthly[SalaryMonthlyGross] ),
+			        FactHeadcountMonthly[TenureBand] = "0-1 y",
+			        FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+			        FactHeadcountMonthly[IsDuplicateId] = 0,
+			        REMOVEFILTERS ( DimDate ),
+			        DimDate[MonthStart] = _m
+			    )
+		formatString: €#,0
+		displayFolder: 4 Pay & market
+		lineageTag: 8523f31f-c229-5309-bc32-a095ae111870
+
+	/// Median salary of people with 2 to 4 years of service (use with a grade in context).
+	measure 'Median Salary 2-4 Years' =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE (
+			        MEDIAN ( FactHeadcountMonthly[SalaryMonthlyGross] ),
+			        FactHeadcountMonthly[TenureBand] = "2-4 y",
+			        FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+			        FactHeadcountMonthly[IsDuplicateId] = 0,
+			        REMOVEFILTERS ( DimDate ),
+			        DimDate[MonthStart] = _m
+			    )
+		formatString: €#,0
+		displayFolder: 4 Pay & market
+		lineageTag: d13f1c22-fbbe-5652-9abc-e1f31f8a4096
+
+	/// How much more new hires earn than 2-4 year colleagues of the same grade (pay compression).
+	measure 'New-Hire Pay Premium %' = DIVIDE ( [Median Salary New Hires], [Median Salary 2-4 Years] ) - 1
+		formatString: 0.0%
+		displayFolder: 4 Pay & market
+		lineageTag: 938afccf-0782-5381-9969-d71b48c8faef
+
+	/// PUBLIC DATA. Statistics Lithuania average monthly gross earnings, ICT (J58-J63), latest quarter published up to the quarter in context.
+	measure 'Market ICT Avg Gross' =
+			VAR _q = MAX ( DimDate[Quarter] )
+			RETURN
+			    CALCULATE (
+			        LASTNONBLANKVALUE ( Market[Quarter], MAX ( Market[AvgGrossEarningsICT_LT] ) ),
+			        Market[Quarter] <= _q
+			    )
+		formatString: €#,0
+		displayFolder: 4 Pay & market
+		lineageTag: 23ccd447-867b-577f-b54a-11d238ac9f35
+
+	/// Company average gross salary vs the Lithuanian ICT average (negative = below market).
+	measure 'Salary vs Market %' = DIVIDE ( [Average Gross Salary], [Market ICT Avg Gross] ) - 1
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: 4 Pay & market
+		lineageTag: ad2ac631-dda9-5333-af01-ee0e95d019a1
+
+	/// PUBLIC DATA. Eurostat labour cost index, wages and salaries, ICT sector, Lithuania (2024-Q4 = 100).
+	measure 'Labour Cost Index ICT' =
+			VAR _q = SELECTEDVALUE ( DimDate[Quarter], MAX ( DimDate[Quarter] ) )
+			RETURN
+			    CALCULATE ( MAX ( Market[LabourCostIndexICT_2024Q4_100] ), TREATAS ( { _q }, Market[Quarter] ) )
+		formatString: 0.0
+		displayFolder: 4 Pay & market
+		lineageTag: 14ebf067-757b-59a5-9181-498b61c185f0
+
+	/// Median days from requisition opened to offer accepted (by date filled).
+	measure 'Median Days to Fill' = CALCULATE ( MEDIAN ( FactRecruiting[DaysToFill] ), FactRecruiting[Status] = "Filled" )
+		formatString: #,0
+		displayFolder: 5 Recruiting
+		lineageTag: 6f3c5799-39cd-5fe5-b98e-1f8cc269486a
+
+	/// Requisitions still open at the extract date.
+	measure 'Open Requisitions' = CALCULATE ( COUNTROWS ( FactRecruiting ), FactRecruiting[Status] = "Open", REMOVEFILTERS ( DimDate ) )
+		formatString: #,0
+		displayFolder: 5 Recruiting
+		lineageTag: 12f896e9-d71d-5dcd-9165-48c4b2b37f5c
+
+	/// Requisitions opened in the period (inactive relationship on OpenedDate).
+	measure 'Requisitions Opened' = CALCULATE ( COUNTROWS ( FactRecruiting ), USERELATIONSHIP ( FactRecruiting[OpenedDate], DimDate[Date] ) )
+		formatString: #,0
+		displayFolder: 5 Recruiting
+		lineageTag: fb14b11f-684e-52dd-896e-c549401a6ad2
+
+	/// Revenue by cost centre (HR cost-centre master applied).
+	measure Revenue = SUM ( FactFinance[Revenue] )
+		formatString: €#,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: 705bb057-ec6c-5c10-9a85-3fb06c141a50
+
+	/// Payroll cost + other cost.
+	measure 'Total Cost' = SUM ( FactFinance[PayrollCost] ) + SUM ( FactFinance[OtherCost] )
+		formatString: €#,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: 143bd886-e46a-5775-90c0-ef9890931335
+
+	/// Average monthly revenue per FTE over the months in context.
+	measure 'Revenue per FTE' = DIVIDE ( [Revenue], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
+		formatString: €#,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: 31011cba-013f-5b6d-952f-ca5311a86bd9
+
+	/// Average monthly cost per FTE over the months in context.
+	measure 'Cost per FTE' = DIVIDE ( [Total Cost], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
+		formatString: €#,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: fe87ccc3-31d8-5cf1-9fe0-76ea1aec2987
+
+	/// Revenue by the department written in the finance export (before the cost-centre fix).
+	measure 'Revenue (as reported by finance)' =
+			VAR _depts = VALUES ( DimOrg[Department] )
+			RETURN
+			    CALCULATE (
+			        SUM ( FactFinance[Revenue] ),
+			        REMOVEFILTERS ( DimOrg ),
+			        TREATAS ( _depts, FactFinance[DepartmentReported] )
+			    )
+		formatString: €#,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: 9589d0ec-40c4-57e6-b9bd-566da170bc1c
+
+	/// Revenue per FTE using the finance department mapping: shows the mis-mapped cost centre.
+	measure 'Revenue per FTE (as reported)' = DIVIDE ( [Revenue (as reported by finance)], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
+		formatString: €#,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: 6efa12fa-45ae-520b-83af-a202b93fe363
+
+	/// People paid in the last month in context (finance export).
+	measure 'Finance Headcount' =
+			VAR _m = MAX ( DimDate[MonthStart] )
+			RETURN
+			    CALCULATE ( SUM ( FactFinance[PayrollHeadcount] ), REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )
+		formatString: #,0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: e41fc232-6175-5ebd-bbab-9791bd51773e
+
+	/// Finance headcount minus raw HRIS headcount. Explained by duplicate ids and leavers paid in their last month.
+	measure 'HR vs Finance Gap' = IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - [Headcount (raw HRIS)] )
+		formatString: +#,0;-#,0;0
+		displayFolder: 6 Finance & reconciliation
+		lineageTag: 85485f50-2fe0-58fc-8a40-a7230f7d2611
+
+	/// Share of timesheet rows entered more than 10 days after month end.
+	measure 'Late Timesheets %' = DIVIDE ( CALCULATE ( COUNTROWS ( FactTimesheet ), FactTimesheet[EntryLagDays] > 10 ), COUNTROWS ( FactTimesheet ) )
+		formatString: 0.0%
+		displayFolder: 7 Data quality
+		lineageTag: 77ab558a-1efc-53fc-bca8-f5e77649525f
+
+	/// Closed or provisional (timesheet cut-off rule).
+	measure 'Month Status' = IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional: timesheets still arriving" )
+		displayFolder: 7 Data quality
+		lineageTag: 1298d687-0e8c-5b95-b034-af5541af3798
+
+	partition _Measures = m
+		mode: import
+		source = #table(type table [Measures = text], {})
+
+	column Measures
+		dataType: string
+		isHidden
+		lineageTag: ff3ad31d-3796-55c5-9076-ce4fb752aba9
+		summarizeBy: none
+		sourceColumn: Measures

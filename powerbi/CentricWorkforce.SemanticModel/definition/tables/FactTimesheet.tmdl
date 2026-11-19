@@ -1,0 +1,100 @@
+/// Hours per person and month as received at the extract date (6 Nov 2026). SIMULATED.
+table FactTimesheet
+	lineageTag: 26b2f7f7-1d96-54eb-9718-4401610fbe0e
+
+	column MonthStart
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		lineageTag: a9f26ad2-0e50-5324-a3ad-15ac05c45857
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EmployeeId
+		dataType: string
+		lineageTag: 92e3e1e4-ec7d-54d9-ae06-7bb01c77f70d
+		summarizeBy: none
+		sourceColumn: EmployeeId
+
+	column EmployeeKey
+		dataType: string
+		isHidden
+		lineageTag: ad17ebde-6b1d-5601-8cfa-e4743d5c30c3
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column CostCenter
+		dataType: string
+		isHidden
+		lineageTag: 1ff61e0b-77ec-57d4-80c4-431b7b224f16
+		summarizeBy: none
+		sourceColumn: CostCenter
+
+	column Grade
+		dataType: string
+		isHidden
+		lineageTag: c4197685-4c91-5eeb-997f-4a812944326d
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column BillableHours
+		dataType: double
+		formatString: #,0
+		lineageTag: da83d7a6-d8ca-5c1d-a46f-202031c49e03
+		summarizeBy: none
+		sourceColumn: BillableHours
+
+	column NonBillableHours
+		dataType: double
+		formatString: #,0
+		lineageTag: d7906b7a-605f-5cc8-9588-f31600c02e8e
+		summarizeBy: none
+		sourceColumn: NonBillableHours
+
+	column BenchHours
+		dataType: double
+		formatString: #,0
+		lineageTag: f68cdbcd-fbe5-5664-9ce0-41b0d84e2d15
+		summarizeBy: none
+		sourceColumn: BenchHours
+
+	column OvertimeHours
+		dataType: double
+		formatString: #,0
+		lineageTag: 815f8716-4bb5-5693-a2ff-4ab987a8e996
+		summarizeBy: none
+		sourceColumn: OvertimeHours
+
+	column EnteredDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 849bd12a-e9d7-57c1-b593-acf8c4c6be0d
+		summarizeBy: none
+		sourceColumn: EnteredDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EntryLagDays
+		dataType: int64
+		lineageTag: 878779c2-ca51-5809-b9c5-4486faed8b37
+		summarizeBy: none
+		sourceColumn: EntryLagDays
+
+	column LoggedHours
+		dataType: double
+		lineageTag: e1b77722-0a23-5f9b-8d97-f828f41cb2ee
+		summarizeBy: none
+		sourceColumn: LoggedHours
+
+	partition FactTimesheet = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "FactTimesheet.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"MonthStart", type date}, {"EmployeeId", type text}, {"EmployeeKey", type text}, {"CostCenter", type text}, {"Grade", type text}, {"BillableHours", type number}, {"NonBillableHours", type number}, {"BenchHours", type number}, {"OvertimeHours", type number}, {"EnteredDate", type date}, {"EntryLagDays", Int64.Type}}, "en-US"),
+					Logged = Table.AddColumn(Typed, "LoggedHours", each [BillableHours] + [NonBillableHours] + [BenchHours], type number)
+				in
+					Logged

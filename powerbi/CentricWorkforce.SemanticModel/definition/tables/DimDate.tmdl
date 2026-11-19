@@ -1,0 +1,95 @@
+/// Calendar Nov 2024 - Oct 2026 with Lithuanian public holidays, working days and the timesheet cut-off flag.
+table DimDate
+	lineageTag: 0779acd1-af58-5b2e-ad77-58b33f24358a
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: yyyy-mm-dd
+		lineageTag: d113700b-9739-5b60-b621-80482f1a3406
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MonthStart
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: c422258c-bacc-58ce-8107-6fda6da69584
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		lineageTag: d57c5292-bdfb-5e95-bb3e-ce1fcdcf89e4
+		summarizeBy: none
+		sourceColumn: Year
+
+	column Quarter
+		dataType: string
+		lineageTag: 10202c88-cc5b-5353-a9af-2ca86b9b0fee
+		summarizeBy: none
+		sourceColumn: Quarter
+
+	column MonthNumber
+		dataType: int64
+		lineageTag: c227b9f5-9584-5b9a-922c-0286e074f87f
+		summarizeBy: none
+		sourceColumn: MonthNumber
+
+	column MonthLabel
+		dataType: string
+		lineageTag: 34973b37-6df6-5cad-9127-e8687750bd57
+		summarizeBy: none
+		sourceColumn: MonthLabel
+		sortByColumn: MonthIndex
+
+	column MonthIndex
+		dataType: int64
+		isHidden
+		lineageTag: f8a5674f-05e1-577a-a835-4d27cf44cf5c
+		summarizeBy: none
+		sourceColumn: MonthIndex
+
+	column HolidayName
+		dataType: string
+		lineageTag: 26f79ac7-0dff-5426-9c52-3f25a6edffe1
+		summarizeBy: none
+		sourceColumn: HolidayName
+
+	column IsWorkingDay
+		dataType: int64
+		lineageTag: ea8f6970-4c7e-5898-b0ed-7615d5904426
+		summarizeBy: none
+		sourceColumn: IsWorkingDay
+
+	column WorkingDaysInMonth
+		dataType: int64
+		lineageTag: 27124e86-d6d3-5565-ba78-4f454e482318
+		summarizeBy: none
+		sourceColumn: WorkingDaysInMonth
+
+	column IsClosedMonth
+		dataType: int64
+		lineageTag: 3ac0529d-8b05-5e30-ac1d-7cfd3cc7054b
+		summarizeBy: none
+		sourceColumn: IsClosedMonth
+
+	column IsFinanceClosedMonth
+		dataType: int64
+		lineageTag: 2b7ed80b-ef4a-567e-8698-d22f4551fe01
+		summarizeBy: none
+		sourceColumn: IsFinanceClosedMonth
+
+	partition DimDate = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "DimDate.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"Date", type date}, {"MonthStart", type date}, {"Year", Int64.Type}, {"Quarter", type text}, {"MonthNumber", Int64.Type}, {"MonthLabel", type text}, {"MonthIndex", Int64.Type}, {"HolidayName", type text}, {"IsWorkingDay", Int64.Type}, {"WorkingDaysInMonth", Int64.Type}, {"IsClosedMonth", Int64.Type}, {"IsFinanceClosedMonth", Int64.Type}}, "en-US")
+				in
+					Typed

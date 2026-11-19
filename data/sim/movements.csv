@@ -1,0 +1,567 @@
+movement_id,date,employee_id,movement_type,exit_type,exit_reason,regretted,from_department,to_department
+M00001,2024-11-04,E0576,Hire,,,,,Delivery 1
+M00002,2024-11-07,E0571,Hire,,,,,Data & Cloud
+M00003,2024-11-07,E0578,Hire,,,,,Delivery 3
+M00004,2024-11-12,E0573,Hire,,,,,Delivery 2
+M00005,2024-11-12,E0577,Hire,,,,,Sales
+M00006,2024-11-13,E0022,Exit,Voluntary,Relocation,False,Delivery 1,
+M00007,2024-11-13,E0314,Transfer,,,,Delivery 3,Delivery 1
+M00008,2024-11-14,E0089,Exit,Voluntary,Career growth,True,Delivery 1,
+M00009,2024-11-14,E0093,Transfer,,,,Delivery 1,Data & Cloud
+M00010,2024-11-15,E0016,Exit,Voluntary,Personal,False,Delivery 1,
+M00011,2024-11-19,E0226,Transfer,,,,Delivery 2,Delivery 3
+M00012,2024-11-21,E0575,Hire,,,,,Data & Cloud
+M00013,2024-11-22,E0572,Hire,,,,,Delivery 2
+M00014,2024-11-24,E0574,Hire,,,,,Delivery 3
+M00015,2024-12-02,E0393,Transfer,,,,Data & Cloud,Delivery 1
+M00016,2024-12-07,E0200,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00017,2024-12-08,E0091,Exit,Voluntary,Personal,False,Delivery 1,
+M00018,2024-12-08,E0213,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00019,2024-12-08,E0581,Hire,,,,,Support functions
+M00020,2024-12-09,E0580,Hire,,,,,Delivery 1
+M00021,2024-12-12,E0585,Hire,,,,,Sales
+M00022,2024-12-14,E0244,Exit,Voluntary,Career growth,True,Delivery 2,
+M00023,2024-12-14,E0582,Hire,,,,,Delivery 3
+M00024,2024-12-17,E0390,Exit,Voluntary,Better pay elsewhere,False,Data & Cloud,
+M00025,2024-12-18,E0215,Exit,Voluntary,Relocation,True,Delivery 2,
+M00026,2024-12-21,E0579,Hire,,,,,Delivery 1
+M00027,2024-12-24,E0373,Exit,Voluntary,Other,False,Data & Cloud,
+M00028,2024-12-24,E0409,Exit,Voluntary,Better pay elsewhere,True,Data & Cloud,
+M00029,2024-12-25,E0584,Hire,,,,,Delivery 2
+M00030,2024-12-29,E0586,Hire,,,,,Delivery 2
+M00031,2024-12-30,E0583,Hire,,,,,Delivery 1
+M00032,2025-01-01,E0588,Hire,,,,,Delivery 1
+M00033,2025-01-02,E0097,Exit,Voluntary,Other,False,Delivery 1,
+M00034,2025-01-07,E0112,Exit,Voluntary,Other,False,Delivery 1,
+M00035,2025-01-10,E0017,Transfer,,,,Delivery 1,Delivery 2
+M00036,2025-01-11,E0589,Hire,,,,,Delivery 1
+M00037,2025-01-15,E0241,Exit,Voluntary,Personal,True,Delivery 2,
+M00038,2025-01-18,E0040,Exit,Voluntary,Career growth,True,Delivery 1,
+M00039,2025-01-18,E0422,Exit,Voluntary,Other,True,Data & Cloud,
+M00040,2025-01-20,E0019,Exit,Involuntary,Performance,False,Delivery 1,
+M00041,2025-01-21,E0410,Exit,Voluntary,Career growth,False,Data & Cloud,
+M00042,2025-01-21,E0587,Hire,,,,,Delivery 1
+M00043,2025-01-23,E0313,Transfer,,,,Delivery 3,Delivery 2
+M00044,2025-02-01,E0590,Hire,,,,,Delivery 1
+M00045,2025-02-04,E0593,Hire,,,,,Delivery 2
+M00046,2025-02-05,E0585,Exit,Voluntary,Career growth,False,Sales,
+M00047,2025-02-05,E0592,Hire,,,,,Delivery 2
+M00048,2025-02-06,E0400,Exit,Voluntary,Personal,True,Data & Cloud,
+M00049,2025-02-08,E0594,Hire,,,,,Data & Cloud
+M00050,2025-02-09,E0256,Transfer,,,,Delivery 2,Delivery 3
+M00051,2025-02-10,E0595,Hire,,,,,Data & Cloud
+M00052,2025-02-13,E0314,Exit,Involuntary,End of fixed-term contract,False,Delivery 1,
+M00053,2025-02-18,E0096,Transfer,,,,Delivery 1,Data & Cloud
+M00054,2025-02-18,E0446,Transfer,,,,Data & Cloud,Delivery 3
+M00055,2025-02-19,E0117,Exit,Voluntary,Better pay elsewhere,False,Delivery 1,
+M00056,2025-02-19,E0140,Exit,Voluntary,Relocation,True,Delivery 2,
+M00057,2025-02-20,E0591,Hire,,,,,Delivery 2
+M00058,2025-03-02,E0064,Exit,Involuntary,Performance,False,Delivery 1,
+M00059,2025-03-04,E0596,Hire,,,,,Delivery 1
+M00060,2025-03-11,E0586,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00061,2025-03-11,E0597,Hire,,,,,Delivery 1
+M00062,2025-03-12,E0065,Exit,Voluntary,Better pay elsewhere,False,Delivery 1,
+M00063,2025-03-14,E0216,Exit,Voluntary,Relocation,True,Delivery 2,
+M00064,2025-03-18,E0067,Exit,Voluntary,Career growth,False,Delivery 1,
+M00065,2025-03-20,E0599,Hire,,,,,Delivery 1
+M00066,2025-03-22,E0600,Hire,,,,,Delivery 2
+M00067,2025-03-22,E0601,Hire,,,,,Data & Cloud
+M00068,2025-03-22,E0602,Hire,,,,,Data & Cloud
+M00069,2025-03-26,E0598,Hire,,,,,Delivery 1
+M00070,2025-03-27,E0149,Exit,Involuntary,Performance,False,Delivery 2,
+M00071,2025-04-01,E0618,Hire,,,,,Delivery 1
+M00072,2025-04-02,E0613,Hire,,,,,Data & Cloud
+M00073,2025-04-04,E0615,Hire,,,,,Delivery 1
+M00074,2025-04-06,E0603,Hire,,,,,Delivery 2
+M00075,2025-04-06,E0607,Hire,,,,,Delivery 1
+M00076,2025-04-07,E0608,Hire,,,,,Data & Cloud
+M00077,2025-04-07,E0609,Hire,,,,,Data & Cloud
+M00078,2025-04-09,E0606,Hire,,,,,Delivery 1
+M00079,2025-04-10,E0617,Hire,,,,,Delivery 1
+M00080,2025-04-15,E0136,Exit,Voluntary,Career growth,True,Delivery 2,
+M00081,2025-04-15,E0614,Hire,,,,,Delivery 1
+M00082,2025-04-16,E0619,Hire,,,,,Delivery 1
+M00083,2025-04-17,E0275,Exit,Voluntary,Better pay elsewhere,True,Delivery 3,
+M00084,2025-04-19,E0620,Hire,,,,,Delivery 1
+M00085,2025-04-20,E0604,Hire,,,,,Delivery 1
+M00086,2025-04-22,E0610,Hire,,,,,Data & Cloud
+M00087,2025-04-22,E0612,Hire,,,,,Delivery 1
+M00088,2025-04-23,E0605,Hire,,,,,Data & Cloud
+M00089,2025-04-24,E0071,Transfer,,,,Delivery 1,Delivery 3
+M00090,2025-04-24,E0578,Transfer,,,,Delivery 3,Delivery 1
+M00091,2025-04-24,E0616,Hire,,,,,Data & Cloud
+M00092,2025-04-27,E0151,Transfer,,,,Delivery 2,Delivery 3
+M00093,2025-04-28,E0537,Exit,Involuntary,Performance,False,Support functions,
+M00094,2025-04-30,E0611,Hire,,,,,Delivery 1
+M00095,2025-05-03,E0629,Hire,,,,,Data & Cloud
+M00096,2025-05-04,E0075,Exit,Voluntary,Relocation,False,Delivery 1,
+M00097,2025-05-04,E0625,Hire,,,,,Delivery 2
+M00098,2025-05-06,E0624,Hire,,,,,Delivery 2
+M00099,2025-05-06,E0633,Hire,,,,,Delivery 1
+M00100,2025-05-07,E0475,Exit,Voluntary,Other,True,Sales,
+M00101,2025-05-07,E0622,Hire,,,,,Delivery 1
+M00102,2025-05-13,E0576,Transfer,,,,Delivery 1,Data & Cloud
+M00103,2025-05-14,E0631,Hire,,,,,Data & Cloud
+M00104,2025-05-16,E0187,Transfer,,,,Delivery 2,Delivery 1
+M00105,2025-05-16,E0621,Hire,,,,,Delivery 1
+M00106,2025-05-16,E0634,Hire,,,,,Delivery 1
+M00107,2025-05-17,E0630,Hire,,,,,Data & Cloud
+M00108,2025-05-18,E0251,Exit,Involuntary,Misconduct,False,Delivery 2,
+M00109,2025-05-20,E0626,Hire,,,,,Data & Cloud
+M00110,2025-05-21,E0638,Hire,,,,,Delivery 1
+M00111,2025-05-23,E0640,Hire,,,,,Delivery 1
+M00112,2025-05-26,E0637,Hire,,,,,Delivery 1
+M00113,2025-05-27,E0632,Hire,,,,,Data & Cloud
+M00114,2025-05-27,E0635,Hire,,,,,Delivery 1
+M00115,2025-05-29,E0623,Hire,,,,,Delivery 2
+M00116,2025-05-29,E0627,Hire,,,,,Data & Cloud
+M00117,2025-05-29,E0628,Hire,,,,,Delivery 1
+M00118,2025-05-30,E0096,Exit,Voluntary,Personal,False,Data & Cloud,
+M00119,2025-05-31,E0636,Hire,,,,,Data & Cloud
+M00120,2025-05-31,E0639,Hire,,,,,Data & Cloud
+M00121,2025-06-01,E0643,Hire,,,,,Delivery 1
+M00122,2025-06-02,E0651,Hire,,,,,Delivery 1
+M00123,2025-06-03,E0655,Hire,,,,,Data & Cloud
+M00124,2025-06-05,E0654,Hire,,,,,Delivery 1
+M00125,2025-06-07,E0252,Transfer,,,,Delivery 2,Data & Cloud
+M00126,2025-06-07,E0598,Exit,Voluntary,Onboarding / team fit,False,Delivery 1,
+M00127,2025-06-08,E0260,Exit,Involuntary,End of fixed-term contract,False,Delivery 2,
+M00128,2025-06-08,E0608,Exit,Voluntary,Onboarding / team fit,False,Data & Cloud,
+M00129,2025-06-08,E0645,Hire,,,,,Data & Cloud
+M00130,2025-06-08,E0648,Hire,,,,,Data & Cloud
+M00131,2025-06-09,E0644,Hire,,,,,Delivery 1
+M00132,2025-06-15,E0274,Transfer,,,,Delivery 3,Data & Cloud
+M00133,2025-06-15,E0635,Exit,Voluntary,Better pay elsewhere,True,Delivery 1,
+M00134,2025-06-15,E0649,Hire,,,,,Data & Cloud
+M00135,2025-06-16,E0646,Hire,,,,,Delivery 1
+M00136,2025-06-19,E0571,Transfer,,,,Data & Cloud,Delivery 3
+M00137,2025-06-19,E0650,Hire,,,,,Data & Cloud
+M00138,2025-06-22,E0279,Exit,Voluntary,Better pay elsewhere,True,Delivery 3,
+M00139,2025-06-22,E0600,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00140,2025-06-22,E0609,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00141,2025-06-22,E0615,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00142,2025-06-24,E0642,Hire,,,,,Support functions
+M00143,2025-06-25,E0641,Hire,,,,,Delivery 3
+M00144,2025-06-26,E0653,Hire,,,,,Data & Cloud
+M00145,2025-06-27,E0396,Transfer,,,,Data & Cloud,Delivery 2
+M00146,2025-06-27,E0647,Hire,,,,,Delivery 1
+M00147,2025-06-27,E0652,Hire,,,,,Data & Cloud
+M00148,2025-06-27,E0656,Hire,,,,,Delivery 1
+M00149,2025-06-28,E0657,Hire,,,,,Data & Cloud
+M00150,2025-07-03,E0187,Exit,Voluntary,Career growth,False,Delivery 1,
+M00151,2025-07-03,E0623,Exit,Voluntary,Career growth,False,Delivery 2,
+M00152,2025-07-06,E0574,Exit,Voluntary,Career growth,False,Delivery 3,
+M00153,2025-07-11,E0455,Transfer,,,,Data & Cloud,Delivery 3
+M00154,2025-07-12,E0658,Hire,,,,,Delivery 1
+M00155,2025-07-14,E0576,Exit,Voluntary,Career growth,False,Data & Cloud,
+M00156,2025-07-15,E0659,Hire,,,,,Delivery 2
+M00157,2025-07-16,E0416,Exit,Voluntary,Better pay elsewhere,False,Data & Cloud,
+M00158,2025-07-18,E0105,Transfer,,,,Delivery 1,Delivery 2
+M00159,2025-07-20,E0660,Hire,,,,,Sales
+M00160,2025-07-21,E0603,Exit,Voluntary,Role not as expected,False,Delivery 2,
+M00161,2025-07-22,E0218,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00162,2025-07-23,E0638,Exit,Voluntary,Onboarding / team fit,False,Delivery 1,
+M00163,2025-07-27,E0285,Exit,Voluntary,Career growth,True,Delivery 3,
+M00164,2025-07-29,E0534,Exit,Voluntary,Other,True,Support functions,
+M00165,2025-07-31,E0632,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00166,2025-08-02,E0438,Exit,Voluntary,Better pay elsewhere,True,Data & Cloud,
+M00167,2025-08-05,E0571,Exit,Voluntary,Other,False,Delivery 3,
+M00168,2025-08-06,E0580,Transfer,,,,Delivery 1,Delivery 3
+M00169,2025-08-07,E0661,Hire,,,,,Delivery 2
+M00170,2025-08-08,E0092,Transfer,,,,Delivery 1,Data & Cloud
+M00171,2025-08-08,E0665,Hire,,,,,Data & Cloud
+M00172,2025-08-09,E0367,Exit,Involuntary,Misconduct,False,Delivery 3,
+M00173,2025-08-14,E0273,Exit,Voluntary,Career growth,True,Delivery 3,
+M00174,2025-08-14,E0662,Hire,,,,,Delivery 3
+M00175,2025-08-18,E0655,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00176,2025-08-20,E0664,Hire,,,,,Delivery 2
+M00177,2025-08-21,E0643,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00178,2025-08-22,E0007,Exit,Voluntary,Career growth,False,Delivery 1,
+M00179,2025-08-23,E0169,Transfer,,,,Delivery 2,Data & Cloud
+M00180,2025-08-24,E0248,Exit,Voluntary,Career growth,False,Delivery 2,
+M00181,2025-08-24,E0663,Hire,,,,,Delivery 1
+M00182,2025-08-26,E0056,Exit,Involuntary,End of fixed-term contract,False,Delivery 1,
+M00183,2025-08-27,E0666,Hire,,,,,Delivery 1
+M00184,2025-08-29,E0039,Exit,Voluntary,Better pay elsewhere,False,Delivery 1,
+M00185,2025-08-29,E0536,Exit,Involuntary,Performance,False,Support functions,
+M00186,2025-09-01,E0690,Hire,,,,,Delivery 3
+M00187,2025-09-02,E0686,Hire,,,,,Delivery 2
+M00188,2025-09-06,E0147,Exit,Voluntary,Better pay elsewhere,True,Delivery 2,
+M00189,2025-09-07,E0688,Hire,,,,,Data & Cloud
+M00190,2025-09-08,E0049,Exit,Voluntary,Career growth,False,Delivery 1,
+M00191,2025-09-09,E0179,Exit,Voluntary,Career growth,False,Delivery 2,
+M00192,2025-09-09,E0687,Hire,,,,,Delivery 3
+M00193,2025-09-10,E0573,Exit,Voluntary,Career growth,False,Delivery 2,
+M00194,2025-09-11,E0622,Exit,Voluntary,Better pay elsewhere,False,Delivery 1,
+M00195,2025-09-15,E0495,Exit,Voluntary,Better pay elsewhere,False,Sales,
+M00196,2025-09-16,E0693,Hire,,,,,Delivery 2
+M00197,2025-09-17,E0636,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00198,2025-09-19,E0692,Hire,,,,,Delivery 2
+M00199,2025-09-20,E0375,Exit,Voluntary,Relocation,True,Data & Cloud,
+M00200,2025-09-20,E0654,Exit,Voluntary,Onboarding / team fit,True,Delivery 1,
+M00201,2025-09-21,E0474,Exit,Voluntary,Other,True,Sales,
+M00202,2025-09-21,E0606,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00203,2025-09-21,E0691,Hire,,,,,Data & Cloud
+M00204,2025-09-22,E0083,Exit,Involuntary,Performance,False,Delivery 1,
+M00205,2025-09-23,E0650,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00206,2025-09-24,E0695,Hire,,,,,Delivery 1
+M00207,2025-09-25,E0130,Exit,Voluntary,Better pay elsewhere,False,Delivery 1,
+M00208,2025-09-25,E0444,Exit,Voluntary,Better pay elsewhere,True,Data & Cloud,
+M00209,2025-09-26,E0188,Exit,Involuntary,End of fixed-term contract,False,Delivery 2,
+M00210,2025-09-26,E0694,Hire,,,,,Data & Cloud
+M00211,2025-09-27,E0262,Transfer,,,,Delivery 3,Data & Cloud
+M00212,2025-09-28,E0685,Hire,,,,,Delivery 1
+M00213,2025-09-28,E0689,Hire,,,,,Support functions
+M00214,2025-10-01,E0619,Exit,Voluntary,Onboarding / team fit,False,Delivery 1,
+M00215,2025-10-01,E0698,Hire,,,,,Delivery 1
+M00216,2025-10-02,E0697,Hire,,,,,Delivery 1
+M00217,2025-10-02,E0699,Hire,,,,,Delivery 3
+M00218,2025-10-02,E0700,Hire,,,,,Delivery 3
+M00219,2025-10-06,E0287,Exit,Voluntary,Better pay elsewhere,False,Delivery 3,
+M00220,2025-10-06,E0704,Hire,,,,,Delivery 1
+M00221,2025-10-07,E0378,Transfer,,,,Data & Cloud,Delivery 3
+M00222,2025-10-09,E0646,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00223,2025-10-14,E0617,Exit,Voluntary,Personal,False,Delivery 1,
+M00224,2025-10-14,E0644,Exit,Voluntary,Better pay elsewhere,False,Delivery 1,
+M00225,2025-10-16,E0653,Exit,Voluntary,Onboarding / team fit,False,Data & Cloud,
+M00226,2025-10-16,E0705,Hire,,,,,Data & Cloud
+M00227,2025-10-19,E0701,Hire,,,,,Data & Cloud
+M00228,2025-10-19,E0703,Hire,,,,,Delivery 3
+M00229,2025-10-20,E0219,Exit,Voluntary,Personal,False,Delivery 2,
+M00230,2025-10-20,E0630,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00231,2025-10-25,E0420,Transfer,,,,Data & Cloud,Delivery 1
+M00232,2025-10-27,E0702,Hire,,,,,Support functions
+M00233,2025-10-27,E0706,Hire,,,,,Delivery 1
+M00234,2025-10-30,E0696,Hire,,,,,Delivery 1
+M00235,2025-11-01,E0718,Hire,,,,,Delivery 1
+M00236,2025-11-02,E0717,Hire,,,,,Delivery 2
+M00237,2025-11-03,E0640,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00238,2025-11-03,E0713,Hire,,,,,Data & Cloud
+M00239,2025-11-03,E0721,Hire,,,,,Delivery 1
+M00240,2025-11-05,E0460,Exit,Voluntary,Career growth,True,Data & Cloud,
+M00241,2025-11-06,E0274,Exit,Voluntary,Better pay elsewhere,True,Data & Cloud,
+M00242,2025-11-07,E0058,Exit,Voluntary,Better pay elsewhere,True,Delivery 1,
+M00243,2025-11-08,E0459,Exit,Involuntary,End of fixed-term contract,False,Data & Cloud,
+M00244,2025-11-10,E0268,Transfer,,,,Delivery 3,Data & Cloud
+M00245,2025-11-13,E0720,Hire,,,,,Data & Cloud
+M00246,2025-11-14,E0185,Exit,Voluntary,Better pay elsewhere,True,Delivery 2,
+M00247,2025-11-14,E0715,Hire,,,,,Sales
+M00248,2025-11-14,E0716,Hire,,,,,Sales
+M00249,2025-11-16,E0342,Transfer,,,,Delivery 3,Delivery 2
+M00250,2025-11-17,E0707,Hire,,,,,Delivery 1
+M00251,2025-11-17,E0709,Hire,,,,,Delivery 1
+M00252,2025-11-17,E0710,Hire,,,,,Delivery 2
+M00253,2025-11-18,E0711,Hire,,,,,Delivery 2
+M00254,2025-11-18,E0712,Hire,,,,,Delivery 2
+M00255,2025-11-18,E0719,Hire,,,,,Delivery 1
+M00256,2025-11-19,E0184,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00257,2025-11-21,E0722,Hire,,,,,Delivery 2
+M00258,2025-11-23,E0649,Exit,Voluntary,Onboarding / team fit,False,Data & Cloud,
+M00259,2025-11-23,E0714,Hire,,,,,Data & Cloud
+M00260,2025-11-24,E0295,Transfer,,,,Delivery 3,Data & Cloud
+M00261,2025-11-28,E0186,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00262,2025-11-30,E0708,Hire,,,,,Delivery 1
+M00263,2025-12-02,E0727,Hire,,,,,Data & Cloud
+M00264,2025-12-04,E0726,Hire,,,,,Delivery 1
+M00265,2025-12-05,E0723,Hire,,,,,Delivery 2
+M00266,2025-12-07,E0688,Exit,Voluntary,Better pay elsewhere,True,Data & Cloud,
+M00267,2025-12-08,E0300,Transfer,,,,Delivery 3,Data & Cloud
+M00268,2025-12-10,E0256,Exit,Voluntary,Better pay elsewhere,False,Delivery 3,
+M00269,2025-12-11,E0269,Exit,Voluntary,Relocation,True,Delivery 3,
+M00270,2025-12-14,E0724,Hire,,,,,Delivery 3
+M00271,2025-12-14,E0729,Hire,,,,,Delivery 1
+M00272,2025-12-18,E0398,Exit,Involuntary,End of fixed-term contract,False,Data & Cloud,
+M00273,2025-12-19,E0725,Hire,,,,,Delivery 1
+M00274,2025-12-20,E0731,Hire,,,,,Support functions
+M00275,2025-12-24,E0154,Exit,Involuntary,End of fixed-term contract,False,Delivery 2,
+M00276,2025-12-28,E0730,Hire,,,,,Data & Cloud
+M00277,2025-12-29,E0732,Hire,,,,,Delivery 3
+M00278,2025-12-30,E0728,Hire,,,,,Delivery 1
+M00279,2026-01-03,E0738,Hire,,,,,Delivery 1
+M00280,2026-01-06,E0734,Hire,,,,,Delivery 2
+M00281,2026-01-08,E0733,Hire,,,,,Delivery 1
+M00282,2026-01-11,E0740,Hire,,,,,Sales
+M00283,2026-01-13,E0331,Exit,Voluntary,Better pay elsewhere,False,Delivery 3,
+M00284,2026-01-14,E0156,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00285,2026-01-16,E0698,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00286,2026-01-16,E0736,Hire,,,,,Data & Cloud
+M00287,2026-01-17,E0737,Hire,,,,,Data & Cloud
+M00288,2026-01-18,E0354,Transfer,,,,Delivery 3,Delivery 1
+M00289,2026-01-22,E0735,Hire,,,,,Data & Cloud
+M00290,2026-01-22,E0739,Hire,,,,,Data & Cloud
+M00291,2026-01-23,E0578,Exit,Voluntary,Career growth,True,Delivery 1,
+M00292,2026-01-24,E0514,Exit,Involuntary,End of fixed-term contract,False,Support functions,
+M00293,2026-01-28,E0483,Exit,Involuntary,Performance,False,Sales,
+M00294,2026-01-29,E0202,Exit,Involuntary,End of fixed-term contract,False,Delivery 2,
+M00295,2026-02-01,E0660,Exit,Voluntary,Personal,False,Sales,
+M00296,2026-02-07,E0196,Transfer,,,,Delivery 2,Delivery 1
+M00297,2026-02-13,E0587,Exit,Voluntary,Personal,False,Delivery 1,
+M00298,2026-02-13,E0743,Hire,,,,,Delivery 3
+M00299,2026-02-18,E0745,Hire,,,,,Data & Cloud
+M00300,2026-02-20,E0493,Exit,Voluntary,Personal,True,Sales,
+M00301,2026-02-23,E0742,Hire,,,,,Delivery 3
+M00302,2026-02-24,E0432,Exit,Involuntary,Performance,False,Data & Cloud,
+M00303,2026-02-24,E0725,Exit,Voluntary,Role not as expected,False,Delivery 1,
+M00304,2026-02-24,E0744,Hire,,,,,Data & Cloud
+M00305,2026-02-26,E0741,Hire,,,,,Delivery 2
+M00306,2026-03-02,E0323,Exit,Voluntary,Better pay elsewhere,True,Delivery 3,
+M00307,2026-03-02,E0705,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00308,2026-03-03,E0435,Exit,Voluntary,Workload / burnout,True,Data & Cloud,
+M00309,2026-03-04,E0748,Hire,,,,,Delivery 3
+M00310,2026-03-05,E0457,Exit,Voluntary,Workload / burnout,True,Data & Cloud,
+M00311,2026-03-05,E0713,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00312,2026-03-07,E0747,Hire,,,,,Delivery 2
+M00313,2026-03-08,E0116,Exit,Voluntary,Personal,False,Delivery 1,
+M00314,2026-03-09,E0709,Exit,Voluntary,Onboarding / team fit,False,Delivery 1,
+M00315,2026-03-10,E0455,Exit,Voluntary,Better pay elsewhere,False,Delivery 3,
+M00316,2026-03-13,E0749,Hire,,,,,Sales
+M00317,2026-03-16,E0750,Hire,,,,,Support functions
+M00318,2026-03-17,E0746,Hire,,,,,Delivery 2
+M00319,2026-03-17,E0752,Hire,,,,,Delivery 1
+M00320,2026-03-18,E0588,Exit,Involuntary,Performance,False,Delivery 1,
+M00321,2026-03-19,E0421,Exit,Involuntary,End of fixed-term contract,False,Data & Cloud,
+M00322,2026-03-21,E0107,Exit,Voluntary,Personal,True,Delivery 1,
+M00323,2026-03-23,E0751,Hire,,,,,Delivery 1
+M00324,2026-03-25,E0290,Transfer,,,,Delivery 3,Data & Cloud
+M00325,2026-03-26,E0356,Exit,Voluntary,Career growth,False,Delivery 3,
+M00326,2026-03-31,E0017,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00327,2026-03-31,E0105,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00328,2026-03-31,E0137,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00329,2026-03-31,E0139,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00330,2026-03-31,E0141,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00331,2026-03-31,E0142,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00332,2026-03-31,E0152,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00333,2026-03-31,E0153,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00334,2026-03-31,E0155,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00335,2026-03-31,E0163,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00336,2026-03-31,E0166,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00337,2026-03-31,E0173,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00338,2026-03-31,E0174,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00339,2026-03-31,E0177,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00340,2026-03-31,E0178,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00341,2026-03-31,E0180,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00342,2026-03-31,E0182,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00343,2026-03-31,E0190,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00344,2026-03-31,E0191,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00345,2026-03-31,E0192,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00346,2026-03-31,E0195,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00347,2026-03-31,E0205,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00348,2026-03-31,E0207,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00349,2026-03-31,E0210,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00350,2026-03-31,E0214,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00351,2026-03-31,E0221,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00352,2026-03-31,E0224,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00353,2026-03-31,E0227,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00354,2026-03-31,E0230,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00355,2026-03-31,E0234,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00356,2026-03-31,E0235,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00357,2026-03-31,E0236,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00358,2026-03-31,E0240,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00359,2026-03-31,E0243,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00360,2026-03-31,E0245,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00361,2026-03-31,E0249,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00362,2026-03-31,E0254,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00363,2026-03-31,E0255,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00364,2026-03-31,E0257,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00365,2026-03-31,E0313,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00366,2026-03-31,E0572,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00367,2026-03-31,E0591,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00368,2026-03-31,E0592,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00369,2026-03-31,E0593,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00370,2026-03-31,E0624,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00371,2026-03-31,E0693,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00372,2026-03-31,E0710,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00373,2026-03-31,E0712,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00374,2026-03-31,E0723,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00375,2026-03-31,E0734,Exit,Organisational change,Reorganisation,False,Delivery 2,
+M00376,2026-04-01,E0017,Hire,,,,,Delivery 2
+M00377,2026-04-01,E0105,Hire,,,,,Delivery 2
+M00378,2026-04-01,E0137,Hire,,,,,Delivery 2
+M00379,2026-04-01,E0139,Hire,,,,,Delivery 2
+M00380,2026-04-01,E0141,Hire,,,,,Delivery 2
+M00381,2026-04-01,E0142,Hire,,,,,Delivery 2
+M00382,2026-04-01,E0152,Hire,,,,,Delivery 2
+M00383,2026-04-01,E0153,Hire,,,,,Delivery 2
+M00384,2026-04-01,E0155,Hire,,,,,Delivery 2
+M00385,2026-04-01,E0163,Hire,,,,,Delivery 2
+M00386,2026-04-01,E0166,Hire,,,,,Delivery 2
+M00387,2026-04-01,E0173,Hire,,,,,Delivery 2
+M00388,2026-04-01,E0174,Hire,,,,,Delivery 2
+M00389,2026-04-01,E0177,Hire,,,,,Delivery 2
+M00390,2026-04-01,E0178,Hire,,,,,Delivery 2
+M00391,2026-04-01,E0180,Hire,,,,,Delivery 2
+M00392,2026-04-01,E0182,Hire,,,,,Delivery 2
+M00393,2026-04-01,E0190,Hire,,,,,Delivery 2
+M00394,2026-04-01,E0191,Hire,,,,,Delivery 2
+M00395,2026-04-01,E0192,Hire,,,,,Delivery 2
+M00396,2026-04-01,E0195,Hire,,,,,Delivery 2
+M00397,2026-04-01,E0205,Hire,,,,,Delivery 2
+M00398,2026-04-01,E0207,Hire,,,,,Delivery 2
+M00399,2026-04-01,E0210,Hire,,,,,Delivery 2
+M00400,2026-04-01,E0214,Hire,,,,,Delivery 2
+M00401,2026-04-01,E0221,Hire,,,,,Delivery 2
+M00402,2026-04-01,E0224,Hire,,,,,Delivery 2
+M00403,2026-04-01,E0227,Hire,,,,,Delivery 2
+M00404,2026-04-01,E0230,Hire,,,,,Delivery 2
+M00405,2026-04-01,E0234,Hire,,,,,Delivery 2
+M00406,2026-04-01,E0235,Hire,,,,,Delivery 2
+M00407,2026-04-01,E0236,Hire,,,,,Delivery 2
+M00408,2026-04-01,E0240,Hire,,,,,Delivery 2
+M00409,2026-04-01,E0243,Hire,,,,,Delivery 2
+M00410,2026-04-01,E0245,Hire,,,,,Delivery 2
+M00411,2026-04-01,E0249,Hire,,,,,Delivery 2
+M00412,2026-04-01,E0254,Hire,,,,,Delivery 2
+M00413,2026-04-01,E0255,Hire,,,,,Delivery 2
+M00414,2026-04-01,E0257,Hire,,,,,Delivery 2
+M00415,2026-04-01,E0313,Hire,,,,,Delivery 2
+M00416,2026-04-01,E0378,Exit,Voluntary,Other,True,Delivery 3,
+M00417,2026-04-01,E0572,Hire,,,,,Delivery 2
+M00418,2026-04-01,E0591,Hire,,,,,Delivery 2
+M00419,2026-04-01,E0592,Hire,,,,,Delivery 2
+M00420,2026-04-01,E0593,Hire,,,,,Delivery 2
+M00421,2026-04-01,E0624,Hire,,,,,Delivery 2
+M00422,2026-04-01,E0641,Exit,Voluntary,Relocation,False,Delivery 3,
+M00423,2026-04-01,E0693,Hire,,,,,Delivery 2
+M00424,2026-04-01,E0710,Hire,,,,,Delivery 2
+M00425,2026-04-01,E0712,Hire,,,,,Delivery 2
+M00426,2026-04-01,E0723,Hire,,,,,Delivery 2
+M00427,2026-04-01,E0734,Hire,,,,,Delivery 2
+M00428,2026-04-01,E0755,Hire,,,,,Delivery 1
+M00429,2026-04-05,E0148,Exit,Voluntary,Better pay elsewhere,True,Delivery 2,
+M00430,2026-04-07,E0625,Exit,Voluntary,Relocation,True,Delivery 2,
+M00431,2026-04-09,E0754,Hire,,,,,Sales
+M00432,2026-04-10,E0153,Exit,Voluntary,Better pay elsewhere,True,Delivery 2,
+M00433,2026-04-13,E0732,Exit,Voluntary,Role not as expected,False,Delivery 3,
+M00434,2026-04-17,E0037,Exit,Voluntary,Personal,False,Delivery 1,
+M00435,2026-04-17,E0103,Exit,Involuntary,Performance,False,Delivery 1,
+M00436,2026-04-17,E0710,Exit,Voluntary,Other,True,Delivery 2,
+M00437,2026-04-17,E0753,Hire,,,,,Data & Cloud
+M00438,2026-04-21,E0507,Exit,Voluntary,Better pay elsewhere,True,Support functions,
+M00439,2026-04-21,E0634,Exit,Voluntary,Career growth,False,Delivery 1,
+M00440,2026-04-22,E0716,Exit,Voluntary,Career growth,False,Sales,
+M00441,2026-04-24,E0278,Exit,Voluntary,Career growth,False,Delivery 3,
+M00442,2026-04-26,E0506,Exit,Involuntary,Misconduct,False,Support functions,
+M00443,2026-05-02,E0767,Hire,,,,,Data & Cloud
+M00444,2026-05-02,E0768,Hire,,,,,Delivery 1
+M00445,2026-05-04,E0765,Hire,,,,,Delivery 1
+M00446,2026-05-05,E0488,Exit,Voluntary,Better pay elsewhere,True,Sales,
+M00447,2026-05-06,E0756,Hire,,,,,Delivery 1
+M00448,2026-05-06,E0762,Hire,,,,,Data & Cloud
+M00449,2026-05-07,E0189,Exit,Voluntary,Better pay elsewhere,False,Delivery 2,
+M00450,2026-05-08,E0748,Exit,Voluntary,Onboarding / team fit,False,Delivery 3,
+M00451,2026-05-09,E0761,Hire,,,,,Delivery 3
+M00452,2026-05-09,E0763,Hire,,,,,Delivery 1
+M00453,2026-05-10,E0155,Transfer,,,,Delivery 2,Delivery 1
+M00454,2026-05-10,E0685,Exit,Voluntary,Career growth,True,Delivery 1,
+M00455,2026-05-11,E0408,Transfer,,,,Data & Cloud,Delivery 2
+M00456,2026-05-14,E0224,Exit,Involuntary,End of fixed-term contract,False,Delivery 2,
+M00457,2026-05-15,E0766,Hire,,,,,Data & Cloud
+M00458,2026-05-17,E0545,Exit,Voluntary,Career growth,True,Support functions,
+M00459,2026-05-20,E0758,Hire,,,,,Delivery 3
+M00460,2026-05-23,E0759,Hire,,,,,Data & Cloud
+M00461,2026-05-23,E0764,Hire,,,,,Data & Cloud
+M00462,2026-05-25,E0757,Hire,,,,,Delivery 3
+M00463,2026-05-29,E0664,Exit,Voluntary,Career growth,False,Delivery 2,
+M00464,2026-05-30,E0547,Exit,Voluntary,Other,True,Support functions,
+M00465,2026-05-30,E0760,Hire,,,,,Data & Cloud
+M00466,2026-06-01,E0770,Hire,,,,,Delivery 3
+M00467,2026-06-01,E0779,Hire,,,,,Delivery 2
+M00468,2026-06-04,E0595,Transfer,,,,Data & Cloud,Delivery 2
+M00469,2026-06-06,E0771,Hire,,,,,Delivery 3
+M00470,2026-06-07,E0778,Hire,,,,,Delivery 2
+M00471,2026-06-12,E0735,Exit,Voluntary,Workload / burnout,True,Data & Cloud,
+M00472,2026-06-15,E0175,Exit,Voluntary,Career growth,True,Delivery 2,
+M00473,2026-06-15,E0629,Exit,Voluntary,Workload / burnout,True,Data & Cloud,
+M00474,2026-06-16,E0433,Exit,Voluntary,Career growth,True,Data & Cloud,
+M00475,2026-06-16,E0498,Exit,Voluntary,Better pay elsewhere,True,Sales,
+M00476,2026-06-17,E0701,Transfer,,,,Data & Cloud,Delivery 1
+M00477,2026-06-19,E0445,Transfer,,,,Data & Cloud,Delivery 3
+M00478,2026-06-19,E0777,Hire,,,,,Delivery 3
+M00479,2026-06-20,E0775,Hire,,,,,Delivery 3
+M00480,2026-06-24,E0772,Hire,,,,,Support functions
+M00481,2026-06-25,E0776,Hire,,,,,Sales
+M00482,2026-06-26,E0355,Exit,Voluntary,Better pay elsewhere,True,Delivery 3,
+M00483,2026-06-26,E0708,Exit,Involuntary,End of fixed-term contract,False,Delivery 1,
+M00484,2026-06-28,E0769,Hire,,,,,Delivery 1
+M00485,2026-06-29,E0119,Exit,Voluntary,Other,False,Delivery 1,
+M00486,2026-06-29,E0360,Exit,Voluntary,Better pay elsewhere,False,Delivery 3,
+M00487,2026-06-29,E0774,Hire,,,,,Delivery 1
+M00488,2026-06-30,E0773,Hire,,,,,Delivery 2
+M00489,2026-07-01,E0767,Exit,Involuntary,Misconduct,False,Data & Cloud,
+M00490,2026-07-02,E0781,Hire,,,,,Sales
+M00491,2026-07-04,E0783,Hire,,,,,Support functions
+M00492,2026-07-09,E0784,Hire,,,,,Delivery 2
+M00493,2026-07-10,E0750,Exit,Voluntary,Onboarding / team fit,False,Support functions,
+M00494,2026-07-10,E0762,Exit,Voluntary,Role not as expected,False,Data & Cloud,
+M00495,2026-07-14,E0786,Hire,,,,,Delivery 2
+M00496,2026-07-15,E0780,Hire,,,,,Delivery 2
+M00497,2026-07-17,E0782,Hire,,,,,Support functions
+M00498,2026-07-19,E0374,Exit,Voluntary,Workload / burnout,True,Data & Cloud,
+M00499,2026-07-20,E0789,Hire,,,,,Data & Cloud
+M00500,2026-07-24,E0352,Exit,Voluntary,Relocation,True,Delivery 3,
+M00501,2026-07-24,E0787,Hire,,,,,Delivery 3
+M00502,2026-07-24,E0788,Hire,,,,,Data & Cloud
+M00503,2026-07-26,E0388,Transfer,,,,Data & Cloud,Delivery 1
+M00504,2026-07-27,E0291,Transfer,,,,Delivery 3,Delivery 2
+M00505,2026-07-31,E0785,Hire,,,,,Delivery 1
+M00506,2026-08-01,E0272,Exit,Involuntary,End of fixed-term contract,False,Delivery 3,
+M00507,2026-08-03,E0490,Exit,Voluntary,Career growth,True,Sales,
+M00508,2026-08-03,E0798,Hire,,,,,Delivery 3
+M00509,2026-08-05,E0659,Exit,Voluntary,Personal,False,Delivery 2,
+M00510,2026-08-07,E0796,Hire,,,,,Delivery 1
+M00511,2026-08-09,E0532,Exit,Voluntary,Career growth,True,Support functions,
+M00512,2026-08-10,E0105,Exit,Voluntary,Personal,True,Delivery 2,
+M00513,2026-08-10,E0792,Hire,,,,,Delivery 3
+M00514,2026-08-12,E0793,Hire,,,,,Delivery 3
+M00515,2026-08-13,E0755,Exit,Voluntary,Onboarding / team fit,False,Delivery 1,
+M00516,2026-08-13,E0790,Hire,,,,,Delivery 1
+M00517,2026-08-13,E0791,Hire,,,,,Delivery 2
+M00518,2026-08-13,E0797,Hire,,,,,Data & Cloud
+M00519,2026-08-15,E0031,Exit,Voluntary,Better pay elsewhere,True,Delivery 1,
+M00520,2026-08-23,E0237,Exit,Voluntary,Career growth,True,Delivery 2,
+M00521,2026-08-24,E0232,Exit,Voluntary,Better pay elsewhere,True,Delivery 2,
+M00522,2026-08-25,E0450,Exit,Voluntary,Career growth,True,Data & Cloud,
+M00523,2026-08-25,E0787,Exit,Voluntary,Other,False,Delivery 3,
+M00524,2026-08-26,E0794,Hire,,,,,Data & Cloud
+M00525,2026-08-28,E0789,Exit,Involuntary,Misconduct,False,Data & Cloud,
+M00526,2026-08-29,E0795,Hire,,,,,Data & Cloud
+M00527,2026-09-02,E0803,Hire,,,,,Data & Cloud
+M00528,2026-09-07,E0276,Exit,Involuntary,Performance,False,Delivery 3,
+M00529,2026-09-09,E0327,Exit,Voluntary,Better pay elsewhere,True,Delivery 3,
+M00530,2026-09-15,E0492,Exit,Voluntary,Personal,False,Sales,
+M00531,2026-09-18,E0799,Hire,,,,,Delivery 3
+M00532,2026-09-23,E0463,Exit,Voluntary,Career growth,False,Sales,
+M00533,2026-09-26,E0469,Exit,Voluntary,Career growth,True,Sales,
+M00534,2026-09-26,E0791,Exit,Voluntary,Career growth,True,Delivery 2,
+M00535,2026-09-27,E0540,Exit,Voluntary,Better pay elsewhere,False,Support functions,
+M00536,2026-09-27,E0800,Hire,,,,,Data & Cloud
+M00537,2026-09-28,E0802,Hire,,,,,Data & Cloud
+M00538,2026-09-30,E0182,Exit,Involuntary,End of fixed-term contract,False,Delivery 2,
+M00539,2026-09-30,E0658,Exit,Voluntary,Other,True,Delivery 1,
+M00540,2026-09-30,E0801,Hire,,,,,Support functions
+M00541,2026-09-30,E0804,Hire,,,,,Data & Cloud
+M00542,2026-10-02,E0811,Hire,,,,,Support functions
+M00543,2026-10-05,E0776,Exit,Voluntary,Better pay elsewhere,False,Sales,
+M00544,2026-10-06,E0597,Exit,Voluntary,Career growth,False,Delivery 1,
+M00545,2026-10-06,E0757,Exit,Voluntary,Role not as expected,False,Delivery 3,
+M00546,2026-10-06,E0813,Hire,,,,,Delivery 2
+M00547,2026-10-09,E0196,Exit,Voluntary,Better pay elsewhere,True,Delivery 1,
+M00548,2026-10-10,E0693,Exit,Voluntary,Career growth,False,Delivery 2,
+M00549,2026-10-10,E0774,Exit,Voluntary,Career growth,True,Delivery 1,
+M00550,2026-10-11,E0814,Hire,,,,,Delivery 1
+M00551,2026-10-13,E0806,Hire,,,,,Delivery 2
+M00552,2026-10-13,E0807,Hire,,,,,Delivery 2
+M00553,2026-10-14,E0254,Exit,Voluntary,Career growth,True,Delivery 2,
+M00554,2026-10-14,E0812,Hire,,,,,Delivery 2
+M00555,2026-10-16,E0437,Exit,Voluntary,Better pay elsewhere,False,Data & Cloud,
+M00556,2026-10-19,E0704,Exit,Voluntary,Career growth,False,Delivery 1,
+M00557,2026-10-19,E0805,Hire,,,,,Delivery 1
+M00558,2026-10-19,E0808,Hire,,,,,Delivery 3
+M00559,2026-10-20,E0810,Hire,,,,,Sales
+M00560,2026-10-20,E0815,Hire,,,,,Delivery 3
+M00561,2026-10-21,E0115,Exit,Voluntary,Relocation,False,Delivery 1,
+M00562,2026-10-21,E0816,Hire,,,,,Data & Cloud
+M00563,2026-10-25,E0077,Transfer,,,,Delivery 1,Delivery 2
+M00564,2026-10-26,E0809,Hire,,,,,Data & Cloud
+M00565,2026-10-30,E0817,Hire,,,,,Data & Cloud
+M00566,2026-10-31,E0034,Exit,Voluntary,Better pay elsewhere,True,Delivery 1,

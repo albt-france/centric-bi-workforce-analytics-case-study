@@ -1,0 +1,6 @@
+file,source,source_last_update,retrieved
+eurostat_labour_cost_index_ict_lt.csv,"Eurostat lc_lci_r2_q (LT, NACE J, wages and salaries D1_D4_MD5, 2020=100, NSA)",2026-11-19T11:00:00+0100,2026-11-19
+eurostat_job_vacancy_rate_ict.csv,"Eurostat jvs_q_nace2 (NACE J, JVR, NSA; LT, FR, EU27_2020)",2026-03-20T23:00:00+0100,2026-11-19
+eurostat_ict_specialists_share.csv,"Eurostat isoc_sks_itspt (% of total employment; LT, EU27_2020)",2026-04-17T23:00:00+0200,2026-11-19
+osp_average_monthly_earnings.csv,"Statistics Lithuania S3R0050_M3060315_1 (average monthly earnings, both sexes, whole economy excl. individual enterprises)",2026-09-02,2026-11-19
+lt_public_holidays.csv,"Nager.Date public holidays API, country LT, 2024-2026",,2026-11-19

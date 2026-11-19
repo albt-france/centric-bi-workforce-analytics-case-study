@@ -1,0 +1,23 @@
+kpi,context,sql_value
+Headcount,"Sep 2026, company",603.0
+Headcount (raw HRIS),"Sep 2026, company",621.0
+FTE,"Sep 2026, company",591.4
+Average Headcount,R12M to Sep 2026,604.3
+Exits (gross),R12M to Sep 2026,153.0
+Attrition % (gross),R12M to Sep 2026,0.2532
+Attrition % (excl. transfers),R12M to Sep 2026,0.1704
+Voluntary Attrition %,R12M to Sep 2026,0.1407
+Regretted Attrition %,R12M to Sep 2026,0.0678
+Voluntary Attrition %,"R12M to Sep 2026, Data & Cloud",0.1446
+Early Attrition % (exits < 12 months / hires),R12M to Sep 2026,0.3028
+Hires,R12M to Sep 2026,109.0
+Utilization %,"Sep 2026, billable departments",0.7838
+Utilization % (closed months only),"Oct 2026, billable departments",
+"Utilization % (raw, no cut-off)","Oct 2026, billable departments",0.6019
+Bench %,"Sep 2026, Delivery 3",0.1762
+Overtime %,"Feb 2026, Data & Cloud",0.189
+Average Gross Salary,"Sep 2026, company",3526.0
+Median Days to Fill,filled Oct 2025 - Sep 2026,32.0
+Finance Headcount,"Sep 2026, company",610.0
+HR vs Finance Gap (finance - HR raw),"Sep 2026, company",-11.0
+Revenue per FTE,"Sep 2026, company",5815.0

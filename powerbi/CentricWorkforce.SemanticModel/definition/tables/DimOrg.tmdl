@@ -1,0 +1,58 @@
+/// Cost centre = department x site. Security (RLS) is applied here.
+table DimOrg
+	lineageTag: b5b74025-234a-53de-9244-8871c9c8d945
+
+	column CostCenter
+		dataType: string
+		lineageTag: 8026a0fa-bda5-5a63-b3fb-cae1a36d737d
+		summarizeBy: none
+		sourceColumn: CostCenter
+
+	column Department
+		dataType: string
+		lineageTag: 8b9fd8b5-2f8b-596b-b40b-34eeff4fbb55
+		summarizeBy: none
+		sourceColumn: Department
+		sortByColumn: DepartmentOrder
+
+	column Site
+		dataType: string
+		lineageTag: 3c53f36e-07ce-5420-a51c-5a0b6dab6ae1
+		summarizeBy: none
+		sourceColumn: Site
+
+	column Division
+		dataType: string
+		lineageTag: bb1b24bd-1ea7-56c1-9313-09763d9a50ec
+		summarizeBy: none
+		sourceColumn: Division
+
+	column IsBillable
+		dataType: int64
+		lineageTag: 746ade30-ef06-5a79-92a8-220835fc71ea
+		summarizeBy: none
+		sourceColumn: IsBillable
+
+	column DepartmentOrder
+		dataType: int64
+		isHidden
+		lineageTag: 36b7dba1-a577-541d-afac-0274d192f36c
+		summarizeBy: none
+		sourceColumn: DepartmentOrder
+
+	column OrgUnit
+		dataType: string
+		lineageTag: 789e46fb-1668-5ede-bc72-d6bbc53e708a
+		summarizeBy: none
+		sourceColumn: OrgUnit
+
+	partition DimOrg = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "DimOrg.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"CostCenter", type text}, {"Department", type text}, {"Site", type text}, {"Division", type text}, {"IsBillable", Int64.Type}, {"DepartmentOrder", Int64.Type}}, "en-US"),
+					OrgUnit = Table.AddColumn(Typed, "OrgUnit", each [Department] & " · " & [Site], type text)
+				in
+					OrgUnit

@@ -1,0 +1,9 @@
+/// A department head sees only their own department (all sites). Test it with View as > DepartmentManager + Other user.
+role DepartmentManager
+	modelPermission: read
+
+	tablePermission DimOrg = DimOrg[Department] = LOOKUPVALUE ( SecurityUserDepartment[Department], SecurityUserDepartment[UserPrincipalName], USERPRINCIPALNAME () )
+
+	tablePermission DimEmployee = DimEmployee[Department] = LOOKUPVALUE ( SecurityUserDepartment[Department], SecurityUserDepartment[UserPrincipalName], USERPRINCIPALNAME () )
+
+	annotation PBI_Id = 67553db4f95754e7bc100b60235b38c9

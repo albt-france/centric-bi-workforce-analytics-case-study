@@ -1,0 +1,567 @@
+MovementId,Date,EmployeeId,EmployeeKey,MovementType,ExitType,ExitReason,IsRegretted,IsInternalTransfer,IsVoluntary,CostCenter,Grade,TenureMonths,TenureBand,FromDepartment,ToDepartment
+M00001,2024-11-04,E0576,E0576|2024-11-04,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00002,2024-11-07,E0571,E0571|2024-11-07,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00003,2024-11-07,E0578,E0578|2024-11-07,Hire,,,0,0,,CC-D3-KAU,G2,0,0-1 y,,Delivery 3
+M00004,2024-11-12,E0573,E0573|2024-11-12,Hire,,,0,0,,CC-D2-KAU,G2,0,0-1 y,,Delivery 2
+M00005,2024-11-12,E0577,E0577|2024-11-12,Hire,,,0,0,,CC-SA-VNO,G1,0,0-1 y,,Sales
+M00006,2024-11-13,E0022,E0022|2024-08-05,Exit,Voluntary,Relocation,0,0,1,CC-D1-KAU,G1,3,0-1 y,Delivery 1,
+M00007,2024-11-13,E0314,E0314|2024-11-13,Transfer,,,0,0,,CC-D1-KAU,G3,62,4+ y,Delivery 3,Delivery 1
+M00008,2024-11-14,E0089,E0089|2024-10-19,Exit,Voluntary,Career growth,1,0,1,CC-D1-KAU,G3,1,0-1 y,Delivery 1,
+M00009,2024-11-14,E0093,E0093|2024-11-14,Transfer,,,0,0,,CC-DC-VNO,G2,10,0-1 y,Delivery 1,Data & Cloud
+M00010,2024-11-15,E0016,E0016|2024-01-01,Exit,Voluntary,Personal,0,0,1,CC-D1-KAU,G3,63,4+ y,Delivery 1,
+M00011,2024-11-19,E0226,E0226|2024-11-19,Transfer,,,0,0,,CC-D3-VNO,G2,39,2-4 y,Delivery 2,Delivery 3
+M00012,2024-11-21,E0575,E0575|2024-11-21,Hire,,,0,0,,CC-DC-KAU,G1,0,0-1 y,,Data & Cloud
+M00013,2024-11-22,E0572,E0572|2024-11-22,Hire,,,0,0,,CC-D2-VNO,G1,0,0-1 y,,Delivery 2
+M00014,2024-11-24,E0574,E0574|2024-11-24,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00015,2024-12-02,E0393,E0393|2024-12-02,Transfer,,,0,0,,CC-D1-VNO,G5,9,0-1 y,Data & Cloud,Delivery 1
+M00016,2024-12-07,E0200,E0200|2024-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G2,15,1-2 y,Delivery 2,
+M00017,2024-12-08,E0091,E0091|2024-01-01,Exit,Voluntary,Personal,0,0,1,CC-D1-KAU,G1,48,4+ y,Delivery 1,
+M00018,2024-12-08,E0213,E0213|2024-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G2,48,4+ y,Delivery 2,
+M00019,2024-12-08,E0581,E0581|2024-12-08,Hire,,,0,0,,CC-SF-KAU,G2,0,0-1 y,,Support functions
+M00020,2024-12-09,E0580,E0580|2024-12-09,Hire,,,0,0,,CC-D1-KAU,G3,0,0-1 y,,Delivery 1
+M00021,2024-12-12,E0585,E0585|2024-12-12,Hire,,,0,0,,CC-SA-KAU,G2,0,0-1 y,,Sales
+M00022,2024-12-14,E0244,E0244|2024-05-20,Exit,Voluntary,Career growth,1,0,1,CC-D2-KAU,G2,7,0-1 y,Delivery 2,
+M00023,2024-12-14,E0582,E0582|2024-12-14,Hire,,,0,0,,CC-D3-KAU,G2,0,0-1 y,,Delivery 3
+M00024,2024-12-17,E0390,E0390|2024-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-DC-KAU,G2,38,2-4 y,Data & Cloud,
+M00025,2024-12-18,E0215,E0215|2024-06-03,Exit,Voluntary,Relocation,1,0,1,CC-D2-VNO,G4,6,0-1 y,Delivery 2,
+M00026,2024-12-21,E0579,E0579|2024-12-21,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00027,2024-12-24,E0373,E0373|2024-04-01,Exit,Voluntary,Other,0,0,1,CC-DC-VNO,G1,8,0-1 y,Data & Cloud,
+M00028,2024-12-24,E0409,E0409|2024-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-DC-KAU,G1,32,2-4 y,Data & Cloud,
+M00029,2024-12-25,E0584,E0584|2024-12-25,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00030,2024-12-29,E0586,E0586|2024-12-29,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00031,2024-12-30,E0583,E0583|2024-12-30,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00032,2025-01-01,E0588,E0588|2025-01-01,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00033,2025-01-02,E0097,E0097|2025-01-01,Exit,Voluntary,Other,0,0,1,CC-D1-VNO,G3,24,2-4 y,Delivery 1,
+M00034,2025-01-07,E0112,E0112|2025-01-01,Exit,Voluntary,Other,0,0,1,CC-D1-KAU,G1,12,1-2 y,Delivery 1,
+M00035,2025-01-10,E0017,E0017|2025-01-10,Transfer,,,0,0,,CC-D2-KAU,G1,27,2-4 y,Delivery 1,Delivery 2
+M00036,2025-01-11,E0589,E0589|2025-01-11,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00037,2025-01-15,E0241,E0241|2025-01-01,Exit,Voluntary,Personal,1,0,1,CC-D2-KAU,G1,56,4+ y,Delivery 2,
+M00038,2025-01-18,E0040,E0040|2025-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D1-VNO,G1,4,0-1 y,Delivery 1,
+M00039,2025-01-18,E0422,E0422|2025-01-01,Exit,Voluntary,Other,1,0,1,CC-DC-KAU,G3,112,4+ y,Data & Cloud,
+M00040,2025-01-20,E0019,E0019|2025-01-01,Exit,Involuntary,Performance,0,0,0,CC-D1-KAU,G4,9,0-1 y,Delivery 1,
+M00041,2025-01-21,E0410,E0410|2025-01-01,Exit,Voluntary,Career growth,0,0,1,CC-DC-VNO,G1,48,4+ y,Data & Cloud,
+M00042,2025-01-21,E0587,E0587|2025-01-21,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00043,2025-01-23,E0313,E0313|2025-01-23,Transfer,,,0,0,,CC-D2-KAU,G1,7,0-1 y,Delivery 3,Delivery 2
+M00044,2025-02-01,E0590,E0590|2025-02-01,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00045,2025-02-04,E0593,E0593|2025-02-04,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00046,2025-02-05,E0585,E0585|2025-01-01,Exit,Voluntary,Career growth,0,0,1,CC-SA-KAU,G2,2,0-1 y,Sales,
+M00047,2025-02-05,E0592,E0592|2025-02-05,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00048,2025-02-06,E0400,E0400|2025-01-01,Exit,Voluntary,Personal,1,0,1,CC-DC-VNO,G4,56,4+ y,Data & Cloud,
+M00049,2025-02-08,E0594,E0594|2025-02-08,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00050,2025-02-09,E0256,E0256|2025-02-09,Transfer,,,0,0,,CC-D3-KAU,G2,19,1-2 y,Delivery 2,Delivery 3
+M00051,2025-02-10,E0595,E0595|2025-02-10,Hire,,,0,0,,CC-DC-KAU,G1,0,0-1 y,,Data & Cloud
+M00052,2025-02-13,E0314,E0314|2025-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D1-KAU,G3,65,4+ y,Delivery 1,
+M00053,2025-02-18,E0096,E0096|2025-02-18,Transfer,,,0,0,,CC-DC-VNO,G3,97,4+ y,Delivery 1,Data & Cloud
+M00054,2025-02-18,E0446,E0446|2025-02-18,Transfer,,,0,0,,CC-D3-VNO,G4,40,2-4 y,Data & Cloud,Delivery 3
+M00055,2025-02-19,E0117,E0117|2025-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D1-KAU,G5,27,2-4 y,Delivery 1,
+M00056,2025-02-19,E0140,E0140|2025-01-01,Exit,Voluntary,Relocation,1,0,1,CC-D2-VNO,G1,9,0-1 y,Delivery 2,
+M00057,2025-02-20,E0591,E0591|2025-02-20,Hire,,,0,0,,CC-D2-KAU,G2,0,0-1 y,,Delivery 2
+M00058,2025-03-02,E0064,E0064|2025-01-01,Exit,Involuntary,Performance,0,0,0,CC-D1-VNO,G3,28,2-4 y,Delivery 1,
+M00059,2025-03-04,E0596,E0596|2025-03-04,Hire,,,0,0,,CC-D1-KAU,G4,0,0-1 y,,Delivery 1
+M00060,2025-03-11,E0586,E0586|2025-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G3,3,0-1 y,Delivery 2,
+M00061,2025-03-11,E0597,E0597|2025-03-11,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00062,2025-03-12,E0065,E0065|2025-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D1-VNO,G1,56,4+ y,Delivery 1,
+M00063,2025-03-14,E0216,E0216|2025-01-01,Exit,Voluntary,Relocation,1,0,1,CC-D2-KAU,G4,42,2-4 y,Delivery 2,
+M00064,2025-03-18,E0067,E0067|2025-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D1-KAU,G2,21,1-2 y,Delivery 1,
+M00065,2025-03-20,E0599,E0599|2025-03-20,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00066,2025-03-22,E0600,E0600|2025-03-22,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00067,2025-03-22,E0601,E0601|2025-03-22,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00068,2025-03-22,E0602,E0602|2025-03-22,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00069,2025-03-26,E0598,E0598|2025-03-26,Hire,,,0,0,,CC-D1-VNO,G3,0,0-1 y,,Delivery 1
+M00070,2025-03-27,E0149,E0149|2025-01-01,Exit,Involuntary,Performance,0,0,0,CC-D2-VNO,G3,25,2-4 y,Delivery 2,
+M00071,2025-04-01,E0618,E0618|2025-04-01,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00072,2025-04-02,E0613,E0613|2025-04-02,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00073,2025-04-04,E0615,E0615|2025-04-04,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00074,2025-04-06,E0603,E0603|2025-04-06,Hire,,,0,0,,CC-D2-VNO,G1,0,0-1 y,,Delivery 2
+M00075,2025-04-06,E0607,E0607|2025-04-06,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00076,2025-04-07,E0608,E0608|2025-04-07,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00077,2025-04-07,E0609,E0609|2025-04-07,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00078,2025-04-09,E0606,E0606|2025-04-09,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00079,2025-04-10,E0617,E0617|2025-04-10,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00080,2025-04-15,E0136,E0136|2025-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D2-KAU,G3,9,0-1 y,Delivery 2,
+M00081,2025-04-15,E0614,E0614|2025-04-15,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00082,2025-04-16,E0619,E0619|2025-04-16,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00083,2025-04-17,E0275,E0275|2025-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D3-VNO,G2,12,1-2 y,Delivery 3,
+M00084,2025-04-19,E0620,E0620|2025-04-19,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00085,2025-04-20,E0604,E0604|2025-04-20,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00086,2025-04-22,E0610,E0610|2025-04-22,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00087,2025-04-22,E0612,E0612|2025-04-22,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00088,2025-04-23,E0605,E0605|2025-04-23,Hire,,,0,0,,CC-DC-VNO,G4,0,0-1 y,,Data & Cloud
+M00089,2025-04-24,E0071,E0071|2025-04-24,Transfer,,,0,0,,CC-D3-KAU,G3,186,4+ y,Delivery 1,Delivery 3
+M00090,2025-04-24,E0578,E0578|2025-04-24,Transfer,,,0,0,,CC-D1-KAU,G2,5,0-1 y,Delivery 3,Delivery 1
+M00091,2025-04-24,E0616,E0616|2025-04-24,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00092,2025-04-27,E0151,E0151|2025-04-27,Transfer,,,0,0,,CC-D3-KAU,G1,36,2-4 y,Delivery 2,Delivery 3
+M00093,2025-04-28,E0537,E0537|2025-01-01,Exit,Involuntary,Performance,0,0,0,CC-SF-KAU,G2,88,4+ y,Support functions,
+M00094,2025-04-30,E0611,E0611|2025-04-30,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00095,2025-05-03,E0629,E0629|2025-05-03,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00096,2025-05-04,E0075,E0075|2025-01-01,Exit,Voluntary,Relocation,0,0,1,CC-D1-KAU,G3,13,1-2 y,Delivery 1,
+M00097,2025-05-04,E0625,E0625|2025-05-04,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00098,2025-05-06,E0624,E0624|2025-05-06,Hire,,,0,0,,CC-D2-KAU,G4,0,0-1 y,,Delivery 2
+M00099,2025-05-06,E0633,E0633|2025-05-06,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00100,2025-05-07,E0475,E0475|2025-01-01,Exit,Voluntary,Other,1,0,1,CC-SA-KAU,G2,11,0-1 y,Sales,
+M00101,2025-05-07,E0622,E0622|2025-05-07,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00102,2025-05-13,E0576,E0576|2025-05-13,Transfer,,,0,0,,CC-DC-KAU,G1,6,0-1 y,Delivery 1,Data & Cloud
+M00103,2025-05-14,E0631,E0631|2025-05-14,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00104,2025-05-16,E0187,E0187|2025-05-16,Transfer,,,0,0,,CC-D1-KAU,G2,14,1-2 y,Delivery 2,Delivery 1
+M00105,2025-05-16,E0621,E0621|2025-05-16,Hire,,,0,0,,CC-D1-VNO,G3,0,0-1 y,,Delivery 1
+M00106,2025-05-16,E0634,E0634|2025-05-16,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00107,2025-05-17,E0630,E0630|2025-05-17,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00108,2025-05-18,E0251,E0251|2025-01-01,Exit,Involuntary,Misconduct,0,0,0,CC-D2-KAU,G4,105,4+ y,Delivery 2,
+M00109,2025-05-20,E0626,E0626|2025-05-20,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00110,2025-05-21,E0638,E0638|2025-05-21,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00111,2025-05-23,E0640,E0640|2025-05-23,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00112,2025-05-26,E0637,E0637|2025-05-26,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00113,2025-05-27,E0632,E0632|2025-05-27,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00114,2025-05-27,E0635,E0635|2025-05-27,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00115,2025-05-29,E0623,E0623|2025-05-29,Hire,,,0,0,,CC-D2-VNO,G3,0,0-1 y,,Delivery 2
+M00116,2025-05-29,E0627,E0627|2025-05-29,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00117,2025-05-29,E0628,E0628|2025-05-29,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00118,2025-05-30,E0096,E0096|2025-02-18,Exit,Voluntary,Personal,0,0,1,CC-DC-VNO,G3,100,4+ y,Data & Cloud,
+M00119,2025-05-31,E0636,E0636|2025-05-31,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00120,2025-05-31,E0639,E0639|2025-05-31,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00121,2025-06-01,E0643,E0643|2025-06-01,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00122,2025-06-02,E0651,E0651|2025-06-02,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00123,2025-06-03,E0655,E0655|2025-06-03,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00124,2025-06-05,E0654,E0654|2025-06-05,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00125,2025-06-07,E0252,E0252|2025-06-07,Transfer,,,0,0,,CC-DC-KAU,G1,10,0-1 y,Delivery 2,Data & Cloud
+M00126,2025-06-07,E0598,E0598|2025-03-26,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-D1-VNO,G3,3,0-1 y,Delivery 1,
+M00127,2025-06-08,E0260,E0260|2025-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D2-KAU,G3,188,4+ y,Delivery 2,
+M00128,2025-06-08,E0608,E0608|2025-04-07,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-DC-VNO,G1,2,0-1 y,Data & Cloud,
+M00129,2025-06-08,E0645,E0645|2025-06-08,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00130,2025-06-08,E0648,E0648|2025-06-08,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00131,2025-06-09,E0644,E0644|2025-06-09,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00132,2025-06-15,E0274,E0274|2025-06-15,Transfer,,,0,0,,CC-DC-KAU,G3,29,2-4 y,Delivery 3,Data & Cloud
+M00133,2025-06-15,E0635,E0635|2025-05-27,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D1-VNO,G1,1,0-1 y,Delivery 1,
+M00134,2025-06-15,E0649,E0649|2025-06-15,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00135,2025-06-16,E0646,E0646|2025-06-16,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00136,2025-06-19,E0571,E0571|2025-06-19,Transfer,,,0,0,,CC-D3-KAU,G3,7,0-1 y,Data & Cloud,Delivery 3
+M00137,2025-06-19,E0650,E0650|2025-06-19,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00138,2025-06-22,E0279,E0279|2025-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D3-VNO,G4,11,0-1 y,Delivery 3,
+M00139,2025-06-22,E0600,E0600|2025-03-22,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G1,3,0-1 y,Delivery 2,
+M00140,2025-06-22,E0609,E0609|2025-04-07,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G1,2,0-1 y,Data & Cloud,
+M00141,2025-06-22,E0615,E0615|2025-04-04,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G1,2,0-1 y,Delivery 1,
+M00142,2025-06-24,E0642,E0642|2025-06-24,Hire,,,0,0,,CC-SF-KAU,G2,0,0-1 y,,Support functions
+M00143,2025-06-25,E0641,E0641|2025-06-25,Hire,,,0,0,,CC-D3-VNO,G2,0,0-1 y,,Delivery 3
+M00144,2025-06-26,E0653,E0653|2025-06-26,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00145,2025-06-27,E0396,E0396|2025-06-27,Transfer,,,0,0,,CC-D2-VNO,G3,38,2-4 y,Data & Cloud,Delivery 2
+M00146,2025-06-27,E0647,E0647|2025-06-27,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00147,2025-06-27,E0652,E0652|2025-06-27,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00148,2025-06-27,E0656,E0656|2025-06-27,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00149,2025-06-28,E0657,E0657|2025-06-28,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00150,2025-07-03,E0187,E0187|2025-05-16,Exit,Voluntary,Career growth,0,0,1,CC-D1-KAU,G2,16,1-2 y,Delivery 1,
+M00151,2025-07-03,E0623,E0623|2025-05-29,Exit,Voluntary,Career growth,0,0,1,CC-D2-VNO,G3,2,0-1 y,Delivery 2,
+M00152,2025-07-06,E0574,E0574|2025-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D3-VNO,G1,8,0-1 y,Delivery 3,
+M00153,2025-07-11,E0455,E0455|2025-07-11,Transfer,,,0,0,,CC-D3-VNO,G3,49,4+ y,Data & Cloud,Delivery 3
+M00154,2025-07-12,E0658,E0658|2025-07-12,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00155,2025-07-14,E0576,E0576|2025-05-13,Exit,Voluntary,Career growth,0,0,1,CC-DC-KAU,G1,8,0-1 y,Data & Cloud,
+M00156,2025-07-15,E0659,E0659|2025-07-15,Hire,,,0,0,,CC-D2-KAU,G4,0,0-1 y,,Delivery 2
+M00157,2025-07-16,E0416,E0416|2025-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-DC-VNO,G4,15,1-2 y,Data & Cloud,
+M00158,2025-07-18,E0105,E0105|2025-07-18,Transfer,,,0,0,,CC-D2-KAU,G1,63,4+ y,Delivery 1,Delivery 2
+M00159,2025-07-20,E0660,E0660|2025-07-20,Hire,,,0,0,,CC-SA-KAU,G1,0,0-1 y,,Sales
+M00160,2025-07-21,E0603,E0603|2025-04-06,Exit,Voluntary,Role not as expected,0,0,1,CC-D2-VNO,G1,3,0-1 y,Delivery 2,
+M00161,2025-07-22,E0218,E0218|2025-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G3,22,1-2 y,Delivery 2,
+M00162,2025-07-23,E0638,E0638|2025-05-21,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-D1-VNO,G2,2,0-1 y,Delivery 1,
+M00163,2025-07-27,E0285,E0285|2025-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D3-VNO,G2,80,4+ y,Delivery 3,
+M00164,2025-07-29,E0534,E0534|2025-01-01,Exit,Voluntary,Other,1,0,1,CC-SF-KAU,G1,42,2-4 y,Support functions,
+M00165,2025-07-31,E0632,E0632|2025-05-27,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G2,2,0-1 y,Data & Cloud,
+M00166,2025-08-02,E0438,E0438|2025-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-DC-VNO,G1,24,2-4 y,Data & Cloud,
+M00167,2025-08-05,E0571,E0571|2025-06-19,Exit,Voluntary,Other,0,0,1,CC-D3-KAU,G3,9,0-1 y,Delivery 3,
+M00168,2025-08-06,E0580,E0580|2025-08-06,Transfer,,,0,0,,CC-D3-KAU,G3,8,0-1 y,Delivery 1,Delivery 3
+M00169,2025-08-07,E0661,E0661|2025-08-07,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00170,2025-08-08,E0092,E0092|2025-08-08,Transfer,,,0,0,,CC-DC-KAU,G4,12,1-2 y,Delivery 1,Data & Cloud
+M00171,2025-08-08,E0665,E0665|2025-08-08,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00172,2025-08-09,E0367,E0367|2025-01-01,Exit,Involuntary,Misconduct,0,0,0,CC-D3-KAU,G3,30,2-4 y,Delivery 3,
+M00173,2025-08-14,E0273,E0273|2025-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D3-VNO,G2,23,1-2 y,Delivery 3,
+M00174,2025-08-14,E0662,E0662|2025-08-14,Hire,,,0,0,,CC-D3-VNO,G4,0,0-1 y,,Delivery 3
+M00175,2025-08-18,E0655,E0655|2025-06-03,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G2,2,0-1 y,Data & Cloud,
+M00176,2025-08-20,E0664,E0664|2025-08-20,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00177,2025-08-21,E0643,E0643|2025-06-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G1,2,0-1 y,Delivery 1,
+M00178,2025-08-22,E0007,E0007|2025-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D1-KAU,G2,52,4+ y,Delivery 1,
+M00179,2025-08-23,E0169,E0169|2025-08-23,Transfer,,,0,0,,CC-DC-VNO,G2,75,4+ y,Delivery 2,Data & Cloud
+M00180,2025-08-24,E0248,E0248|2025-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D2-KAU,G3,34,2-4 y,Delivery 2,
+M00181,2025-08-24,E0663,E0663|2025-08-24,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00182,2025-08-26,E0056,E0056|2025-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D1-VNO,G1,63,4+ y,Delivery 1,
+M00183,2025-08-27,E0666,E0666|2025-08-27,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00184,2025-08-29,E0039,E0039|2025-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D1-KAU,G5,25,2-4 y,Delivery 1,
+M00185,2025-08-29,E0536,E0536|2025-01-01,Exit,Involuntary,Performance,0,0,0,CC-SF-KAU,G2,57,4+ y,Support functions,
+M00186,2025-09-01,E0690,E0690|2025-09-01,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00187,2025-09-02,E0686,E0686|2025-09-02,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00188,2025-09-06,E0147,E0147|2025-09-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D2-VNO,G2,22,1-2 y,Delivery 2,
+M00189,2025-09-07,E0688,E0688|2025-09-07,Hire,,,0,0,,CC-DC-VNO,G4,0,0-1 y,,Data & Cloud
+M00190,2025-09-08,E0049,E0049|2025-09-01,Exit,Voluntary,Career growth,0,0,1,CC-D1-KAU,G4,23,1-2 y,Delivery 1,
+M00191,2025-09-09,E0179,E0179|2025-09-01,Exit,Voluntary,Career growth,0,0,1,CC-D2-VNO,G3,24,2-4 y,Delivery 2,
+M00192,2025-09-09,E0687,E0687|2025-09-09,Hire,,,0,0,,CC-D3-VNO,G2,0,0-1 y,,Delivery 3
+M00193,2025-09-10,E0573,E0573|2025-09-01,Exit,Voluntary,Career growth,0,0,1,CC-D2-KAU,G2,10,0-1 y,Delivery 2,
+M00194,2025-09-11,E0622,E0622|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D1-KAU,G2,4,0-1 y,Delivery 1,
+M00195,2025-09-15,E0495,E0495|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-SA-VNO,G3,21,1-2 y,Sales,
+M00196,2025-09-16,E0693,E0693|2025-09-16,Hire,,,0,0,,CC-D2-VNO,G3,0,0-1 y,,Delivery 2
+M00197,2025-09-17,E0636,E0636|2025-09-01,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G2,4,0-1 y,Data & Cloud,
+M00198,2025-09-19,E0692,E0692|2025-09-19,Hire,,,0,0,,CC-D2-VNO,G1,0,0-1 y,,Delivery 2
+M00199,2025-09-20,E0375,E0375|2025-09-01,Exit,Voluntary,Relocation,1,0,1,CC-DC-KAU,G4,22,1-2 y,Data & Cloud,
+M00200,2025-09-20,E0654,E0654|2025-09-01,Exit,Voluntary,Onboarding / team fit,1,0,1,CC-D1-VNO,G1,3,0-1 y,Delivery 1,
+M00201,2025-09-21,E0474,E0474|2025-09-01,Exit,Voluntary,Other,1,0,1,CC-SA-KAU,G2,41,2-4 y,Sales,
+M00202,2025-09-21,E0606,E0606|2025-09-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G2,5,0-1 y,Delivery 1,
+M00203,2025-09-21,E0691,E0691|2025-09-21,Hire,,,0,0,,CC-DC-KAU,G1,0,0-1 y,,Data & Cloud
+M00204,2025-09-22,E0083,E0083|2025-09-01,Exit,Involuntary,Performance,0,0,0,CC-D1-KAU,G3,72,4+ y,Delivery 1,
+M00205,2025-09-23,E0650,E0650|2025-09-01,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G1,3,0-1 y,Data & Cloud,
+M00206,2025-09-24,E0695,E0695|2025-09-24,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00207,2025-09-25,E0130,E0130|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D1-VNO,G2,35,2-4 y,Delivery 1,
+M00208,2025-09-25,E0444,E0444|2025-09-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-DC-VNO,G4,37,2-4 y,Data & Cloud,
+M00209,2025-09-26,E0188,E0188|2025-09-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D2-VNO,G3,64,4+ y,Delivery 2,
+M00210,2025-09-26,E0694,E0694|2025-09-26,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00211,2025-09-27,E0262,E0262|2025-09-27,Transfer,,,0,0,,CC-DC-KAU,G3,34,2-4 y,Delivery 3,Data & Cloud
+M00212,2025-09-28,E0685,E0685|2025-09-28,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00213,2025-09-28,E0689,E0689|2025-09-28,Hire,,,0,0,,CC-SF-KAU,G1,0,0-1 y,,Support functions
+M00214,2025-10-01,E0619,E0619|2025-09-01,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-D1-VNO,G2,6,0-1 y,Delivery 1,
+M00215,2025-10-01,E0698,E0698|2025-10-01,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00216,2025-10-02,E0697,E0697|2025-10-02,Hire,,,0,0,,CC-D1-KAU,G4,0,0-1 y,,Delivery 1
+M00217,2025-10-02,E0699,E0699|2025-10-02,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00218,2025-10-02,E0700,E0700|2025-10-02,Hire,,,0,0,,CC-D3-KAU,G3,0,0-1 y,,Delivery 3
+M00219,2025-10-06,E0287,E0287|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D3-VNO,G2,29,2-4 y,Delivery 3,
+M00220,2025-10-06,E0704,E0704|2025-10-06,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00221,2025-10-07,E0378,E0378|2025-10-07,Transfer,,,0,0,,CC-D3-KAU,G3,17,1-2 y,Data & Cloud,Delivery 3
+M00222,2025-10-09,E0646,E0646|2025-09-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G1,4,0-1 y,Delivery 1,
+M00223,2025-10-14,E0617,E0617|2025-09-01,Exit,Voluntary,Personal,0,0,1,CC-D1-VNO,G1,6,0-1 y,Delivery 1,
+M00224,2025-10-14,E0644,E0644|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D1-VNO,G2,4,0-1 y,Delivery 1,
+M00225,2025-10-16,E0653,E0653|2025-09-01,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-DC-VNO,G2,4,0-1 y,Data & Cloud,
+M00226,2025-10-16,E0705,E0705|2025-10-16,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00227,2025-10-19,E0701,E0701|2025-10-19,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00228,2025-10-19,E0703,E0703|2025-10-19,Hire,,,0,0,,CC-D3-KAU,G3,0,0-1 y,,Delivery 3
+M00229,2025-10-20,E0219,E0219|2025-09-01,Exit,Voluntary,Personal,0,0,1,CC-D2-KAU,G2,192,4+ y,Delivery 2,
+M00230,2025-10-20,E0630,E0630|2025-09-01,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G1,5,0-1 y,Data & Cloud,
+M00231,2025-10-25,E0420,E0420|2025-10-25,Transfer,,,0,0,,CC-D1-KAU,G2,47,2-4 y,Data & Cloud,Delivery 1
+M00232,2025-10-27,E0702,E0702|2025-10-27,Hire,,,0,0,,CC-SF-KAU,G1,0,0-1 y,,Support functions
+M00233,2025-10-27,E0706,E0706|2025-10-27,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00234,2025-10-30,E0696,E0696|2025-10-30,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00235,2025-11-01,E0718,E0718|2025-11-01,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00236,2025-11-02,E0717,E0717|2025-11-02,Hire,,,0,0,,CC-D2-KAU,G2,0,0-1 y,,Delivery 2
+M00237,2025-11-03,E0640,E0640|2025-09-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G2,6,0-1 y,Delivery 1,
+M00238,2025-11-03,E0713,E0713|2025-11-03,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00239,2025-11-03,E0721,E0721|2025-11-03,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00240,2025-11-05,E0460,E0460|2025-09-01,Exit,Voluntary,Career growth,1,0,1,CC-DC-KAU,G4,32,2-4 y,Data & Cloud,
+M00241,2025-11-06,E0274,E0274|2025-09-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-DC-KAU,G3,34,2-4 y,Data & Cloud,
+M00242,2025-11-07,E0058,E0058|2025-09-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D1-VNO,G4,48,4+ y,Delivery 1,
+M00243,2025-11-08,E0459,E0459|2025-09-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-DC-KAU,G3,68,4+ y,Data & Cloud,
+M00244,2025-11-10,E0268,E0268|2025-11-10,Transfer,,,0,0,,CC-DC-KAU,G3,59,4+ y,Delivery 3,Data & Cloud
+M00245,2025-11-13,E0720,E0720|2025-11-13,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00246,2025-11-14,E0185,E0185|2025-09-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D2-VNO,G2,39,2-4 y,Delivery 2,
+M00247,2025-11-14,E0715,E0715|2025-11-14,Hire,,,0,0,,CC-SA-KAU,G1,0,0-1 y,,Sales
+M00248,2025-11-14,E0716,E0716|2025-11-14,Hire,,,0,0,,CC-SA-VNO,G3,0,0-1 y,,Sales
+M00249,2025-11-16,E0342,E0342|2025-11-16,Transfer,,,0,0,,CC-D2-KAU,G5,47,2-4 y,Delivery 3,Delivery 2
+M00250,2025-11-17,E0707,E0707|2025-11-17,Hire,,,0,0,,CC-D1-KAU,G4,0,0-1 y,,Delivery 1
+M00251,2025-11-17,E0709,E0709|2025-11-17,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00252,2025-11-17,E0710,E0710|2025-11-17,Hire,,,0,0,,CC-D2-VNO,G2,0,0-1 y,,Delivery 2
+M00253,2025-11-18,E0711,E0711|2025-11-18,Hire,,,0,0,,CC-D2-VNO,G3,0,0-1 y,,Delivery 2
+M00254,2025-11-18,E0712,E0712|2025-11-18,Hire,,,0,0,,CC-D2-VNO,G3,0,0-1 y,,Delivery 2
+M00255,2025-11-18,E0719,E0719|2025-11-18,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00256,2025-11-19,E0184,E0184|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G3,47,2-4 y,Delivery 2,
+M00257,2025-11-21,E0722,E0722|2025-11-21,Hire,,,0,0,,CC-D2-KAU,G2,0,0-1 y,,Delivery 2
+M00258,2025-11-23,E0649,E0649|2025-09-01,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-DC-VNO,G2,5,0-1 y,Data & Cloud,
+M00259,2025-11-23,E0714,E0714|2025-11-23,Hire,,,0,0,,CC-DC-VNO,G4,0,0-1 y,,Data & Cloud
+M00260,2025-11-24,E0295,E0295|2025-11-24,Transfer,,,0,0,,CC-DC-VNO,G4,27,2-4 y,Delivery 3,Data & Cloud
+M00261,2025-11-28,E0186,E0186|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G5,15,1-2 y,Delivery 2,
+M00262,2025-11-30,E0708,E0708|2025-11-30,Hire,,,0,0,,CC-D1-KAU,G3,0,0-1 y,,Delivery 1
+M00263,2025-12-02,E0727,E0727|2025-12-02,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00264,2025-12-04,E0726,E0726|2025-12-04,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00265,2025-12-05,E0723,E0723|2025-12-05,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00266,2025-12-07,E0688,E0688|2025-09-07,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-DC-VNO,G4,3,0-1 y,Data & Cloud,
+M00267,2025-12-08,E0300,E0300|2025-12-08,Transfer,,,0,0,,CC-DC-KAU,G2,100,4+ y,Delivery 3,Data & Cloud
+M00268,2025-12-10,E0256,E0256|2025-09-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D3-KAU,G2,29,2-4 y,Delivery 3,
+M00269,2025-12-11,E0269,E0269|2025-09-01,Exit,Voluntary,Relocation,1,0,1,CC-D3-KAU,G4,57,4+ y,Delivery 3,
+M00270,2025-12-14,E0724,E0724|2025-12-14,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00271,2025-12-14,E0729,E0729|2025-12-14,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00272,2025-12-18,E0398,E0398|2025-09-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-DC-KAU,G2,52,4+ y,Data & Cloud,
+M00273,2025-12-19,E0725,E0725|2025-12-19,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00274,2025-12-20,E0731,E0731|2025-12-20,Hire,,,0,0,,CC-SF-KAU,G3,0,0-1 y,,Support functions
+M00275,2025-12-24,E0154,E0154|2025-09-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D2-VNO,G2,77,4+ y,Delivery 2,
+M00276,2025-12-28,E0730,E0730|2025-12-28,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00277,2025-12-29,E0732,E0732|2025-12-29,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00278,2025-12-30,E0728,E0728|2025-12-30,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00279,2026-01-03,E0738,E0738|2026-01-03,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00280,2026-01-06,E0734,E0734|2026-01-06,Hire,,,0,0,,CC-D2-VNO,G1,0,0-1 y,,Delivery 2
+M00281,2026-01-08,E0733,E0733|2026-01-08,Hire,,,0,0,,CC-D1-VNO,G4,0,0-1 y,,Delivery 1
+M00282,2026-01-11,E0740,E0740|2026-01-11,Hire,,,0,0,,CC-SA-KAU,G1,0,0-1 y,,Sales
+M00283,2026-01-13,E0331,E0331|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D3-VNO,G2,20,1-2 y,Delivery 3,
+M00284,2026-01-14,E0156,E0156|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-VNO,G4,141,4+ y,Delivery 2,
+M00285,2026-01-16,E0698,E0698|2026-01-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G1,3,0-1 y,Delivery 1,
+M00286,2026-01-16,E0736,E0736|2026-01-16,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00287,2026-01-17,E0737,E0737|2026-01-17,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00288,2026-01-18,E0354,E0354|2026-01-18,Transfer,,,0,0,,CC-D1-KAU,G3,20,1-2 y,Delivery 3,Delivery 1
+M00289,2026-01-22,E0735,E0735|2026-01-22,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00290,2026-01-22,E0739,E0739|2026-01-22,Hire,,,0,0,,CC-DC-KAU,G1,0,0-1 y,,Data & Cloud
+M00291,2026-01-23,E0578,E0578|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D1-KAU,G2,14,1-2 y,Delivery 1,
+M00292,2026-01-24,E0514,E0514|2026-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-SF-KAU,G2,26,2-4 y,Support functions,
+M00293,2026-01-28,E0483,E0483|2026-01-01,Exit,Involuntary,Performance,0,0,0,CC-SA-VNO,G3,35,2-4 y,Sales,
+M00294,2026-01-29,E0202,E0202|2026-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D2-KAU,G2,178,4+ y,Delivery 2,
+M00295,2026-02-01,E0660,E0660|2026-01-01,Exit,Voluntary,Personal,0,0,1,CC-SA-KAU,G1,7,0-1 y,Sales,
+M00296,2026-02-07,E0196,E0196|2026-02-07,Transfer,,,0,0,,CC-D1-KAU,G2,66,4+ y,Delivery 2,Delivery 1
+M00297,2026-02-13,E0587,E0587|2026-01-01,Exit,Voluntary,Personal,0,0,1,CC-D1-KAU,G2,13,1-2 y,Delivery 1,
+M00298,2026-02-13,E0743,E0743|2026-02-13,Hire,,,0,0,,CC-D3-KAU,G3,0,0-1 y,,Delivery 3
+M00299,2026-02-18,E0745,E0745|2026-02-18,Hire,,,0,0,,CC-DC-VNO,G4,0,0-1 y,,Data & Cloud
+M00300,2026-02-20,E0493,E0493|2026-01-01,Exit,Voluntary,Personal,1,0,1,CC-SA-KAU,G3,50,4+ y,Sales,
+M00301,2026-02-23,E0742,E0742|2026-02-23,Hire,,,0,0,,CC-D3-KAU,G1,0,0-1 y,,Delivery 3
+M00302,2026-02-24,E0432,E0432|2026-01-01,Exit,Involuntary,Performance,0,0,0,CC-DC-VNO,G2,40,2-4 y,Data & Cloud,
+M00303,2026-02-24,E0725,E0725|2026-01-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D1-VNO,G1,2,0-1 y,Delivery 1,
+M00304,2026-02-24,E0744,E0744|2026-02-24,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00305,2026-02-26,E0741,E0741|2026-02-26,Hire,,,0,0,,CC-D2-VNO,G2,0,0-1 y,,Delivery 2
+M00306,2026-03-02,E0323,E0323|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D3-KAU,G4,26,2-4 y,Delivery 3,
+M00307,2026-03-02,E0705,E0705|2026-01-01,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G1,5,0-1 y,Data & Cloud,
+M00308,2026-03-03,E0435,E0435|2026-01-01,Exit,Voluntary,Workload / burnout,1,0,1,CC-DC-KAU,G3,67,4+ y,Data & Cloud,
+M00309,2026-03-04,E0748,E0748|2026-03-04,Hire,,,0,0,,CC-D3-VNO,G2,0,0-1 y,,Delivery 3
+M00310,2026-03-05,E0457,E0457|2026-01-01,Exit,Voluntary,Workload / burnout,1,0,1,CC-DC-VNO,G4,21,1-2 y,Data & Cloud,
+M00311,2026-03-05,E0713,E0713|2026-01-01,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-KAU,G3,4,0-1 y,Data & Cloud,
+M00312,2026-03-07,E0747,E0747|2026-03-07,Hire,,,0,0,,CC-D2-KAU,G2,0,0-1 y,,Delivery 2
+M00313,2026-03-08,E0116,E0116|2026-01-01,Exit,Voluntary,Personal,0,0,1,CC-D1-VNO,G3,21,1-2 y,Delivery 1,
+M00314,2026-03-09,E0709,E0709|2026-01-01,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-D1-VNO,G2,4,0-1 y,Delivery 1,
+M00315,2026-03-10,E0455,E0455|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D3-VNO,G3,57,4+ y,Delivery 3,
+M00316,2026-03-13,E0749,E0749|2026-03-13,Hire,,,0,0,,CC-SA-VNO,G2,0,0-1 y,,Sales
+M00317,2026-03-16,E0750,E0750|2026-03-16,Hire,,,0,0,,CC-SF-KAU,G2,0,0-1 y,,Support functions
+M00318,2026-03-17,E0746,E0746|2026-03-17,Hire,,,0,0,,CC-D2-VNO,G3,0,0-1 y,,Delivery 2
+M00319,2026-03-17,E0752,E0752|2026-03-17,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00320,2026-03-18,E0588,E0588|2026-01-01,Exit,Involuntary,Performance,0,0,0,CC-D1-KAU,G1,14,1-2 y,Delivery 1,
+M00321,2026-03-19,E0421,E0421|2026-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-DC-VNO,G3,34,2-4 y,Data & Cloud,
+M00322,2026-03-21,E0107,E0107|2026-01-01,Exit,Voluntary,Personal,1,0,1,CC-D1-KAU,G3,21,1-2 y,Delivery 1,
+M00323,2026-03-23,E0751,E0751|2026-03-23,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00324,2026-03-25,E0290,E0290|2026-03-25,Transfer,,,0,0,,CC-DC-VNO,G4,51,4+ y,Delivery 3,Data & Cloud
+M00325,2026-03-26,E0356,E0356|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D3-KAU,G2,43,2-4 y,Delivery 3,
+M00326,2026-03-31,E0017,E0017|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,41,2-4 y,Delivery 2,
+M00327,2026-03-31,E0105,E0105|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,71,4+ y,Delivery 2,
+M00328,2026-03-31,E0137,E0137|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,73,4+ y,Delivery 2,
+M00329,2026-03-31,E0139,E0139|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,70,4+ y,Delivery 2,
+M00330,2026-03-31,E0141,E0141|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,91,4+ y,Delivery 2,
+M00331,2026-03-31,E0142,E0142|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G4,32,2-4 y,Delivery 2,
+M00332,2026-03-31,E0152,E0152|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,35,2-4 y,Delivery 2,
+M00333,2026-03-31,E0153,E0153|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,42,2-4 y,Delivery 2,
+M00334,2026-03-31,E0155,E0155|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G4,23,1-2 y,Delivery 2,
+M00335,2026-03-31,E0163,E0163|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,77,4+ y,Delivery 2,
+M00336,2026-03-31,E0166,E0166|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,161,4+ y,Delivery 2,
+M00337,2026-03-31,E0173,E0173|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,47,2-4 y,Delivery 2,
+M00338,2026-03-31,E0174,E0174|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G2,47,2-4 y,Delivery 2,
+M00339,2026-03-31,E0177,E0177|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,50,4+ y,Delivery 2,
+M00340,2026-03-31,E0178,E0178|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G4,65,4+ y,Delivery 2,
+M00341,2026-03-31,E0180,E0180|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,93,4+ y,Delivery 2,
+M00342,2026-03-31,E0182,E0182|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,39,2-4 y,Delivery 2,
+M00343,2026-03-31,E0190,E0190|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,17,1-2 y,Delivery 2,
+M00344,2026-03-31,E0191,E0191|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,99,4+ y,Delivery 2,
+M00345,2026-03-31,E0192,E0192|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G2,106,4+ y,Delivery 2,
+M00346,2026-03-31,E0195,E0195|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,71,4+ y,Delivery 2,
+M00347,2026-03-31,E0205,E0205|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,46,2-4 y,Delivery 2,
+M00348,2026-03-31,E0207,E0207|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,99,4+ y,Delivery 2,
+M00349,2026-03-31,E0210,E0210|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,33,2-4 y,Delivery 2,
+M00350,2026-03-31,E0214,E0214|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G2,35,2-4 y,Delivery 2,
+M00351,2026-03-31,E0221,E0221|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,81,4+ y,Delivery 2,
+M00352,2026-03-31,E0224,E0224|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,64,4+ y,Delivery 2,
+M00353,2026-03-31,E0227,E0227|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,48,4+ y,Delivery 2,
+M00354,2026-03-31,E0230,E0230|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,81,4+ y,Delivery 2,
+M00355,2026-03-31,E0234,E0234|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,195,4+ y,Delivery 2,
+M00356,2026-03-31,E0235,E0235|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,34,2-4 y,Delivery 2,
+M00357,2026-03-31,E0236,E0236|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,25,2-4 y,Delivery 2,
+M00358,2026-03-31,E0240,E0240|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,58,4+ y,Delivery 2,
+M00359,2026-03-31,E0243,E0243|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,51,4+ y,Delivery 2,
+M00360,2026-03-31,E0245,E0245|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G5,43,2-4 y,Delivery 2,
+M00361,2026-03-31,E0249,E0249|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G1,28,2-4 y,Delivery 2,
+M00362,2026-03-31,E0254,E0254|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,41,2-4 y,Delivery 2,
+M00363,2026-03-31,E0255,E0255|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,76,4+ y,Delivery 2,
+M00364,2026-03-31,E0257,E0257|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G3,82,4+ y,Delivery 2,
+M00365,2026-03-31,E0313,E0313|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,21,1-2 y,Delivery 2,
+M00366,2026-03-31,E0572,E0572|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G2,16,1-2 y,Delivery 2,
+M00367,2026-03-31,E0591,E0591|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G2,13,1-2 y,Delivery 2,
+M00368,2026-03-31,E0592,E0592|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,13,1-2 y,Delivery 2,
+M00369,2026-03-31,E0593,E0593|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,13,1-2 y,Delivery 2,
+M00370,2026-03-31,E0624,E0624|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G4,10,0-1 y,Delivery 2,
+M00371,2026-03-31,E0693,E0693|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,6,0-1 y,Delivery 2,
+M00372,2026-03-31,E0710,E0710|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G2,4,0-1 y,Delivery 2,
+M00373,2026-03-31,E0712,E0712|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G3,4,0-1 y,Delivery 2,
+M00374,2026-03-31,E0723,E0723|2026-01-01,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-KAU,G1,3,0-1 y,Delivery 2,
+M00375,2026-03-31,E0734,E0734|2026-01-06,Exit,Organisational change,Reorganisation,0,1,0,CC-D2-VNO,G1,2,0-1 y,Delivery 2,
+M00376,2026-04-01,E0017,E0017|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,42,2-4 y,,Delivery 2
+M00377,2026-04-01,E0105,E0105|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,72,4+ y,,Delivery 2
+M00378,2026-04-01,E0137,E0137|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,74,4+ y,,Delivery 2
+M00379,2026-04-01,E0139,E0139|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,71,4+ y,,Delivery 2
+M00380,2026-04-01,E0141,E0141|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,92,4+ y,,Delivery 2
+M00381,2026-04-01,E0142,E0142|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G4,33,2-4 y,,Delivery 2
+M00382,2026-04-01,E0152,E0152|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,36,2-4 y,,Delivery 2
+M00383,2026-04-01,E0153,E0153|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,43,2-4 y,,Delivery 2
+M00384,2026-04-01,E0155,E0155|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G4,24,2-4 y,,Delivery 2
+M00385,2026-04-01,E0163,E0163|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,78,4+ y,,Delivery 2
+M00386,2026-04-01,E0166,E0166|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,162,4+ y,,Delivery 2
+M00387,2026-04-01,E0173,E0173|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,48,4+ y,,Delivery 2
+M00388,2026-04-01,E0174,E0174|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G2,48,4+ y,,Delivery 2
+M00389,2026-04-01,E0177,E0177|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,51,4+ y,,Delivery 2
+M00390,2026-04-01,E0178,E0178|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G4,66,4+ y,,Delivery 2
+M00391,2026-04-01,E0180,E0180|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,94,4+ y,,Delivery 2
+M00392,2026-04-01,E0182,E0182|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,40,2-4 y,,Delivery 2
+M00393,2026-04-01,E0190,E0190|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,18,1-2 y,,Delivery 2
+M00394,2026-04-01,E0191,E0191|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,100,4+ y,,Delivery 2
+M00395,2026-04-01,E0192,E0192|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G2,107,4+ y,,Delivery 2
+M00396,2026-04-01,E0195,E0195|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,72,4+ y,,Delivery 2
+M00397,2026-04-01,E0205,E0205|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,47,2-4 y,,Delivery 2
+M00398,2026-04-01,E0207,E0207|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,100,4+ y,,Delivery 2
+M00399,2026-04-01,E0210,E0210|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,34,2-4 y,,Delivery 2
+M00400,2026-04-01,E0214,E0214|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G2,36,2-4 y,,Delivery 2
+M00401,2026-04-01,E0221,E0221|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,82,4+ y,,Delivery 2
+M00402,2026-04-01,E0224,E0224|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,65,4+ y,,Delivery 2
+M00403,2026-04-01,E0227,E0227|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,49,4+ y,,Delivery 2
+M00404,2026-04-01,E0230,E0230|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,82,4+ y,,Delivery 2
+M00405,2026-04-01,E0234,E0234|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,196,4+ y,,Delivery 2
+M00406,2026-04-01,E0235,E0235|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,35,2-4 y,,Delivery 2
+M00407,2026-04-01,E0236,E0236|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,26,2-4 y,,Delivery 2
+M00408,2026-04-01,E0240,E0240|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,59,4+ y,,Delivery 2
+M00409,2026-04-01,E0243,E0243|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,52,4+ y,,Delivery 2
+M00410,2026-04-01,E0245,E0245|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G5,44,2-4 y,,Delivery 2
+M00411,2026-04-01,E0249,E0249|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G1,29,2-4 y,,Delivery 2
+M00412,2026-04-01,E0254,E0254|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,42,2-4 y,,Delivery 2
+M00413,2026-04-01,E0255,E0255|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,77,4+ y,,Delivery 2
+M00414,2026-04-01,E0257,E0257|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G3,83,4+ y,,Delivery 2
+M00415,2026-04-01,E0313,E0313|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,22,1-2 y,,Delivery 2
+M00416,2026-04-01,E0378,E0378|2026-01-01,Exit,Voluntary,Other,1,0,1,CC-D3-KAU,G3,23,1-2 y,Delivery 3,
+M00417,2026-04-01,E0572,E0572|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G2,17,1-2 y,,Delivery 2
+M00418,2026-04-01,E0591,E0591|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G2,14,1-2 y,,Delivery 2
+M00419,2026-04-01,E0592,E0592|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,14,1-2 y,,Delivery 2
+M00420,2026-04-01,E0593,E0593|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,14,1-2 y,,Delivery 2
+M00421,2026-04-01,E0624,E0624|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G4,11,0-1 y,,Delivery 2
+M00422,2026-04-01,E0641,E0641|2026-01-01,Exit,Voluntary,Relocation,0,0,1,CC-D3-VNO,G2,10,0-1 y,Delivery 3,
+M00423,2026-04-01,E0693,E0693|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,7,0-1 y,,Delivery 2
+M00424,2026-04-01,E0710,E0710|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G2,5,0-1 y,,Delivery 2
+M00425,2026-04-01,E0712,E0712|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G3,5,0-1 y,,Delivery 2
+M00426,2026-04-01,E0723,E0723|2026-04-01,Hire,,,0,1,,CC-D2-KAU,G1,4,0-1 y,,Delivery 2
+M00427,2026-04-01,E0734,E0734|2026-04-01,Hire,,,0,1,,CC-D2-VNO,G1,3,0-1 y,,Delivery 2
+M00428,2026-04-01,E0755,E0755|2026-04-01,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00429,2026-04-05,E0148,E0148|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D2-KAU,G1,40,2-4 y,Delivery 2,
+M00430,2026-04-07,E0625,E0625|2026-01-01,Exit,Voluntary,Relocation,1,0,1,CC-D2-KAU,G3,11,0-1 y,Delivery 2,
+M00431,2026-04-09,E0754,E0754|2026-04-09,Hire,,,0,0,,CC-SA-KAU,G1,0,0-1 y,,Sales
+M00432,2026-04-10,E0153,E0153|2026-04-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D2-KAU,G3,43,2-4 y,Delivery 2,
+M00433,2026-04-13,E0732,E0732|2026-01-01,Exit,Voluntary,Role not as expected,0,0,1,CC-D3-VNO,G1,4,0-1 y,Delivery 3,
+M00434,2026-04-17,E0037,E0037|2026-01-01,Exit,Voluntary,Personal,0,0,1,CC-D1-KAU,G3,59,4+ y,Delivery 1,
+M00435,2026-04-17,E0103,E0103|2026-01-01,Exit,Involuntary,Performance,0,0,0,CC-D1-KAU,G5,198,4+ y,Delivery 1,
+M00436,2026-04-17,E0710,E0710|2026-04-01,Exit,Voluntary,Other,1,0,1,CC-D2-VNO,G2,5,0-1 y,Delivery 2,
+M00437,2026-04-17,E0753,E0753|2026-04-17,Hire,,,0,0,,CC-DC-VNO,G2,0,0-1 y,,Data & Cloud
+M00438,2026-04-21,E0507,E0507|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-SF-KAU,G2,29,2-4 y,Support functions,
+M00439,2026-04-21,E0634,E0634|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D1-VNO,G2,11,0-1 y,Delivery 1,
+M00440,2026-04-22,E0716,E0716|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-SA-VNO,G3,5,0-1 y,Sales,
+M00441,2026-04-24,E0278,E0278|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D3-KAU,G2,47,2-4 y,Delivery 3,
+M00442,2026-04-26,E0506,E0506|2026-01-01,Exit,Involuntary,Misconduct,0,0,0,CC-SF-VNO,G4,77,4+ y,Support functions,
+M00443,2026-05-02,E0767,E0767|2026-05-02,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00444,2026-05-02,E0768,E0768|2026-05-02,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00445,2026-05-04,E0765,E0765|2026-05-04,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00446,2026-05-05,E0488,E0488|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-SA-KAU,G2,42,2-4 y,Sales,
+M00447,2026-05-06,E0756,E0756|2026-05-06,Hire,,,0,0,,CC-D1-VNO,G3,0,0-1 y,,Delivery 1
+M00448,2026-05-06,E0762,E0762|2026-05-06,Hire,,,0,0,,CC-DC-VNO,G4,0,0-1 y,,Data & Cloud
+M00449,2026-05-07,E0189,E0189|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D2-KAU,G4,19,1-2 y,Delivery 2,
+M00450,2026-05-08,E0748,E0748|2026-03-04,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-D3-VNO,G2,2,0-1 y,Delivery 3,
+M00451,2026-05-09,E0761,E0761|2026-05-09,Hire,,,0,0,,CC-D3-VNO,G3,0,0-1 y,,Delivery 3
+M00452,2026-05-09,E0763,E0763|2026-05-09,Hire,,,0,0,,CC-D1-KAU,G1,0,0-1 y,,Delivery 1
+M00453,2026-05-10,E0155,E0155|2026-05-10,Transfer,,,0,0,,CC-D1-KAU,G4,25,2-4 y,Delivery 2,Delivery 1
+M00454,2026-05-10,E0685,E0685|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D1-KAU,G2,8,0-1 y,Delivery 1,
+M00455,2026-05-11,E0408,E0408|2026-05-11,Transfer,,,0,0,,CC-D2-KAU,G1,30,2-4 y,Data & Cloud,Delivery 2
+M00456,2026-05-14,E0224,E0224|2026-04-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D2-KAU,G1,66,4+ y,Delivery 2,
+M00457,2026-05-15,E0766,E0766|2026-05-15,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00458,2026-05-17,E0545,E0545|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-SF-VNO,G4,48,4+ y,Support functions,
+M00459,2026-05-20,E0758,E0758|2026-05-20,Hire,,,0,0,,CC-D3-KAU,G2,0,0-1 y,,Delivery 3
+M00460,2026-05-23,E0759,E0759|2026-05-23,Hire,,,0,0,,CC-DC-VNO,G3,0,0-1 y,,Data & Cloud
+M00461,2026-05-23,E0764,E0764|2026-05-23,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00462,2026-05-25,E0757,E0757|2026-05-25,Hire,,,0,0,,CC-D3-KAU,G3,0,0-1 y,,Delivery 3
+M00463,2026-05-29,E0664,E0664|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D2-KAU,G1,9,0-1 y,Delivery 2,
+M00464,2026-05-30,E0547,E0547|2026-01-01,Exit,Voluntary,Other,1,0,1,CC-SF-VNO,G3,88,4+ y,Support functions,
+M00465,2026-05-30,E0760,E0760|2026-05-30,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00466,2026-06-01,E0770,E0770|2026-06-01,Hire,,,0,0,,CC-D3-KAU,G2,0,0-1 y,,Delivery 3
+M00467,2026-06-01,E0779,E0779|2026-06-01,Hire,,,0,0,,CC-D2-VNO,G2,0,0-1 y,,Delivery 2
+M00468,2026-06-04,E0595,E0595|2026-06-04,Transfer,,,0,0,,CC-D2-KAU,G1,16,1-2 y,Data & Cloud,Delivery 2
+M00469,2026-06-06,E0771,E0771|2026-06-06,Hire,,,0,0,,CC-D3-KAU,G3,0,0-1 y,,Delivery 3
+M00470,2026-06-07,E0778,E0778|2026-06-07,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00471,2026-06-12,E0735,E0735|2026-01-22,Exit,Voluntary,Workload / burnout,1,0,1,CC-DC-KAU,G3,5,0-1 y,Data & Cloud,
+M00472,2026-06-15,E0175,E0175|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D2-KAU,G3,69,4+ y,Delivery 2,
+M00473,2026-06-15,E0629,E0629|2026-01-01,Exit,Voluntary,Workload / burnout,1,0,1,CC-DC-VNO,G1,13,1-2 y,Data & Cloud,
+M00474,2026-06-16,E0433,E0433|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-DC-KAU,G2,26,2-4 y,Data & Cloud,
+M00475,2026-06-16,E0498,E0498|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-SA-KAU,G3,31,2-4 y,Sales,
+M00476,2026-06-17,E0701,E0701|2026-06-17,Transfer,,,0,0,,CC-D1-VNO,G1,8,0-1 y,Data & Cloud,Delivery 1
+M00477,2026-06-19,E0445,E0445|2026-06-19,Transfer,,,0,0,,CC-D3-VNO,G3,33,2-4 y,Data & Cloud,Delivery 3
+M00478,2026-06-19,E0777,E0777|2026-06-19,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00479,2026-06-20,E0775,E0775|2026-06-20,Hire,,,0,0,,CC-D3-VNO,G2,0,0-1 y,,Delivery 3
+M00480,2026-06-24,E0772,E0772|2026-06-24,Hire,,,0,0,,CC-SF-KAU,G2,0,0-1 y,,Support functions
+M00481,2026-06-25,E0776,E0776|2026-06-25,Hire,,,0,0,,CC-SA-VNO,G3,0,0-1 y,,Sales
+M00482,2026-06-26,E0355,E0355|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D3-VNO,G1,43,2-4 y,Delivery 3,
+M00483,2026-06-26,E0708,E0708|2026-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D1-KAU,G3,7,0-1 y,Delivery 1,
+M00484,2026-06-28,E0769,E0769|2026-06-28,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00485,2026-06-29,E0119,E0119|2026-01-01,Exit,Voluntary,Other,0,0,1,CC-D1-VNO,G1,25,2-4 y,Delivery 1,
+M00486,2026-06-29,E0360,E0360|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-D3-VNO,G3,36,2-4 y,Delivery 3,
+M00487,2026-06-29,E0774,E0774|2026-06-29,Hire,,,0,0,,CC-D1-VNO,G2,0,0-1 y,,Delivery 1
+M00488,2026-06-30,E0773,E0773|2026-06-30,Hire,,,0,0,,CC-D2-KAU,G2,0,0-1 y,,Delivery 2
+M00489,2026-07-01,E0767,E0767|2026-05-02,Exit,Involuntary,Misconduct,0,0,0,CC-DC-KAU,G3,2,0-1 y,Data & Cloud,
+M00490,2026-07-02,E0781,E0781|2026-07-02,Hire,,,0,0,,CC-SA-KAU,G1,0,0-1 y,,Sales
+M00491,2026-07-04,E0783,E0783|2026-07-04,Hire,,,0,0,,CC-SF-VNO,G2,0,0-1 y,,Support functions
+M00492,2026-07-09,E0784,E0784|2026-07-09,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00493,2026-07-10,E0750,E0750|2026-03-16,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-SF-KAU,G2,4,0-1 y,Support functions,
+M00494,2026-07-10,E0762,E0762|2026-05-06,Exit,Voluntary,Role not as expected,0,0,1,CC-DC-VNO,G4,2,0-1 y,Data & Cloud,
+M00495,2026-07-14,E0786,E0786|2026-07-14,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00496,2026-07-15,E0780,E0780|2026-07-15,Hire,,,0,0,,CC-D2-KAU,G4,0,0-1 y,,Delivery 2
+M00497,2026-07-17,E0782,E0782|2026-07-17,Hire,,,0,0,,CC-SF-VNO,G4,0,0-1 y,,Support functions
+M00498,2026-07-19,E0374,E0374|2026-01-01,Exit,Voluntary,Workload / burnout,1,0,1,CC-DC-VNO,G3,40,2-4 y,Data & Cloud,
+M00499,2026-07-20,E0789,E0789|2026-07-20,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00500,2026-07-24,E0352,E0352|2026-01-01,Exit,Voluntary,Relocation,1,0,1,CC-D3-VNO,G3,90,4+ y,Delivery 3,
+M00501,2026-07-24,E0787,E0787|2026-07-24,Hire,,,0,0,,CC-D3-VNO,G2,0,0-1 y,,Delivery 3
+M00502,2026-07-24,E0788,E0788|2026-07-24,Hire,,,0,0,,CC-DC-VNO,G4,0,0-1 y,,Data & Cloud
+M00503,2026-07-26,E0388,E0388|2026-07-26,Transfer,,,0,0,,CC-D1-VNO,G2,104,4+ y,Data & Cloud,Delivery 1
+M00504,2026-07-27,E0291,E0291|2026-07-27,Transfer,,,0,0,,CC-D2-KAU,G1,23,1-2 y,Delivery 3,Delivery 2
+M00505,2026-07-31,E0785,E0785|2026-07-31,Hire,,,0,0,,CC-D1-KAU,G2,0,0-1 y,,Delivery 1
+M00506,2026-08-01,E0272,E0272|2026-01-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D3-VNO,G3,65,4+ y,Delivery 3,
+M00507,2026-08-03,E0490,E0490|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-SA-VNO,G3,95,4+ y,Sales,
+M00508,2026-08-03,E0798,E0798|2026-08-03,Hire,,,0,0,,CC-D3-VNO,G2,0,0-1 y,,Delivery 3
+M00509,2026-08-05,E0659,E0659|2026-01-01,Exit,Voluntary,Personal,0,0,1,CC-D2-KAU,G4,13,1-2 y,Delivery 2,
+M00510,2026-08-07,E0796,E0796|2026-08-07,Hire,,,0,0,,CC-D1-KAU,G3,0,0-1 y,,Delivery 1
+M00511,2026-08-09,E0532,E0532|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-SF-KAU,G2,25,2-4 y,Support functions,
+M00512,2026-08-10,E0105,E0105|2026-04-01,Exit,Voluntary,Personal,1,0,1,CC-D2-KAU,G1,76,4+ y,Delivery 2,
+M00513,2026-08-10,E0792,E0792|2026-08-10,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00514,2026-08-12,E0793,E0793|2026-08-12,Hire,,,0,0,,CC-D3-VNO,G3,0,0-1 y,,Delivery 3
+M00515,2026-08-13,E0755,E0755|2026-04-01,Exit,Voluntary,Onboarding / team fit,0,0,1,CC-D1-VNO,G1,4,0-1 y,Delivery 1,
+M00516,2026-08-13,E0790,E0790|2026-08-13,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00517,2026-08-13,E0791,E0791|2026-08-13,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00518,2026-08-13,E0797,E0797|2026-08-13,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00519,2026-08-15,E0031,E0031|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D1-KAU,G3,157,4+ y,Delivery 1,
+M00520,2026-08-23,E0237,E0237|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-D2-KAU,G4,59,4+ y,Delivery 2,
+M00521,2026-08-24,E0232,E0232|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D2-KAU,G4,34,2-4 y,Delivery 2,
+M00522,2026-08-25,E0450,E0450|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-DC-VNO,G1,43,2-4 y,Data & Cloud,
+M00523,2026-08-25,E0787,E0787|2026-07-24,Exit,Voluntary,Other,0,0,1,CC-D3-VNO,G2,1,0-1 y,Delivery 3,
+M00524,2026-08-26,E0794,E0794|2026-08-26,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00525,2026-08-28,E0789,E0789|2026-07-20,Exit,Involuntary,Misconduct,0,0,0,CC-DC-KAU,G3,1,0-1 y,Data & Cloud,
+M00526,2026-08-29,E0795,E0795|2026-08-29,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00527,2026-09-02,E0803,E0803|2026-09-02,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00528,2026-09-07,E0276,E0276|2026-01-01,Exit,Involuntary,Performance,0,0,0,CC-D3-VNO,G1,61,4+ y,Delivery 3,
+M00529,2026-09-09,E0327,E0327|2026-01-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D3-KAU,G4,30,2-4 y,Delivery 3,
+M00530,2026-09-15,E0492,E0492|2026-01-01,Exit,Voluntary,Personal,0,0,1,CC-SA-KAU,G1,65,4+ y,Sales,
+M00531,2026-09-18,E0799,E0799|2026-09-18,Hire,,,0,0,,CC-D3-VNO,G3,0,0-1 y,,Delivery 3
+M00532,2026-09-23,E0463,E0463|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-SA-VNO,G1,34,2-4 y,Sales,
+M00533,2026-09-26,E0469,E0469|2026-01-01,Exit,Voluntary,Career growth,1,0,1,CC-SA-KAU,G2,23,1-2 y,Sales,
+M00534,2026-09-26,E0791,E0791|2026-08-13,Exit,Voluntary,Career growth,1,0,1,CC-D2-KAU,G3,1,0-1 y,Delivery 2,
+M00535,2026-09-27,E0540,E0540|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-SF-VNO,G1,28,2-4 y,Support functions,
+M00536,2026-09-27,E0800,E0800|2026-09-27,Hire,,,0,0,,CC-DC-VNO,G3,0,0-1 y,,Data & Cloud
+M00537,2026-09-28,E0802,E0802|2026-09-28,Hire,,,0,0,,CC-DC-VNO,G3,0,0-1 y,,Data & Cloud
+M00538,2026-09-30,E0182,E0182|2026-04-01,Exit,Involuntary,End of fixed-term contract,0,0,0,CC-D2-KAU,G3,45,2-4 y,Delivery 2,
+M00539,2026-09-30,E0658,E0658|2026-01-01,Exit,Voluntary,Other,1,0,1,CC-D1-KAU,G2,14,1-2 y,Delivery 1,
+M00540,2026-09-30,E0801,E0801|2026-09-30,Hire,,,0,0,,CC-SF-KAU,G1,0,0-1 y,,Support functions
+M00541,2026-09-30,E0804,E0804|2026-09-30,Hire,,,0,0,,CC-DC-KAU,G2,0,0-1 y,,Data & Cloud
+M00542,2026-10-02,E0811,E0811|2026-10-02,Hire,,,0,0,,CC-SF-KAU,G1,0,0-1 y,,Support functions
+M00543,2026-10-05,E0776,E0776|2026-06-25,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-SA-VNO,G3,4,0-1 y,Sales,
+M00544,2026-10-06,E0597,E0597|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D1-VNO,G1,19,1-2 y,Delivery 1,
+M00545,2026-10-06,E0757,E0757|2026-05-25,Exit,Voluntary,Role not as expected,0,0,1,CC-D3-KAU,G3,5,0-1 y,Delivery 3,
+M00546,2026-10-06,E0813,E0813|2026-10-06,Hire,,,0,0,,CC-D2-KAU,G1,0,0-1 y,,Delivery 2
+M00547,2026-10-09,E0196,E0196|2026-02-07,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D1-KAU,G2,74,4+ y,Delivery 1,
+M00548,2026-10-10,E0693,E0693|2026-04-01,Exit,Voluntary,Career growth,0,0,1,CC-D2-VNO,G3,13,1-2 y,Delivery 2,
+M00549,2026-10-10,E0774,E0774|2026-06-29,Exit,Voluntary,Career growth,1,0,1,CC-D1-VNO,G2,4,0-1 y,Delivery 1,
+M00550,2026-10-11,E0814,E0814|2026-10-11,Hire,,,0,0,,CC-D1-VNO,G1,0,0-1 y,,Delivery 1
+M00551,2026-10-13,E0806,E0806|2026-10-13,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00552,2026-10-13,E0807,E0807|2026-10-13,Hire,,,0,0,,CC-D2-KAU,G4,0,0-1 y,,Delivery 2
+M00553,2026-10-14,E0254,E0254|2026-04-01,Exit,Voluntary,Career growth,1,0,1,CC-D2-KAU,G3,48,4+ y,Delivery 2,
+M00554,2026-10-14,E0812,E0812|2026-10-14,Hire,,,0,0,,CC-D2-KAU,G3,0,0-1 y,,Delivery 2
+M00555,2026-10-16,E0437,E0437|2026-01-01,Exit,Voluntary,Better pay elsewhere,0,0,1,CC-DC-KAU,G3,77,4+ y,Data & Cloud,
+M00556,2026-10-19,E0704,E0704|2026-01-01,Exit,Voluntary,Career growth,0,0,1,CC-D1-VNO,G1,12,1-2 y,Delivery 1,
+M00557,2026-10-19,E0805,E0805|2026-10-19,Hire,,,0,0,,CC-D1-KAU,G3,0,0-1 y,,Delivery 1
+M00558,2026-10-19,E0808,E0808|2026-10-19,Hire,,,0,0,,CC-D3-VNO,G3,0,0-1 y,,Delivery 3
+M00559,2026-10-20,E0810,E0810|2026-10-20,Hire,,,0,0,,CC-SA-VNO,G3,0,0-1 y,,Sales
+M00560,2026-10-20,E0815,E0815|2026-10-20,Hire,,,0,0,,CC-D3-VNO,G1,0,0-1 y,,Delivery 3
+M00561,2026-10-21,E0115,E0115|2026-01-01,Exit,Voluntary,Relocation,0,0,1,CC-D1-VNO,G3,59,4+ y,Delivery 1,
+M00562,2026-10-21,E0816,E0816|2026-10-21,Hire,,,0,0,,CC-DC-KAU,G3,0,0-1 y,,Data & Cloud
+M00563,2026-10-25,E0077,E0077|2026-10-25,Transfer,,,0,0,,CC-D2-VNO,G1,179,4+ y,Delivery 1,Delivery 2
+M00564,2026-10-26,E0809,E0809|2026-10-26,Hire,,,0,0,,CC-DC-VNO,G1,0,0-1 y,,Data & Cloud
+M00565,2026-10-30,E0817,E0817|2026-10-30,Hire,,,0,0,,CC-DC-KAU,G4,0,0-1 y,,Data & Cloud
+M00566,2026-10-31,E0034,E0034|2026-07-01,Exit,Voluntary,Better pay elsewhere,1,0,1,CC-D1-VNO,G3,33,2-4 y,Delivery 1,

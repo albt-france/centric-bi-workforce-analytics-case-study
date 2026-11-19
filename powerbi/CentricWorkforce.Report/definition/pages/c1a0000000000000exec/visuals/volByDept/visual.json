@@ -1,0 +1,105 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "volByDept",
+  "position": {
+    "x": 32,
+    "y": 723,
+    "z": 15000,
+    "height": 305,
+    "width": 916,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimOrg"
+                    }
+                  },
+                  "Property": "Department"
+                }
+              },
+              "queryRef": "DimOrg.Department",
+              "nativeQueryRef": "Department"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Voluntary Attrition %"
+                }
+              },
+              "queryRef": "_Measures.Voluntary Attrition %",
+              "nativeQueryRef": "Voluntary Attrition %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Regretted Attrition %"
+                }
+              },
+              "queryRef": "_Measures.Regretted Attrition %",
+              "nativeQueryRef": "Regretted Attrition %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Voluntary and regretted attrition by department (period selected)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

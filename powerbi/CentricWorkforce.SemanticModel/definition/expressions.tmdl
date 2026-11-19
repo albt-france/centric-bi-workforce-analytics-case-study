@@ -1,0 +1,5 @@
+/// Folder holding the model CSV files (data/model). Change it if the repository is not in C:\case-study-centric.
+expression DataFolder = "C:\case-study-centric\data\model\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e602a5e4-50e1-5162-9f06-e1659af1a7d8
+
+	annotation PBI_ResultType = Text

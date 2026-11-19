@@ -1,0 +1,13 @@
+# local only
+data/raw/
+data/_hidden_truth.csv
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+docs/report.html
+docs/_print.pdf
+# Power BI: never publish binaries, caches or local settings
+*.pbix
+**/.pbi/cache.abf
+**/.pbi/localSettings.json

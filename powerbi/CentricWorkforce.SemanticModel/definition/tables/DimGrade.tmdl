@@ -1,0 +1,33 @@
+/// Grades G1-G5.
+table DimGrade
+	lineageTag: 9293f8ef-6e08-5441-8537-ed48f2ee28c0
+
+	column Grade
+		dataType: string
+		lineageTag: 954bf631-fd33-52b3-ae04-de7828b85375
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column GradeName
+		dataType: string
+		lineageTag: 9ddf09e3-74e5-5af1-9117-2f752bbdf47f
+		summarizeBy: none
+		sourceColumn: GradeName
+		sortByColumn: GradeOrder
+
+	column GradeOrder
+		dataType: int64
+		isHidden
+		lineageTag: 8cd4acc0-e0f0-5ae5-8df7-d3bebc147495
+		summarizeBy: none
+		sourceColumn: GradeOrder
+
+	partition DimGrade = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "DimGrade.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"Grade", type text}, {"GradeName", type text}, {"GradeOrder", Int64.Type}}, "en-US")
+				in
+					Typed

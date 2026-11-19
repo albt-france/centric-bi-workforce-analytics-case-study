@@ -1,0 +1,116 @@
+/// Hires, exits and transfers with exit type, regretted flag and internal-transfer flag. SIMULATED.
+table FactMovements
+	lineageTag: 0867ba54-f290-5cb8-9dbf-eec8c354b04b
+
+	column MovementId
+		dataType: string
+		lineageTag: edf3b377-1fcb-5834-940e-0a7fb69f77b5
+		summarizeBy: none
+		sourceColumn: MovementId
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		lineageTag: ed121769-b9e9-5732-aa24-a84c505ab63e
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EmployeeId
+		dataType: string
+		lineageTag: 8ef3d10c-d68e-5825-8c84-b5b7f22b76fb
+		summarizeBy: none
+		sourceColumn: EmployeeId
+
+	column EmployeeKey
+		dataType: string
+		isHidden
+		lineageTag: 4a902606-5c18-5050-912f-ba3b3e6b2479
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column MovementType
+		dataType: string
+		lineageTag: 8a74ddc3-3fe8-5c1a-bbac-3b5990aea8a5
+		summarizeBy: none
+		sourceColumn: MovementType
+
+	column ExitType
+		dataType: string
+		lineageTag: b1dc9490-92c7-56e7-817a-ca35eb6bafb4
+		summarizeBy: none
+		sourceColumn: ExitType
+
+	column ExitReason
+		dataType: string
+		lineageTag: 835aee96-7c7b-51d7-bdc9-97ed3ffb7444
+		summarizeBy: none
+		sourceColumn: ExitReason
+
+	column IsRegretted
+		dataType: int64
+		lineageTag: b9da0a76-3e6f-5155-a71c-45ed01bc3985
+		summarizeBy: none
+		sourceColumn: IsRegretted
+
+	column IsInternalTransfer
+		dataType: int64
+		lineageTag: 2358e892-98d3-5efc-a0cf-8ff1678511a9
+		summarizeBy: none
+		sourceColumn: IsInternalTransfer
+
+	column IsVoluntary
+		dataType: double
+		lineageTag: 117f6cc0-6ef0-5137-aaa2-f32c38026378
+		summarizeBy: none
+		sourceColumn: IsVoluntary
+
+	column CostCenter
+		dataType: string
+		isHidden
+		lineageTag: a7ff03c4-446c-593b-ac34-8d6e8346fb38
+		summarizeBy: none
+		sourceColumn: CostCenter
+
+	column Grade
+		dataType: string
+		isHidden
+		lineageTag: 1b60c637-0946-5dad-a319-0fcdd9eabe83
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column TenureMonths
+		dataType: int64
+		lineageTag: bc8f74b5-57dc-5c16-883f-b16e2283cca0
+		summarizeBy: none
+		sourceColumn: TenureMonths
+
+	column TenureBand
+		dataType: string
+		lineageTag: b8162df4-4b6d-5da0-9689-5c939eaca375
+		summarizeBy: none
+		sourceColumn: TenureBand
+
+	column FromDepartment
+		dataType: string
+		lineageTag: 608a03d0-6ab6-5fd6-beaa-a791df68c826
+		summarizeBy: none
+		sourceColumn: FromDepartment
+
+	column ToDepartment
+		dataType: string
+		lineageTag: f01fac97-a660-54c6-80c1-ff1182502efa
+		summarizeBy: none
+		sourceColumn: ToDepartment
+
+	partition FactMovements = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "FactMovements.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"MovementId", type text}, {"Date", type date}, {"EmployeeId", type text}, {"EmployeeKey", type text}, {"MovementType", type text}, {"ExitType", type text}, {"ExitReason", type text}, {"IsRegretted", Int64.Type}, {"IsInternalTransfer", Int64.Type}, {"IsVoluntary", type number}, {"CostCenter", type text}, {"Grade", type text}, {"TenureMonths", Int64.Type}, {"TenureBand", type text}, {"FromDepartment", type text}, {"ToDepartment", type text}}, "en-US")
+				in
+					Typed

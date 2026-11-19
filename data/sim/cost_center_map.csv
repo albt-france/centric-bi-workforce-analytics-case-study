@@ -1,0 +1,13 @@
+cost_center,department,site
+CC-D1-KAU,Delivery 1,Kaunas
+CC-D1-VNO,Delivery 1,Vilnius
+CC-D2-KAU,Delivery 2,Kaunas
+CC-D2-VNO,Delivery 2,Vilnius
+CC-D3-KAU,Delivery 3,Kaunas
+CC-D3-VNO,Delivery 3,Vilnius
+CC-DC-KAU,Data & Cloud,Kaunas
+CC-DC-VNO,Data & Cloud,Vilnius
+CC-SA-KAU,Sales,Kaunas
+CC-SA-VNO,Sales,Vilnius
+CC-SF-KAU,Support functions,Kaunas
+CC-SF-VNO,Support functions,Vilnius

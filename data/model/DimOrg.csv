@@ -1,0 +1,13 @@
+CostCenter,Department,Site,Division,IsBillable,DepartmentOrder
+CC-D1-KAU,Delivery 1,Kaunas,Delivery,1,1
+CC-D1-VNO,Delivery 1,Vilnius,Delivery,1,1
+CC-D2-KAU,Delivery 2,Kaunas,Delivery,1,2
+CC-D2-VNO,Delivery 2,Vilnius,Delivery,1,2
+CC-D3-KAU,Delivery 3,Kaunas,Delivery,1,3
+CC-D3-VNO,Delivery 3,Vilnius,Delivery,1,3
+CC-DC-KAU,Data & Cloud,Kaunas,Delivery,1,4
+CC-DC-VNO,Data & Cloud,Vilnius,Delivery,1,4
+CC-SA-KAU,Sales,Kaunas,Commercial,0,5
+CC-SA-VNO,Sales,Vilnius,Commercial,0,5
+CC-SF-KAU,Support functions,Kaunas,Support,0,6
+CC-SF-VNO,Support functions,Vilnius,Support,0,6

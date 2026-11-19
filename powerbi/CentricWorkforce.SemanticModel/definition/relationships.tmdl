@@ -1,0 +1,72 @@
+relationship bd1e5679-994e-5f40-b8c9-b77b3085bfe7
+	fromColumn: FactHeadcountMonthly.MonthStart
+	toColumn: DimDate.Date
+
+relationship 25cb4b37-334c-5441-b935-d7737c246b0b
+	fromColumn: FactHeadcountMonthly.CostCenter
+	toColumn: DimOrg.CostCenter
+
+relationship eec15e9c-2f23-5086-a776-30384ce8122e
+	fromColumn: FactHeadcountMonthly.Grade
+	toColumn: DimGrade.Grade
+
+relationship e01c9be4-5594-5881-a8d2-0e06b6dfe7f3
+	fromColumn: FactHeadcountMonthly.EmployeeKey
+	toColumn: DimEmployee.EmployeeKey
+
+relationship cccd87ce-0069-5c20-bbe7-8eb3b69ba9da
+	fromColumn: FactMovements.Date
+	toColumn: DimDate.Date
+
+relationship 25b4bf48-f7de-5e28-ab6a-48346d415776
+	fromColumn: FactMovements.CostCenter
+	toColumn: DimOrg.CostCenter
+
+relationship a8f8cd34-db7e-5ca2-9080-9c89c37e700b
+	fromColumn: FactMovements.Grade
+	toColumn: DimGrade.Grade
+
+relationship a3c9383a-303a-5511-95fb-bc870b05a145
+	fromColumn: FactMovements.EmployeeKey
+	toColumn: DimEmployee.EmployeeKey
+
+relationship 34279675-db32-50b7-91f9-31ff3fd0ac91
+	fromColumn: FactTimesheet.MonthStart
+	toColumn: DimDate.Date
+
+relationship 82066606-5b19-56fc-b321-5dc9a8ca3402
+	fromColumn: FactTimesheet.CostCenter
+	toColumn: DimOrg.CostCenter
+
+relationship 2c0f75bb-3eaa-5adb-9ac8-bdf3b368b766
+	fromColumn: FactTimesheet.Grade
+	toColumn: DimGrade.Grade
+
+relationship 96ea2096-2f80-5c03-872d-c86ee9cd78f0
+	fromColumn: FactTimesheet.EmployeeKey
+	toColumn: DimEmployee.EmployeeKey
+
+relationship f6dcef09-00c1-52d7-bc0a-0ea9853f84c9
+	fromColumn: FactFinance.MonthStart
+	toColumn: DimDate.Date
+
+relationship 12df3118-b0ab-51d4-bee0-a8bd35c0dcc3
+	fromColumn: FactFinance.CostCenter
+	toColumn: DimOrg.CostCenter
+
+relationship fdbc47ba-846f-5c26-be77-f6f0d7b7ad91
+	fromColumn: FactRecruiting.FilledDate
+	toColumn: DimDate.Date
+
+relationship 2fb8cd51-bf48-5f3e-833f-103a9dc51357
+	isActive: false
+	fromColumn: FactRecruiting.OpenedDate
+	toColumn: DimDate.Date
+
+relationship 7466ca95-78de-5c47-92ea-069fd548f8a9
+	fromColumn: FactRecruiting.CostCenter
+	toColumn: DimOrg.CostCenter
+
+relationship 530b91b7-b6c8-5a10-9e1d-64348ec04943
+	fromColumn: FactRecruiting.Grade
+	toColumn: DimGrade.Grade

@@ -1,0 +1,112 @@
+department,quarter_start,exit_reason,exits,regretted
+Data & Cloud,2024-10-01,Better pay elsewhere,2,1
+Data & Cloud,2024-10-01,Other,1,0
+Data & Cloud,2025-01-01,Career growth,1,0
+Data & Cloud,2025-01-01,Other,1,1
+Data & Cloud,2025-01-01,Personal,1,1
+Data & Cloud,2025-04-01,Onboarding / team fit,1,0
+Data & Cloud,2025-04-01,Personal,1,0
+Data & Cloud,2025-04-01,Role not as expected,1,0
+Data & Cloud,2025-07-01,Better pay elsewhere,3,2
+Data & Cloud,2025-07-01,Career growth,1,0
+Data & Cloud,2025-07-01,Relocation,1,1
+Data & Cloud,2025-07-01,Role not as expected,4,0
+Data & Cloud,2025-10-01,Better pay elsewhere,2,2
+Data & Cloud,2025-10-01,Career growth,1,1
+Data & Cloud,2025-10-01,Onboarding / team fit,2,0
+Data & Cloud,2025-10-01,Role not as expected,1,0
+Data & Cloud,2026-01-01,Role not as expected,2,0
+Data & Cloud,2026-01-01,Workload / burnout,2,2
+Data & Cloud,2026-04-01,Career growth,1,1
+Data & Cloud,2026-04-01,Workload / burnout,2,2
+Data & Cloud,2026-07-01,Career growth,1,1
+Data & Cloud,2026-07-01,Role not as expected,1,0
+Data & Cloud,2026-07-01,Workload / burnout,1,1
+Data & Cloud,2026-10-01,Better pay elsewhere,1,0
+Delivery 1,2024-10-01,Career growth,1,1
+Delivery 1,2024-10-01,Personal,2,0
+Delivery 1,2024-10-01,Relocation,1,0
+Delivery 1,2025-01-01,Better pay elsewhere,2,0
+Delivery 1,2025-01-01,Career growth,2,1
+Delivery 1,2025-01-01,Other,2,0
+Delivery 1,2025-04-01,Better pay elsewhere,1,1
+Delivery 1,2025-04-01,Onboarding / team fit,1,0
+Delivery 1,2025-04-01,Relocation,1,0
+Delivery 1,2025-04-01,Role not as expected,1,0
+Delivery 1,2025-07-01,Better pay elsewhere,3,0
+Delivery 1,2025-07-01,Career growth,3,0
+Delivery 1,2025-07-01,Onboarding / team fit,2,1
+Delivery 1,2025-07-01,Role not as expected,2,0
+Delivery 1,2025-10-01,Better pay elsewhere,2,1
+Delivery 1,2025-10-01,Onboarding / team fit,1,0
+Delivery 1,2025-10-01,Personal,1,0
+Delivery 1,2025-10-01,Role not as expected,2,0
+Delivery 1,2026-01-01,Career growth,1,1
+Delivery 1,2026-01-01,Onboarding / team fit,1,0
+Delivery 1,2026-01-01,Personal,3,1
+Delivery 1,2026-01-01,Role not as expected,2,0
+Delivery 1,2026-04-01,Career growth,2,1
+Delivery 1,2026-04-01,Other,1,0
+Delivery 1,2026-04-01,Personal,1,0
+Delivery 1,2026-07-01,Better pay elsewhere,1,1
+Delivery 1,2026-07-01,Onboarding / team fit,1,0
+Delivery 1,2026-07-01,Other,1,1
+Delivery 1,2026-10-01,Better pay elsewhere,2,2
+Delivery 1,2026-10-01,Career growth,3,1
+Delivery 1,2026-10-01,Relocation,1,0
+Delivery 2,2024-10-01,Better pay elsewhere,2,0
+Delivery 2,2024-10-01,Career growth,1,1
+Delivery 2,2024-10-01,Relocation,1,1
+Delivery 2,2025-01-01,Better pay elsewhere,1,0
+Delivery 2,2025-01-01,Personal,1,1
+Delivery 2,2025-01-01,Relocation,2,2
+Delivery 2,2025-04-01,Better pay elsewhere,1,0
+Delivery 2,2025-04-01,Career growth,1,1
+Delivery 2,2025-07-01,Better pay elsewhere,2,1
+Delivery 2,2025-07-01,Career growth,4,0
+Delivery 2,2025-07-01,Role not as expected,1,0
+Delivery 2,2025-10-01,Better pay elsewhere,3,1
+Delivery 2,2025-10-01,Personal,1,0
+Delivery 2,2026-01-01,Better pay elsewhere,1,0
+Delivery 2,2026-04-01,Better pay elsewhere,3,2
+Delivery 2,2026-04-01,Career growth,2,1
+Delivery 2,2026-04-01,Other,1,1
+Delivery 2,2026-04-01,Relocation,1,1
+Delivery 2,2026-07-01,Better pay elsewhere,1,1
+Delivery 2,2026-07-01,Career growth,2,2
+Delivery 2,2026-07-01,Personal,2,1
+Delivery 2,2026-10-01,Career growth,2,1
+Delivery 3,2025-04-01,Better pay elsewhere,2,2
+Delivery 3,2025-07-01,Career growth,3,2
+Delivery 3,2025-07-01,Other,1,0
+Delivery 3,2025-10-01,Better pay elsewhere,2,0
+Delivery 3,2025-10-01,Relocation,1,1
+Delivery 3,2026-01-01,Better pay elsewhere,3,1
+Delivery 3,2026-01-01,Career growth,1,0
+Delivery 3,2026-04-01,Better pay elsewhere,2,1
+Delivery 3,2026-04-01,Career growth,1,0
+Delivery 3,2026-04-01,Onboarding / team fit,1,0
+Delivery 3,2026-04-01,Other,1,1
+Delivery 3,2026-04-01,Relocation,1,0
+Delivery 3,2026-04-01,Role not as expected,1,0
+Delivery 3,2026-07-01,Better pay elsewhere,1,1
+Delivery 3,2026-07-01,Other,1,0
+Delivery 3,2026-07-01,Relocation,1,1
+Delivery 3,2026-10-01,Role not as expected,1,0
+Sales,2025-01-01,Career growth,1,0
+Sales,2025-04-01,Other,1,1
+Sales,2025-07-01,Better pay elsewhere,1,0
+Sales,2025-07-01,Other,1,1
+Sales,2026-01-01,Personal,2,1
+Sales,2026-04-01,Better pay elsewhere,2,2
+Sales,2026-04-01,Career growth,1,0
+Sales,2026-07-01,Career growth,3,2
+Sales,2026-07-01,Personal,1,0
+Sales,2026-10-01,Better pay elsewhere,1,0
+Support functions,2025-07-01,Other,1,1
+Support functions,2026-04-01,Better pay elsewhere,1,1
+Support functions,2026-04-01,Career growth,1,1
+Support functions,2026-04-01,Other,1,1
+Support functions,2026-07-01,Better pay elsewhere,1,0
+Support functions,2026-07-01,Career growth,1,1
+Support functions,2026-07-01,Onboarding / team fit,1,0

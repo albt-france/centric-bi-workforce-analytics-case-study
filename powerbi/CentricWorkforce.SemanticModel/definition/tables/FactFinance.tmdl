@@ -1,0 +1,63 @@
+/// Finance export by cost centre, closed months only (to Sep 2026). SIMULATED.
+table FactFinance
+	lineageTag: c69cc38c-de79-5e1d-ae62-c6f822e0a1ab
+
+	column MonthStart
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		lineageTag: 48a702ef-0569-5e0c-96ca-b70d12cbae60
+		summarizeBy: none
+		sourceColumn: MonthStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CostCenter
+		dataType: string
+		isHidden
+		lineageTag: 2cc8edad-e187-5837-a79d-786324afa107
+		summarizeBy: none
+		sourceColumn: CostCenter
+
+	column DepartmentReported
+		dataType: string
+		lineageTag: d3813fa7-efac-5cf1-811b-765d8716246e
+		summarizeBy: none
+		sourceColumn: DepartmentReported
+
+	column Revenue
+		dataType: double
+		formatString: €#,0
+		lineageTag: 9ecc2080-1415-556e-906c-dab3f0352dcf
+		summarizeBy: none
+		sourceColumn: Revenue
+
+	column PayrollCost
+		dataType: double
+		formatString: €#,0
+		lineageTag: 7b87f6b3-d6aa-5d5b-b9aa-3f1957a4ccff
+		summarizeBy: none
+		sourceColumn: PayrollCost
+
+	column OtherCost
+		dataType: double
+		formatString: €#,0
+		lineageTag: 1a93ef1c-5ea1-5a88-887e-1d97f225a522
+		summarizeBy: none
+		sourceColumn: OtherCost
+
+	column PayrollHeadcount
+		dataType: int64
+		lineageTag: 24e57f45-cde5-5ca0-bda0-5f225636edb5
+		summarizeBy: none
+		sourceColumn: PayrollHeadcount
+
+	partition FactFinance = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "FactFinance.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"MonthStart", type date}, {"CostCenter", type text}, {"DepartmentReported", type text}, {"Revenue", type number}, {"PayrollCost", type number}, {"OtherCost", type number}, {"PayrollHeadcount", Int64.Type}}, "en-US")
+				in
+					Typed

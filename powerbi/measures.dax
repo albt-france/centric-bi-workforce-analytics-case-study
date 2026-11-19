@@ -1,0 +1,282 @@
+// Centric workforce analytics case study - all DAX measures (table _Measures).
+// SIMULATED data. Reference values for checking: docs/KPI_CHECKS.md.
+
+// [1 Headcount] People employed on the last day of the last month in context. Duplicate ids excluded.  Format: #,0
+Headcount =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE (
+            COUNTROWS ( FactHeadcountMonthly ),
+            FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+            FactHeadcountMonthly[IsDuplicateId] = 0,
+            REMOVEFILTERS ( DimDate ),
+            DimDate[MonthStart] = _m
+        )
+
+// [1 Headcount] Same as Headcount but counting every id in the HRIS, duplicates included. Data-quality view only.  Format: #,0
+Headcount (raw HRIS) =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE (
+            COUNTROWS ( FactHeadcountMonthly ),
+            FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+            REMOVEFILTERS ( DimDate ),
+            DimDate[MonthStart] = _m
+        )
+
+// [1 Headcount] Ids created twice by the HRIS migration (Sep 2025) still active at month end.  Format: #,0
+Duplicate IDs =
+    [Headcount (raw HRIS)] - [Headcount]
+
+// [1 Headcount] Contracted full-time equivalents at the end of the last month in context.  Format: #,0.0
+FTE =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE (
+            SUM ( FactHeadcountMonthly[FTE] ),
+            FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+            FactHeadcountMonthly[IsDuplicateId] = 0,
+            REMOVEFILTERS ( DimDate ),
+            DimDate[MonthStart] = _m
+        )
+
+// [1 Headcount] Average of month-end headcounts over the months in context. Denominator of every attrition rate.  Format: #,0.0
+Average Headcount =
+    AVERAGEX ( VALUES ( DimDate[MonthStart] ), [Headcount] )
+
+// [2 Attrition] Every exit keyed in the HRIS, including internal moves keyed as exit + rehire.  Format: #,0
+Exits (gross) =
+    CALCULATE ( COUNTROWS ( FactMovements ), FactMovements[MovementType] = "Exit" )
+
+// [2 Attrition] Exits minus internal transfers (an exit followed by a rehire of the same id within 31 days).  Format: #,0
+Exits (excl. transfers) =
+    CALCULATE ( [Exits (gross)], FactMovements[IsInternalTransfer] = 0 )
+
+// [2 Attrition] Resignations (excl. transfers).  Format: #,0
+Voluntary Exits =
+    CALCULATE ( [Exits (excl. transfers)], FactMovements[IsVoluntary] = 1 )
+
+// [2 Attrition] Resignations the manager flagged as regretted (high performers or scarce skills).  Format: #,0
+Regretted Exits =
+    CALCULATE ( [Voluntary Exits], FactMovements[IsRegretted] = 1 )
+
+// [2 Attrition] Exits (excl. transfers) of people with less than 12 months of service.  Format: #,0
+Exits Under 12 Months Tenure =
+    CALCULATE ( [Exits (excl. transfers)], FactMovements[TenureMonths] < 12 )
+
+// [2 Attrition] External hires (rehires that close an internal transfer are excluded).  Format: #,0
+Hires =
+    CALCULATE ( COUNTROWS ( FactMovements ), FactMovements[MovementType] = "Hire", FactMovements[IsInternalTransfer] = 0 )
+
+// [2 Attrition] Gross exits / average headcount. Shown for comparison only: inflated by transfers.  Format: 0.0%
+Attrition % (gross) =
+    DIVIDE ( [Exits (gross)], [Average Headcount] )
+
+// [2 Attrition] Exits excl. transfers / average headcount.  Format: 0.0%
+Attrition % (excl. transfers) =
+    DIVIDE ( [Exits (excl. transfers)], [Average Headcount] )
+
+// [2 Attrition] Resignations / average headcount.  Format: 0.0%
+Voluntary Attrition % =
+    DIVIDE ( [Voluntary Exits], [Average Headcount] )
+
+// [2 Attrition] Regretted resignations / average headcount. Headline KPI agreed with the HR Director.  Format: 0.0%
+Regretted Attrition % =
+    DIVIDE ( [Regretted Exits], [Average Headcount] )
+
+// [2 Attrition] Exits with less than 12 months of service / hires in the same period.  Format: 0.0%
+Early Attrition % =
+    DIVIDE ( [Exits Under 12 Months Tenure], [Hires] )
+
+// [2 Attrition] Regretted attrition over the 12 months ending with the last date in context.  Format: 0.0%
+Regretted Attrition % R12M =
+    VAR _end = MAX ( DimDate[Date] )
+    RETURN
+        CALCULATE ( [Regretted Attrition %], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+
+// [2 Attrition] Voluntary attrition over the 12 months ending with the last date in context.  Format: 0.0%
+Voluntary Attrition % R12M =
+    VAR _end = MAX ( DimDate[Date] )
+    RETURN
+        CALCULATE ( [Voluntary Attrition %], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+
+// [2 Attrition] Gross attrition over the 12 months ending with the last date in context.  Format: 0.0%
+Attrition % (gross) R12M =
+    VAR _end = MAX ( DimDate[Date] )
+    RETURN
+        CALCULATE ( [Attrition % (gross)], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+
+// [2 Attrition] Attrition excl. transfers over the 12 months ending with the last date in context.  Format: 0.0%
+Attrition % (excl. transfers) R12M =
+    VAR _end = MAX ( DimDate[Date] )
+    RETURN
+        CALCULATE ( [Attrition % (excl. transfers)], DATESINPERIOD ( DimDate[Date], _end, -12, MONTH ) )
+
+// [2 Attrition] Regretted exits in the same period one year earlier.  Format: #,0
+Regretted Exits LY =
+    CALCULATE ( [Regretted Exits], SAMEPERIODLASTYEAR ( DimDate[Date] ) )
+
+// [3 Utilization] Lithuanian working days employed x 8 h x FTE, minus absences. Billable departments only.  Format: #,0
+Capacity Hours =
+    CALCULATE (
+        SUM ( FactHeadcountMonthly[CapacityHours] ),
+        FactHeadcountMonthly[IsDuplicateId] = 0,
+        DimOrg[IsBillable] = 1
+    )
+
+// [3 Utilization] Billable hours received in timesheets (billable departments).  Format: #,0
+Billable Hours =
+    CALCULATE ( SUM ( FactTimesheet[BillableHours] ), DimOrg[IsBillable] = 1 )
+
+// [3 Utilization] Hours logged without a client project (billable departments).  Format: #,0
+Bench Hours =
+    CALCULATE ( SUM ( FactTimesheet[BenchHours] ), DimOrg[IsBillable] = 1 )
+
+// [3 Utilization] Hours above contracted capacity (billable departments).  Format: #,0
+Overtime Hours =
+    CALCULATE ( SUM ( FactTimesheet[OvertimeHours] ), DimOrg[IsBillable] = 1 )
+
+// [3 Utilization] Billable + non-billable + bench hours received (billable departments).  Format: #,0
+Logged Hours =
+    CALCULATE ( SUM ( FactTimesheet[LoggedHours] ), DimOrg[IsBillable] = 1 )
+
+// [3 Utilization] Billable hours / capacity. Not reliable for a month that is not closed: use the closed-months version.  Format: 0.0%
+Utilization % =
+    DIVIDE ( [Billable Hours], [Capacity Hours] )
+
+// [3 Utilization] Utilisation on closed months only (month end + 10 days <= extract date). Blank for the open month.  Format: 0.0%
+Utilization % (closed months) =
+    CALCULATE ( [Utilization %], KEEPFILTERS ( DimDate[IsClosedMonth] = 1 ) )
+
+// [3 Utilization] Bench hours / capacity.  Format: 0.0%
+Bench % =
+    DIVIDE ( [Bench Hours], [Capacity Hours] )
+
+// [3 Utilization] Overtime hours / capacity. Alert threshold: 15% for two months in a row.  Format: 0.0%
+Overtime % =
+    DIVIDE ( [Overtime Hours], [Capacity Hours] )
+
+// [3 Utilization] Logged hours / capacity: shows how much of the month has been received.  Format: 0.0%
+Timesheet Completeness % =
+    DIVIDE ( [Logged Hours], [Capacity Hours] )
+
+// [4 Pay & market] Average contracted monthly gross salary (full-time basis) at the end of the last month in context.  Format: €#,0
+Average Gross Salary =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE (
+            AVERAGE ( FactHeadcountMonthly[SalaryMonthlyGross] ),
+            FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+            FactHeadcountMonthly[IsDuplicateId] = 0,
+            REMOVEFILTERS ( DimDate ),
+            DimDate[MonthStart] = _m
+        )
+
+// [4 Pay & market] Median salary of people with < 1 year of service (use with a grade in context).  Format: €#,0
+Median Salary New Hires =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE (
+            MEDIAN ( FactHeadcountMonthly[SalaryMonthlyGross] ),
+            FactHeadcountMonthly[TenureBand] = "0-1 y",
+            FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+            FactHeadcountMonthly[IsDuplicateId] = 0,
+            REMOVEFILTERS ( DimDate ),
+            DimDate[MonthStart] = _m
+        )
+
+// [4 Pay & market] Median salary of people with 2 to 4 years of service (use with a grade in context).  Format: €#,0
+Median Salary 2-4 Years =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE (
+            MEDIAN ( FactHeadcountMonthly[SalaryMonthlyGross] ),
+            FactHeadcountMonthly[TenureBand] = "2-4 y",
+            FactHeadcountMonthly[IsActiveMonthEnd] = 1,
+            FactHeadcountMonthly[IsDuplicateId] = 0,
+            REMOVEFILTERS ( DimDate ),
+            DimDate[MonthStart] = _m
+        )
+
+// [4 Pay & market] How much more new hires earn than 2-4 year colleagues of the same grade (pay compression).  Format: 0.0%
+New-Hire Pay Premium % =
+    DIVIDE ( [Median Salary New Hires], [Median Salary 2-4 Years] ) - 1
+
+// [4 Pay & market] PUBLIC DATA. Statistics Lithuania average monthly gross earnings, ICT (J58-J63), latest quarter published up to the quarter in context.  Format: €#,0
+Market ICT Avg Gross =
+    VAR _q = MAX ( DimDate[Quarter] )
+    RETURN
+        CALCULATE (
+            LASTNONBLANKVALUE ( Market[Quarter], MAX ( Market[AvgGrossEarningsICT_LT] ) ),
+            Market[Quarter] <= _q
+        )
+
+// [4 Pay & market] Company average gross salary vs the Lithuanian ICT average (negative = below market).  Format: +0.0%;-0.0%;0.0%
+Salary vs Market % =
+    DIVIDE ( [Average Gross Salary], [Market ICT Avg Gross] ) - 1
+
+// [4 Pay & market] PUBLIC DATA. Eurostat labour cost index, wages and salaries, ICT sector, Lithuania (2024-Q4 = 100).  Format: 0.0
+Labour Cost Index ICT =
+    VAR _q = SELECTEDVALUE ( DimDate[Quarter], MAX ( DimDate[Quarter] ) )
+    RETURN
+        CALCULATE ( MAX ( Market[LabourCostIndexICT_2024Q4_100] ), TREATAS ( { _q }, Market[Quarter] ) )
+
+// [5 Recruiting] Median days from requisition opened to offer accepted (by date filled).  Format: #,0
+Median Days to Fill =
+    CALCULATE ( MEDIAN ( FactRecruiting[DaysToFill] ), FactRecruiting[Status] = "Filled" )
+
+// [5 Recruiting] Requisitions still open at the extract date.  Format: #,0
+Open Requisitions =
+    CALCULATE ( COUNTROWS ( FactRecruiting ), FactRecruiting[Status] = "Open", REMOVEFILTERS ( DimDate ) )
+
+// [5 Recruiting] Requisitions opened in the period (inactive relationship on OpenedDate).  Format: #,0
+Requisitions Opened =
+    CALCULATE ( COUNTROWS ( FactRecruiting ), USERELATIONSHIP ( FactRecruiting[OpenedDate], DimDate[Date] ) )
+
+// [6 Finance & reconciliation] Revenue by cost centre (HR cost-centre master applied).  Format: €#,0
+Revenue =
+    SUM ( FactFinance[Revenue] )
+
+// [6 Finance & reconciliation] Payroll cost + other cost.  Format: €#,0
+Total Cost =
+    SUM ( FactFinance[PayrollCost] ) + SUM ( FactFinance[OtherCost] )
+
+// [6 Finance & reconciliation] Average monthly revenue per FTE over the months in context.  Format: €#,0
+Revenue per FTE =
+    DIVIDE ( [Revenue], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
+
+// [6 Finance & reconciliation] Average monthly cost per FTE over the months in context.  Format: €#,0
+Cost per FTE =
+    DIVIDE ( [Total Cost], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
+
+// [6 Finance & reconciliation] Revenue by the department written in the finance export (before the cost-centre fix).  Format: €#,0
+Revenue (as reported by finance) =
+    VAR _depts = VALUES ( DimOrg[Department] )
+    RETURN
+        CALCULATE (
+            SUM ( FactFinance[Revenue] ),
+            REMOVEFILTERS ( DimOrg ),
+            TREATAS ( _depts, FactFinance[DepartmentReported] )
+        )
+
+// [6 Finance & reconciliation] Revenue per FTE using the finance department mapping: shows the mis-mapped cost centre.  Format: €#,0
+Revenue per FTE (as reported) =
+    DIVIDE ( [Revenue (as reported by finance)], SUMX ( VALUES ( DimDate[MonthStart] ), [FTE] ) )
+
+// [6 Finance & reconciliation] People paid in the last month in context (finance export).  Format: #,0
+Finance Headcount =
+    VAR _m = MAX ( DimDate[MonthStart] )
+    RETURN
+        CALCULATE ( SUM ( FactFinance[PayrollHeadcount] ), REMOVEFILTERS ( DimDate ), DimDate[MonthStart] = _m )
+
+// [6 Finance & reconciliation] Finance headcount minus raw HRIS headcount. Explained by duplicate ids and leavers paid in their last month.  Format: +#,0;-#,0;0
+HR vs Finance Gap =
+    IF ( NOT ISBLANK ( [Finance Headcount] ), [Finance Headcount] - [Headcount (raw HRIS)] )
+
+// [7 Data quality] Share of timesheet rows entered more than 10 days after month end.  Format: 0.0%
+Late Timesheets % =
+    DIVIDE ( CALCULATE ( COUNTROWS ( FactTimesheet ), FactTimesheet[EntryLagDays] > 10 ), COUNTROWS ( FactTimesheet ) )
+
+// [7 Data quality] Closed or provisional (timesheet cut-off rule).
+Month Status =
+    IF ( MIN ( DimDate[IsClosedMonth] ) = 1, "Closed", "Provisional: timesheets still arriving" )

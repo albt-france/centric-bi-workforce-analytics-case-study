@@ -1,0 +1,95 @@
+/// SCD2 employee history, ids only (no names). SIMULATED.
+table DimEmployee
+	lineageTag: 3efd3437-bac7-57d5-90c2-872de8f63f8f
+
+	column EmployeeKey
+		dataType: string
+		lineageTag: 6165e00e-ed49-5ea6-ab1b-3d5a8d4708f1
+		summarizeBy: none
+		sourceColumn: EmployeeKey
+
+	column EmployeeId
+		dataType: string
+		lineageTag: 6da6a191-f1ac-53b3-b724-df4109ccc5c5
+		summarizeBy: none
+		sourceColumn: EmployeeId
+
+	column ValidFrom
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 8d294838-25eb-52e9-9af2-f94750c5d0f0
+		summarizeBy: none
+		sourceColumn: ValidFrom
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ValidTo
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 606979e3-7276-5865-b1b4-1f9a6a1f6e7f
+		summarizeBy: none
+		sourceColumn: ValidTo
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Department
+		dataType: string
+		lineageTag: 185fe728-5237-5874-a81f-30d34dcab0db
+		summarizeBy: none
+		sourceColumn: Department
+
+	column Site
+		dataType: string
+		lineageTag: 6c94c136-f97d-5486-8a15-fabc7cea6b05
+		summarizeBy: none
+		sourceColumn: Site
+
+	column Grade
+		dataType: string
+		lineageTag: a81a63ab-9cb8-5f4e-8ca0-84f77e0cfc27
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column HireDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 4deb0607-da8f-5ecb-a626-810197958dd1
+		summarizeBy: none
+		sourceColumn: HireDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SourceSystem
+		dataType: string
+		lineageTag: a6aa7708-5569-52de-864e-c4323880c204
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+	column IsDuplicateId
+		dataType: int64
+		lineageTag: 84d20a29-9d63-5904-84af-f7f9c0688ff7
+		summarizeBy: none
+		sourceColumn: IsDuplicateId
+
+	column MasterEmployeeId
+		dataType: string
+		lineageTag: 867780bd-6731-5f3f-b3fb-6053496844f7
+		summarizeBy: none
+		sourceColumn: MasterEmployeeId
+
+	column ManagerId
+		dataType: string
+		lineageTag: a98903a9-563e-511e-8b37-ef87102c029f
+		summarizeBy: none
+		sourceColumn: ManagerId
+
+	partition DimEmployee = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "DimEmployee.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"EmployeeKey", type text}, {"EmployeeId", type text}, {"ValidFrom", type date}, {"ValidTo", type date}, {"Department", type text}, {"Site", type text}, {"Grade", type text}, {"HireDate", type date}, {"SourceSystem", type text}, {"IsDuplicateId", Int64.Type}, {"MasterEmployeeId", type text}, {"ManagerId", type text}}, "en-US"),
+					Cleaned = Table.ReplaceValue(Typed, null, "Unknown", Replacer.ReplaceValue, {"Site"})
+				in
+					Cleaned

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CentricWorkforce"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "341e20a9-3725-5233-8931-6f313b88a8f5"
+  }
+}

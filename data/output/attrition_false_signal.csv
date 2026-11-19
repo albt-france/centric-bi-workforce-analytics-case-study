@@ -1,0 +1,6 @@
+department,month_start,headcount,exits_gross,exits_excl_transfers,exits_voluntary,rate_gross,rate_excl_transfers
+Delivery 2,2026-01-01,121,2,2,1,0.017,0.017
+Delivery 2,2026-02-01,121,0,0,0,0.0,0.0
+Delivery 2,2026-03-01,123,50,0,0,0.407,0.0
+Delivery 2,2026-04-01,119,4,4,4,0.034,0.034
+Delivery 2,2026-05-01,116,3,3,2,0.026,0.026

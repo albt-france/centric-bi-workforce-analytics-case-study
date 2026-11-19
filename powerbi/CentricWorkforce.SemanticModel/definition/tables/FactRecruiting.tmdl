@@ -1,0 +1,80 @@
+/// Requisitions: opened, filled, days to fill. SIMULATED.
+table FactRecruiting
+	lineageTag: 75d36338-33a0-5ef1-9bba-eeb0ddc14021
+
+	column RequisitionId
+		dataType: string
+		lineageTag: 0d87a7b2-59f6-585c-9de2-5d3062675f74
+		summarizeBy: none
+		sourceColumn: RequisitionId
+
+	column CostCenter
+		dataType: string
+		isHidden
+		lineageTag: ef765be5-7c53-5de3-bcf9-2349bccac650
+		summarizeBy: none
+		sourceColumn: CostCenter
+
+	column Grade
+		dataType: string
+		isHidden
+		lineageTag: e057474a-a4a5-54b9-a3bd-ab8605a904e2
+		summarizeBy: none
+		sourceColumn: Grade
+
+	column Reason
+		dataType: string
+		lineageTag: 1499cf03-1705-53fb-8a0a-f323c668cc0d
+		summarizeBy: none
+		sourceColumn: Reason
+
+	column OpenedDate
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		lineageTag: 682a2b1c-399d-517c-bcad-079b6162aad1
+		summarizeBy: none
+		sourceColumn: OpenedDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FilledDate
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd
+		lineageTag: e08a3bb8-6437-5763-907b-77b7fe067555
+		summarizeBy: none
+		sourceColumn: FilledDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column StartDate
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 083ea063-aaa0-5e44-8c72-8ad58d7a1a2e
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DaysToFill
+		dataType: double
+		lineageTag: a8c614bf-8275-5136-ad9d-da55703a0d89
+		summarizeBy: none
+		sourceColumn: DaysToFill
+
+	column Status
+		dataType: string
+		lineageTag: faf93eea-0acc-521b-b058-5718da679437
+		summarizeBy: none
+		sourceColumn: Status
+
+	partition FactRecruiting = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "FactRecruiting.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"RequisitionId", type text}, {"CostCenter", type text}, {"Grade", type text}, {"Reason", type text}, {"OpenedDate", type date}, {"FilledDate", type date}, {"StartDate", type date}, {"DaysToFill", type number}, {"Status", type text}}, "en-US")
+				in
+					Typed

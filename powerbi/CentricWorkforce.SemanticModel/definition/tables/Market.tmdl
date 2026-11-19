@@ -1,0 +1,88 @@
+/// PUBLIC DATA: Eurostat labour cost index and job vacancy rate (ICT, NACE J), ICT specialists share; Statistics Lithuania average earnings.
+table Market
+	lineageTag: 9f640ec8-22ea-5232-8576-4bcd2b383a54
+
+	column Quarter
+		dataType: string
+		lineageTag: 2ac1673a-35df-535a-a8b5-4845e0bca046
+		summarizeBy: none
+		sourceColumn: Quarter
+
+	column LabourCostIndexICT
+		dataType: double
+		lineageTag: a7ed5186-b51a-5a2a-b100-41b349d5c772
+		summarizeBy: none
+		sourceColumn: LabourCostIndexICT
+
+	column QuarterStart
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 262e8814-9b52-5084-a358-8967205e0dde
+		summarizeBy: none
+		sourceColumn: QuarterStart
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LabourCostIndexICT_2024Q4_100
+		dataType: double
+		lineageTag: e7fcd98c-cecc-5b66-a35e-91db6bf20bf9
+		summarizeBy: none
+		sourceColumn: LabourCostIndexICT_2024Q4_100
+
+	column JobVacancyRateICT_LT
+		dataType: double
+		lineageTag: 72470307-79d3-5f7d-9d28-2f479912edea
+		summarizeBy: none
+		sourceColumn: JobVacancyRateICT_LT
+
+	column JobVacancyRateICT_EU27
+		dataType: double
+		lineageTag: e8e82e78-66ef-5007-8562-2832118d650a
+		summarizeBy: none
+		sourceColumn: JobVacancyRateICT_EU27
+
+	column JobVacancyRateICT_FR
+		dataType: double
+		lineageTag: bc385bdb-7371-54d2-bab2-af5d3634a05a
+		summarizeBy: none
+		sourceColumn: JobVacancyRateICT_FR
+
+	column AvgGrossEarningsICT_LT
+		dataType: double
+		lineageTag: ff2c0fbe-4543-512c-b895-dbd134e5d6ee
+		summarizeBy: none
+		sourceColumn: AvgGrossEarningsICT_LT
+
+	column AvgGrossEarningsAll_LT
+		dataType: double
+		lineageTag: efa6a7e9-9b56-5e48-b38d-daf4562a60b6
+		summarizeBy: none
+		sourceColumn: AvgGrossEarningsAll_LT
+
+	column ICTSpecialistsShare_LT
+		dataType: double
+		lineageTag: f00bf573-4e80-5fb4-bc89-f12ff6327024
+		summarizeBy: none
+		sourceColumn: ICTSpecialistsShare_LT
+
+	column ICTSpecialistsShare_EU27
+		dataType: double
+		lineageTag: ebd0fbe2-51a1-5386-8364-2423c0612af0
+		summarizeBy: none
+		sourceColumn: ICTSpecialistsShare_EU27
+
+	column Source
+		dataType: string
+		lineageTag: 53395291-54d0-56f2-86a6-b81042d264de
+		summarizeBy: none
+		sourceColumn: Source
+
+	partition Market = m
+		mode: import
+		source =
+				let
+					Source = Csv.Document(File.Contents(DataFolder & "Market.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+					Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+					Typed = Table.TransformColumnTypes(Promoted, {{"Quarter", type text}, {"LabourCostIndexICT", type number}, {"QuarterStart", type date}, {"LabourCostIndexICT_2024Q4_100", type number}, {"JobVacancyRateICT_LT", type number}, {"JobVacancyRateICT_EU27", type number}, {"JobVacancyRateICT_FR", type number}, {"AvgGrossEarningsICT_LT", type number}, {"AvgGrossEarningsAll_LT", type number}, {"ICTSpecialistsShare_LT", type number}, {"ICTSpecialistsShare_EU27", type number}, {"Source", type text}}, "en-US")
+				in
+					Typed

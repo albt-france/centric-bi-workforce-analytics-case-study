@@ -1,0 +1,245 @@
+requisition_id,department,site,grade,reason,opened_date,filled_date,start_date,hired_employee_id,status
+R0001,Data & Cloud,Kaunas,G3,Replacement,2024-09-01,2024-10-04,2024-11-07,E0571,Filled
+R0002,Delivery 2,Vilnius,G1,Replacement,2024-10-06,2024-11-03,2024-11-22,E0572,Filled
+R0003,Delivery 2,Kaunas,G2,Replacement,2024-09-18,2024-10-17,2024-11-12,E0573,Filled
+R0004,Delivery 3,Vilnius,G1,Replacement,2024-10-16,2024-10-29,2024-11-24,E0574,Filled
+R0005,Data & Cloud,Kaunas,G1,Replacement,2024-10-01,2024-10-19,2024-11-21,E0575,Filled
+R0006,Delivery 1,Kaunas,G1,Replacement,2024-10-05,2024-10-21,2024-11-04,E0576,Filled
+R0007,Sales,Vilnius,G1,Replacement,2024-09-16,2024-10-13,2024-11-12,E0577,Filled
+R0009,Delivery 1,Kaunas,G2,Replacement,2024-11-13,2024-12-04,2024-12-21,E0579,Filled
+R0010,Delivery 1,Kaunas,G3,Replacement,2024-10-02,2024-11-04,2024-12-09,E0580,Filled
+R0011,Support functions,Kaunas,G2,Replacement,2024-10-25,2024-11-16,2024-12-08,E0581,Filled
+R0012,Delivery 3,Kaunas,G2,Replacement,2024-10-18,2024-11-20,2024-12-14,E0582,Filled
+R0013,Delivery 1,Vilnius,G2,Replacement,2024-11-18,2024-12-07,2024-12-30,E0583,Filled
+R0014,Delivery 2,Kaunas,G1,Replacement,2024-11-14,2024-12-05,2024-12-25,E0584,Filled
+R0015,Sales,Kaunas,G2,Replacement,2024-10-07,2024-11-07,2024-12-12,E0585,Filled
+R0016,Delivery 2,Kaunas,G3,Replacement,2024-11-12,2024-12-13,2024-12-29,E0586,Filled
+R0017,Delivery 1,Kaunas,G2,Replacement,2024-11-24,2024-12-25,2025-01-21,E0587,Filled
+R0018,Delivery 1,Kaunas,G1,Replacement,2024-11-22,2024-12-16,2025-01-01,E0588,Filled
+R0019,Delivery 1,Kaunas,G2,Replacement,2024-10-23,2024-12-11,2025-01-11,E0589,Filled
+R0020,Delivery 1,Kaunas,G1,Replacement,2024-12-10,2025-01-02,2025-02-01,E0590,Filled
+R0021,Delivery 2,Kaunas,G2,Replacement,2024-12-15,2025-01-26,2025-02-20,E0591,Filled
+R0022,Delivery 2,Kaunas,G1,Replacement,2024-12-14,2025-01-18,2025-02-05,E0592,Filled
+R0023,Delivery 2,Kaunas,G1,Replacement,2024-12-29,2025-01-19,2025-02-04,E0593,Filled
+R0024,Data & Cloud,Kaunas,G2,Replacement,2024-12-12,2025-01-16,2025-02-08,E0594,Filled
+R0025,Data & Cloud,Kaunas,G1,Replacement,2024-12-24,2025-01-14,2025-02-10,E0595,Filled
+R0026,Delivery 1,Kaunas,G4,Replacement,2025-01-11,2025-02-18,2025-03-04,E0596,Filled
+R0027,Delivery 1,Vilnius,G1,Replacement,2025-02-07,2025-02-23,2025-03-11,E0597,Filled
+R0028,Delivery 1,Vilnius,G3,Replacement,2025-01-29,2025-03-11,2025-03-26,E0598,Filled
+R0029,Delivery 1,Kaunas,G1,Replacement,2025-01-29,2025-02-15,2025-03-20,E0599,Filled
+R0030,Delivery 2,Kaunas,G1,Replacement,2025-02-04,2025-02-27,2025-03-22,E0600,Filled
+R0031,Data & Cloud,Vilnius,G1,Replacement,2025-02-02,2025-02-28,2025-03-22,E0601,Filled
+R0032,Data & Cloud,Kaunas,G2,Replacement,2025-02-01,2025-03-08,2025-03-22,E0602,Filled
+R0033,Delivery 2,Vilnius,G1,Replacement,2025-02-15,2025-03-12,2025-04-06,E0603,Filled
+R0034,Delivery 1,Kaunas,G2,Replacement,2025-02-23,2025-03-20,2025-04-20,E0604,Filled
+R0035,Data & Cloud,Vilnius,G4,Replacement,2025-02-07,2025-03-29,2025-04-23,E0605,Filled
+R0036,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-09,2025-03-16,2025-04-09,E0606,Filled
+R0037,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-06,2025-03-21,2025-04-06,E0607,Filled
+R0038,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-02-05,2025-03-05,2025-04-07,E0608,Filled
+R0039,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-02-26,2025-03-23,2025-04-07,E0609,Filled
+R0040,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-09,2025-03-26,2025-04-22,E0610,Filled
+R0041,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-23,2025-04-11,2025-04-30,E0611,Filled
+R0042,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-18,2025-03-26,2025-04-22,E0612,Filled
+R0043,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-10,2025-03-09,2025-04-02,E0613,Filled
+R0044,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-10,2025-03-17,2025-04-15,E0614,Filled
+R0045,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-01-17,2025-03-10,2025-04-04,E0615,Filled
+R0046,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-18,2025-03-25,2025-04-24,E0616,Filled
+R0047,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-07,2025-03-27,2025-04-10,E0617,Filled
+R0048,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-21,2025-03-18,2025-04-01,E0618,Filled
+R0049,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-02-19,2025-03-25,2025-04-16,E0619,Filled
+R0050,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-10,2025-03-24,2025-04-19,E0620,Filled
+R0051,Delivery 1,Vilnius,G3,Replacement,2025-03-30,2025-04-28,2025-05-16,E0621,Filled
+R0052,Delivery 1,Kaunas,G2,Replacement,2025-03-23,2025-04-14,2025-05-07,E0622,Filled
+R0053,Delivery 2,Vilnius,G3,Replacement,2025-03-22,2025-05-03,2025-05-29,E0623,Filled
+R0054,Delivery 2,Kaunas,G4,Replacement,2025-02-01,2025-04-06,2025-05-06,E0624,Filled
+R0055,Delivery 2,Kaunas,G3,Replacement,2025-03-06,2025-04-08,2025-05-04,E0625,Filled
+R0056,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-03,2025-04-23,2025-05-20,E0626,Filled
+R0057,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-14,2025-04-30,2025-05-29,E0627,Filled
+R0058,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-12,2025-05-04,2025-05-29,E0628,Filled
+R0059,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-14,2025-04-01,2025-05-03,E0629,Filled
+R0060,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-05,2025-04-27,2025-05-17,E0630,Filled
+R0061,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-04,2025-04-22,2025-05-14,E0631,Filled
+R0062,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-02,2025-05-03,2025-05-27,E0632,Filled
+R0063,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-22,2025-04-04,2025-05-06,E0633,Filled
+R0064,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-03-21,2025-04-13,2025-05-16,E0634,Filled
+R0065,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-03-26,2025-04-22,2025-05-27,E0635,Filled
+R0066,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-03-28,2025-04-29,2025-05-31,E0636,Filled
+R0067,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-11,2025-04-26,2025-05-26,E0637,Filled
+R0068,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-03-19,2025-05-03,2025-05-21,E0638,Filled
+R0069,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-17,2025-05-03,2025-05-31,E0639,Filled
+R0070,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-05,2025-04-19,2025-05-23,E0640,Filled
+R0071,Delivery 3,Vilnius,G2,Replacement,2025-04-29,2025-05-25,2025-06-25,E0641,Filled
+R0072,Support functions,Kaunas,G2,Replacement,2025-05-01,2025-05-27,2025-06-24,E0642,Filled
+R0073,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-05,2025-04-28,2025-06-01,E0643,Filled
+R0074,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-04,2025-05-07,2025-06-09,E0644,Filled
+R0075,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-10,2025-05-07,2025-06-08,E0645,Filled
+R0076,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-24,2025-05-16,2025-06-16,E0646,Filled
+R0077,Delivery 1,Vilnius,G2,Growth - Vilnius ramp-up,2025-05-21,2025-06-12,2025-06-27,E0647,Filled
+R0078,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-11,2025-05-12,2025-06-08,E0648,Filled
+R0079,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-22,2025-05-28,2025-06-15,E0649,Filled
+R0080,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-05-13,2025-06-01,2025-06-19,E0650,Filled
+R0081,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-29,2025-05-12,2025-06-02,E0651,Filled
+R0082,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-05-03,2025-05-23,2025-06-27,E0652,Filled
+R0083,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-30,2025-05-30,2025-06-26,E0653,Filled
+R0084,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-04-14,2025-05-01,2025-06-05,E0654,Filled
+R0085,Data & Cloud,Vilnius,G2,Growth - Vilnius ramp-up,2025-04-12,2025-05-07,2025-06-03,E0655,Filled
+R0086,Delivery 1,Vilnius,G1,Growth - Vilnius ramp-up,2025-05-10,2025-05-30,2025-06-27,E0656,Filled
+R0087,Data & Cloud,Vilnius,G1,Growth - Vilnius ramp-up,2025-05-18,2025-06-11,2025-06-28,E0657,Filled
+R0088,Delivery 1,Kaunas,G2,Replacement,2025-05-14,2025-06-15,2025-07-12,E0658,Filled
+R0089,Delivery 2,Kaunas,G4,Replacement,2025-05-08,2025-06-28,2025-07-15,E0659,Filled
+R0090,Sales,Kaunas,G1,Replacement,2025-06-02,2025-06-28,2025-07-20,E0660,Filled
+R0091,Delivery 2,Kaunas,G3,Replacement,2025-06-16,2025-07-24,2025-08-07,E0661,Filled
+R0092,Delivery 3,Vilnius,G4,Replacement,2025-06-04,2025-07-19,2025-08-14,E0662,Filled
+R0093,Delivery 1,Vilnius,G2,Replacement,2025-07-06,2025-08-02,2025-08-24,E0663,Filled
+R0094,Delivery 2,Kaunas,G1,Replacement,2025-07-04,2025-07-22,2025-08-20,E0664,Filled
+R0095,Data & Cloud,Vilnius,G1,Replacement,2025-06-25,2025-07-12,2025-08-08,E0665,Filled
+R0096,Delivery 1,Vilnius,G1,Replacement,2025-07-20,2025-08-08,2025-08-27,E0666,Filled
+R0097,Delivery 1,Kaunas,G2,Replacement,2025-07-09,2025-08-25,2025-09-28,E0685,Filled
+R0098,Delivery 2,Kaunas,G3,Replacement,2025-07-02,2025-08-11,2025-09-02,E0686,Filled
+R0099,Delivery 3,Vilnius,G2,Replacement,2025-06-23,2025-08-08,2025-09-09,E0687,Filled
+R0100,Data & Cloud,Vilnius,G4,Replacement,2025-06-20,2025-08-10,2025-09-07,E0688,Filled
+R0101,Support functions,Kaunas,G1,Replacement,2025-08-09,2025-09-07,2025-09-28,E0689,Filled
+R0102,Delivery 3,Vilnius,G1,Replacement,2025-07-27,2025-08-15,2025-09-01,E0690,Filled
+R0103,Data & Cloud,Kaunas,G1,Replacement,2025-08-16,2025-09-06,2025-09-21,E0691,Filled
+R0104,Delivery 2,Vilnius,G1,Replacement,2025-08-01,2025-08-20,2025-09-19,E0692,Filled
+R0105,Delivery 2,Vilnius,G3,Replacement,2025-07-22,2025-08-25,2025-09-16,E0693,Filled
+R0106,Data & Cloud,Vilnius,G2,Replacement,2025-08-01,2025-08-31,2025-09-26,E0694,Filled
+R0107,Delivery 1,Vilnius,G1,Replacement,2025-08-19,2025-09-04,2025-09-24,E0695,Filled
+R0108,Delivery 1,Kaunas,G1,Replacement,2025-09-22,2025-10-13,2025-10-30,E0696,Filled
+R0109,Delivery 1,Kaunas,G4,Replacement,2025-08-03,2025-09-09,2025-10-02,E0697,Filled
+R0110,Delivery 1,Vilnius,G1,Replacement,2025-08-10,2025-09-03,2025-10-01,E0698,Filled
+R0111,Delivery 3,Vilnius,G1,Replacement,2025-08-07,2025-09-11,2025-10-02,E0699,Filled
+R0112,Delivery 3,Kaunas,G3,Replacement,2025-07-26,2025-09-08,2025-10-02,E0700,Filled
+R0113,Data & Cloud,Vilnius,G1,Replacement,2025-08-20,2025-09-16,2025-10-19,E0701,Filled
+R0114,Support functions,Kaunas,G1,Replacement,2025-09-04,2025-09-22,2025-10-27,E0702,Filled
+R0115,Delivery 3,Kaunas,G3,Replacement,2025-08-25,2025-10-02,2025-10-19,E0703,Filled
+R0116,Delivery 1,Vilnius,G1,Replacement,2025-08-22,2025-09-17,2025-10-06,E0704,Filled
+R0117,Data & Cloud,Vilnius,G1,Replacement,2025-09-07,2025-09-27,2025-10-16,E0705,Filled
+R0118,Delivery 1,Kaunas,G1,Growth,2025-09-18,2025-10-05,2025-10-27,E0706,Filled
+R0119,Delivery 1,Kaunas,G4,Replacement,2025-08-24,2025-11-01,2025-11-17,E0707,Filled
+R0120,Delivery 1,Kaunas,G3,Replacement,2025-10-04,2025-11-11,2025-11-30,E0708,Filled
+R0121,Delivery 1,Vilnius,G1,Replacement,2025-09-25,2025-10-18,2025-11-17,E0709,Filled
+R0122,Delivery 2,Vilnius,G2,Replacement,2025-10-10,2025-10-27,2025-11-17,E0710,Filled
+R0123,Delivery 2,Vilnius,G3,Replacement,2025-09-14,2025-10-31,2025-11-18,E0711,Filled
+R0124,Delivery 2,Vilnius,G3,Replacement,2025-08-25,2025-10-17,2025-11-18,E0712,Filled
+R0125,Data & Cloud,Kaunas,G3,Replacement,2025-09-17,2025-10-18,2025-11-03,E0713,Filled
+R0126,Data & Cloud,Vilnius,G4,Replacement,2025-08-21,2025-10-24,2025-11-23,E0714,Filled
+R0127,Sales,Kaunas,G1,Replacement,2025-09-16,2025-10-10,2025-11-14,E0715,Filled
+R0128,Sales,Vilnius,G3,Replacement,2025-09-04,2025-10-12,2025-11-14,E0716,Filled
+R0129,Delivery 2,Kaunas,G2,Replacement,2025-09-02,2025-10-03,2025-11-02,E0717,Filled
+R0130,Delivery 1,Vilnius,G2,Replacement,2025-08-31,2025-10-07,2025-11-01,E0718,Filled
+R0131,Delivery 1,Kaunas,G2,Replacement,2025-09-24,2025-10-29,2025-11-18,E0719,Filled
+R0132,Data & Cloud,Vilnius,G2,Replacement,2025-09-23,2025-10-20,2025-11-13,E0720,Filled
+R0133,Delivery 1,Vilnius,G1,Replacement,2025-09-03,2025-10-11,2025-11-03,E0721,Filled
+R0134,Delivery 2,Kaunas,G2,Growth,2025-09-30,2025-10-22,2025-11-21,E0722,Filled
+R0135,Delivery 2,Kaunas,G1,Replacement,2025-10-22,2025-11-15,2025-12-05,E0723,Filled
+R0136,Delivery 3,Vilnius,G1,Replacement,2025-10-28,2025-11-20,2025-12-14,E0724,Filled
+R0137,Delivery 1,Vilnius,G1,Replacement,2025-10-21,2025-11-16,2025-12-19,E0725,Filled
+R0138,Delivery 1,Vilnius,G2,Replacement,2025-09-30,2025-11-01,2025-12-04,E0726,Filled
+R0139,Data & Cloud,Vilnius,G1,Replacement,2025-10-13,2025-11-09,2025-12-02,E0727,Filled
+R0140,Delivery 1,Vilnius,G2,Replacement,2025-11-19,2025-12-15,2025-12-30,E0728,Filled
+R0141,Delivery 1,Vilnius,G1,Replacement,2025-10-31,2025-11-25,2025-12-14,E0729,Filled
+R0142,Data & Cloud,Vilnius,G1,Replacement,2025-11-21,2025-12-09,2025-12-28,E0730,Filled
+R0143,Support functions,Kaunas,G3,Growth,2025-11-03,2025-12-03,2025-12-20,E0731,Filled
+R0144,Delivery 3,Vilnius,G1,Growth,2025-11-02,2025-11-27,2025-12-29,E0732,Filled
+R0145,Delivery 1,Vilnius,G4,Replacement,2025-10-11,2025-12-14,2026-01-08,E0733,Filled
+R0146,Delivery 2,Vilnius,G1,Replacement,2025-11-16,2025-12-08,2026-01-06,E0734,Filled
+R0147,Data & Cloud,Kaunas,G3,Replacement,2025-11-13,2025-12-19,2026-01-22,E0735,Filled
+R0148,Data & Cloud,Kaunas,G2,Replacement,2025-11-11,2025-12-13,2026-01-16,E0736,Filled
+R0149,Data & Cloud,Kaunas,G3,Replacement,2025-11-15,2025-12-30,2026-01-17,E0737,Filled
+R0150,Delivery 1,Vilnius,G2,Replacement,2025-10-22,2025-12-08,2026-01-03,E0738,Filled
+R0151,Data & Cloud,Kaunas,G1,Growth,2025-12-16,2026-01-07,2026-01-22,E0739,Filled
+R0152,Sales,Kaunas,G1,Growth,2025-11-16,2025-12-11,2026-01-11,E0740,Filled
+R0153,Delivery 2,Vilnius,G2,Replacement,2025-12-17,2026-01-22,2026-02-26,E0741,Filled
+R0154,Delivery 3,Kaunas,G1,Replacement,2026-01-16,2026-01-30,2026-02-23,E0742,Filled
+R0155,Delivery 3,Kaunas,G3,Replacement,2026-01-01,2026-01-27,2026-02-13,E0743,Filled
+R0156,Data & Cloud,Kaunas,G2,Replacement,2026-01-08,2026-02-07,2026-02-24,E0744,Filled
+R0157,Data & Cloud,Vilnius,G4,Replacement,2025-12-14,2026-01-26,2026-02-18,E0745,Filled
+R0158,Delivery 2,Vilnius,G3,Replacement,2026-01-05,2026-02-12,2026-03-17,E0746,Filled
+R0159,Delivery 2,Kaunas,G2,Replacement,2026-01-04,2026-02-05,2026-03-07,E0747,Filled
+R0160,Delivery 3,Vilnius,G2,Replacement,2026-01-14,2026-02-18,2026-03-04,E0748,Filled
+R0161,Sales,Vilnius,G2,Replacement,2025-12-21,2026-02-12,2026-03-13,E0749,Filled
+R0162,Support functions,Kaunas,G2,Replacement,2026-01-18,2026-02-11,2026-03-16,E0750,Filled
+R0163,Delivery 1,Kaunas,G2,Replacement,2025-12-31,2026-02-24,2026-03-23,E0751,Filled
+R0164,Delivery 1,Vilnius,G1,Replacement,2026-01-25,2026-02-28,2026-03-17,E0752,Filled
+R0165,Data & Cloud,Vilnius,G2,Replacement,2026-02-13,2026-03-23,2026-04-17,E0753,Filled
+R0166,Sales,Kaunas,G1,Replacement,2026-02-14,2026-03-13,2026-04-09,E0754,Filled
+R0167,Delivery 1,Vilnius,G1,Replacement,2026-02-28,2026-03-14,2026-04-01,E0755,Filled
+R0168,Delivery 1,Vilnius,G3,Replacement,2026-02-24,2026-04-12,2026-05-06,E0756,Filled
+R0169,Delivery 3,Kaunas,G3,Replacement,2026-03-24,2026-05-03,2026-05-25,E0757,Filled
+R0170,Delivery 3,Kaunas,G2,Replacement,2026-03-20,2026-04-26,2026-05-20,E0758,Filled
+R0171,Data & Cloud,Vilnius,G3,Replacement,2026-03-09,2026-05-06,2026-05-23,E0759,Filled
+R0172,Data & Cloud,Kaunas,G3,Replacement,2026-04-17,2026-05-08,2026-05-30,E0760,Filled
+R0173,Delivery 3,Vilnius,G3,Replacement,2026-03-18,2026-04-23,2026-05-09,E0761,Filled
+R0174,Data & Cloud,Vilnius,G4,Replacement,2026-03-09,2026-04-21,2026-05-06,E0762,Filled
+R0175,Delivery 1,Kaunas,G1,Replacement,2026-03-20,2026-04-07,2026-05-09,E0763,Filled
+R0176,Data & Cloud,Vilnius,G1,Replacement,2026-03-27,2026-04-26,2026-05-23,E0764,Filled
+R0177,Delivery 1,Vilnius,G1,Replacement,2026-03-21,2026-04-18,2026-05-04,E0765,Filled
+R0178,Data & Cloud,Kaunas,G3,Replacement,2026-02-19,2026-04-16,2026-05-15,E0766,Filled
+R0179,Data & Cloud,Kaunas,G3,Growth,2026-02-25,2026-04-15,2026-05-02,E0767,Filled
+R0180,Delivery 1,Kaunas,G2,Growth,2026-03-23,2026-04-15,2026-05-02,E0768,Filled
+R0181,Delivery 1,Kaunas,G2,Replacement,2026-05-17,2026-06-13,2026-06-28,E0769,Filled
+R0182,Delivery 3,Kaunas,G2,Replacement,2026-03-30,2026-05-06,2026-06-01,E0770,Filled
+R0183,Delivery 3,Kaunas,G3,Replacement,2026-03-17,2026-05-18,2026-06-06,E0771,Filled
+R0184,Support functions,Kaunas,G2,Replacement,2026-05-15,2026-06-09,2026-06-24,E0772,Filled
+R0185,Delivery 2,Kaunas,G2,Replacement,2026-05-01,2026-06-01,2026-06-30,E0773,Filled
+R0186,Delivery 1,Vilnius,G2,Replacement,2026-04-11,2026-05-26,2026-06-29,E0774,Filled
+R0187,Delivery 3,Vilnius,G2,Replacement,2026-05-01,2026-05-26,2026-06-20,E0775,Filled
+R0188,Sales,Vilnius,G3,Replacement,2026-05-02,2026-06-03,2026-06-25,E0776,Filled
+R0189,Delivery 3,Vilnius,G1,Replacement,2026-05-10,2026-05-28,2026-06-19,E0777,Filled
+R0190,Delivery 2,Kaunas,G3,Replacement,2026-03-21,2026-05-09,2026-06-07,E0778,Filled
+R0191,Delivery 2,Vilnius,G2,Replacement,2026-04-20,2026-05-12,2026-06-01,E0779,Filled
+R0192,Delivery 2,Kaunas,G4,Replacement,2026-04-21,2026-06-12,2026-07-15,E0780,Filled
+R0193,Sales,Kaunas,G1,Replacement,2026-05-13,2026-06-14,2026-07-02,E0781,Filled
+R0194,Support functions,Vilnius,G4,Replacement,2026-05-17,2026-07-02,2026-07-17,E0782,Filled
+R0195,Support functions,Vilnius,G2,Replacement,2026-04-20,2026-05-30,2026-07-04,E0783,Filled
+R0196,Delivery 2,Kaunas,G1,Replacement,2026-05-20,2026-06-11,2026-07-09,E0784,Filled
+R0197,Delivery 1,Kaunas,G2,Replacement,2026-06-06,2026-06-27,2026-07-31,E0785,Filled
+R0198,Delivery 2,Kaunas,G1,Replacement,2026-05-25,2026-06-16,2026-07-14,E0786,Filled
+R0199,Delivery 3,Vilnius,G2,Replacement,2026-05-24,2026-06-21,2026-07-24,E0787,Filled
+R0200,Data & Cloud,Vilnius,G4,Growth,2026-05-17,2026-06-26,2026-07-24,E0788,Filled
+R0201,Data & Cloud,Kaunas,G3,Growth,2026-05-13,2026-07-03,2026-07-20,E0789,Filled
+R0202,Delivery 1,Vilnius,G1,Replacement,2026-06-27,2026-07-21,2026-08-13,E0790,Filled
+R0203,Delivery 2,Kaunas,G3,Replacement,2026-06-21,2026-07-27,2026-08-13,E0791,Filled
+R0204,Delivery 3,Vilnius,G1,Replacement,2026-06-24,2026-07-17,2026-08-10,E0792,Filled
+R0205,Delivery 3,Vilnius,G3,Replacement,2026-06-15,2026-07-21,2026-08-12,E0793,Filled
+R0206,Data & Cloud,Kaunas,G2,Replacement,2026-07-22,2026-08-12,2026-08-26,E0794,Filled
+R0207,Data & Cloud,Vilnius,G1,Replacement,2026-07-03,2026-08-02,2026-08-29,E0795,Filled
+R0208,Delivery 1,Kaunas,G3,Replacement,2026-06-18,2026-07-24,2026-08-07,E0796,Filled
+R0209,Data & Cloud,Kaunas,G2,Replacement,2026-06-10,2026-07-10,2026-08-13,E0797,Filled
+R0210,Delivery 3,Vilnius,G2,Growth,2026-06-07,2026-07-08,2026-08-03,E0798,Filled
+R0211,Delivery 3,Vilnius,G3,Replacement,2026-07-23,2026-08-27,2026-09-18,E0799,Filled
+R0212,Data & Cloud,Vilnius,G3,Replacement,2026-08-13,2026-09-10,2026-09-27,E0800,Filled
+R0213,Support functions,Kaunas,G1,Replacement,2026-07-28,2026-08-28,2026-09-30,E0801,Filled
+R0214,Data & Cloud,Vilnius,G3,Replacement,2026-07-22,2026-08-29,2026-09-28,E0802,Filled
+R0215,Data & Cloud,Kaunas,G3,Replacement,2026-06-21,2026-07-31,2026-09-02,E0803,Filled
+R0216,Data & Cloud,Kaunas,G2,Growth,2026-08-19,2026-09-14,2026-09-30,E0804,Filled
+R0217,Delivery 1,Kaunas,G3,Replacement,2026-08-19,2026-09-23,2026-10-19,E0805,Filled
+R0218,Delivery 2,Kaunas,G3,Replacement,2026-06-30,2026-09-09,2026-10-13,E0806,Filled
+R0219,Delivery 2,Kaunas,G4,Replacement,2026-08-20,2026-09-26,2026-10-13,E0807,Filled
+R0220,Delivery 3,Vilnius,G3,Replacement,2026-07-31,2026-09-14,2026-10-19,E0808,Filled
+R0221,Data & Cloud,Vilnius,G1,Replacement,2026-09-20,2026-10-11,2026-10-26,E0809,Filled
+R0222,Sales,Vilnius,G3,Replacement,2026-08-30,2026-09-29,2026-10-20,E0810,Filled
+R0223,Support functions,Kaunas,G1,Replacement,2026-07-30,2026-09-02,2026-10-02,E0811,Filled
+R0224,Delivery 2,Kaunas,G3,Replacement,2026-08-25,2026-09-28,2026-10-14,E0812,Filled
+R0225,Delivery 2,Kaunas,G1,Replacement,2026-08-24,2026-09-11,2026-10-06,E0813,Filled
+R0226,Delivery 1,Vilnius,G1,Replacement,2026-08-16,2026-09-06,2026-10-11,E0814,Filled
+R0227,Delivery 3,Vilnius,G1,Replacement,2026-09-03,2026-09-21,2026-10-20,E0815,Filled
+R0228,Data & Cloud,Kaunas,G3,Replacement,2026-08-25,2026-09-29,2026-10-21,E0816,Filled
+R0229,Data & Cloud,Kaunas,G4,Growth,2026-08-26,2026-09-26,2026-10-30,E0817,Filled
+R0230,Data & Cloud,Kaunas,G3,Replacement,2026-10-18,,,,Open
+R0231,Data & Cloud,Kaunas,G2,Replacement,2026-09-25,,,,Open
+R0232,Delivery 1,Vilnius,G3,Replacement,2026-09-03,,,,Open
+R0233,Data & Cloud,Vilnius,G4,Replacement,2026-09-26,,,,Open
+R0234,Data & Cloud,Kaunas,G2,Replacement,2026-10-24,,,,Open
+R0235,Delivery 2,Kaunas,G3,Replacement,2026-10-13,,,,Open
+R0236,Data & Cloud,Vilnius,G2,Replacement,2026-09-30,,,,Open
+R0237,Delivery 2,Kaunas,G2,Replacement,2026-10-22,,,,Open
+R0238,Delivery 1,Kaunas,G4,Replacement,2026-10-31,,,,Open
+R0239,Data & Cloud,Kaunas,G3,Replacement,2026-09-22,,,,Open
+R0240,Delivery 2,Kaunas,G2,Replacement,2026-08-30,,,,Open
+R0241,Support functions,Vilnius,G2,Replacement,2026-09-03,,,,Open
+R0242,Sales,Kaunas,G2,Replacement,2026-09-24,,,,Open
+R0243,Data & Cloud,Vilnius,G3,Replacement,2026-10-26,,,,Open
+R0244,Delivery 2,Vilnius,G2,Replacement,2026-08-19,,,,Open
+R0245,Delivery 1,Kaunas,G1,Replacement,2026-10-11,,,,Open

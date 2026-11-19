@@ -1,0 +1,22 @@
+/// RLS mapping: user principal name -> department (placeholder accounts, replace with the real Entra ID group or users).
+table SecurityUserDepartment
+	isHidden
+	lineageTag: 9d69fbfd-cd55-56d5-8878-0b983218831e
+
+	column UserPrincipalName
+		dataType: string
+		isHidden
+		lineageTag: c6c8ec12-7607-5b84-b3ed-80a3fd39fe49
+		summarizeBy: none
+		sourceColumn: UserPrincipalName
+
+	column Department
+		dataType: string
+		isHidden
+		lineageTag: d02ecdcc-a124-5a7d-8664-4e68ebeffac6
+		summarizeBy: none
+		sourceColumn: Department
+
+	partition SecurityUserDepartment = m
+		mode: import
+		source = #table(type table [UserPrincipalName = text, Department = text], {{"head.delivery1@company.example", "Delivery 1"}, {"head.delivery2@company.example", "Delivery 2"}, {"head.delivery3@company.example", "Delivery 3"}, {"head.datacloud@company.example", "Data & Cloud"}, {"head.sales@company.example", "Sales"}, {"head.support@company.example", "Support functions"}})

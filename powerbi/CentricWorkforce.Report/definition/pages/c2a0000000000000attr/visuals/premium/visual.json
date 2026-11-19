@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "premium",
+  "position": {
+    "x": 1285,
+    "y": 651,
+    "z": 11000,
+    "height": 377,
+    "width": 603,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimGrade"
+                    }
+                  },
+                  "Property": "GradeName"
+                }
+              },
+              "queryRef": "DimGrade.GradeName",
+              "nativeQueryRef": "GradeName"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "New-Hire Pay Premium %"
+                }
+              },
+              "queryRef": "_Measures.New-Hire Pay Premium %",
+              "nativeQueryRef": "New-Hire Pay Premium %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'New hires vs 2-4 year colleagues, same grade (median pay)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
